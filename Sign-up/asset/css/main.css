@@ -3,12 +3,14 @@ html, body {
     height: 100vh;
     background-color: #afd5de;
     position: relative;
+    z-index: -2;
 }
 
 .main_background {
     width: 100%;
     height: 100%;
-    background: no-repeat;
+    z-index: 1 !important;
+    background-repeat: no-repeat;
 }
 
 .main {
@@ -23,6 +25,7 @@ html, body {
     flex-direction: column;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
+    z-index: -1;
 }
 
 .form__sign-up {
