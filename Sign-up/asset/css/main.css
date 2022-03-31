@@ -3,14 +3,25 @@ html, body {
     height: 100vh;
     background-color: #afd5de;
     position: relative;
-    z-index: -2;
 }
 
 .main_background {
     width: 100%;
     height: 100%;
-    z-index: 1 !important;
+    position: relative;
+}
+
+.main_background::before {
+    content: '';
+    background-image: url(https://scontent.fhan3-3.fna.fbcdn.net/v/t1.15752-9/275564816_710183776825273_159216032791014765_n.png?_nc_cat=111&ccb=1-5&_nc_sid=ae9488&_nc_ohc=gL75W_ExO4cAX8mdcuf&_nc_ht=scontent.fhan3-3.fna&oh=03_AVLt5k57vWcljusl4wo1EJLl8Vlu8NHu7qbtH5Uf4GYjzw&oe=6268ABC0);
     background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.3;
+    z-index: 1;
 }
 
 .main {
@@ -25,11 +36,11 @@ html, body {
     flex-direction: column;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    z-index: -1;
 }
 
 .form__sign-up {
-
+    z-index: 1;
+    /* background-color: transparent; */
 }
 
 .form__subtitle{
