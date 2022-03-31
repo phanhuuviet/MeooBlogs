@@ -27,7 +27,7 @@ html, body {
 .main {
     width: 72vw;
     height: 100vh;
-    background-color: rgb(220 255 241);
+    background-color: rgb(241 255 249);
     position: absolute;
     right: 0;
     display: flex;
