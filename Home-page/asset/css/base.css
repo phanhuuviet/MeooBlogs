@@ -10,6 +10,7 @@
     --login-color-lighter: #2bbd6f;
     
     --max-width-grid: 1250px;
+    --width-sideBar: 200px;
 }
 
 * {
@@ -65,4 +66,9 @@ img {
 
 .background--FB:hover {
     background-color: #2ba7fa;
+}
+
+/* ====== Admin page ====== */
+.active-sideBar {
+    background: #ccc;
 }
