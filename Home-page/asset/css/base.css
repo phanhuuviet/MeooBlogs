@@ -1,4 +1,6 @@
 :root {
+    --primary-color: #afd5de;
+    --primary-color-lighter: #8bb1bc;
     --text-color: #333;
     --white-color: #fff;
     --black-color: #000;
@@ -69,3 +71,11 @@ img {
 }
 
 /* ====== Admin page ====== */
+.border-bottom-1px {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+.pagination-item-active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+}

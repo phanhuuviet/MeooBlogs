@@ -1,7 +1,7 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    background-color: #afd5de;
+    background-color: var(--primary-color);
     position: relative;
 }
 
