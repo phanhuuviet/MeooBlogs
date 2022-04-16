@@ -2,14 +2,13 @@
     --text-color: #333;
     --white-color: #fff;
     --black-color: #000;
-    --header-height: 125px;
+    --header-height: 135px;
     --border-color: #dbdbdb;
     --header-wrap-height: 80px;
-    --blue-500: 47,181,250;
+    --blue-500: 47, 181, 250;
     --login-color: #04c35c;
     --login-color-lighter: #2bbd6f;
-    
-    --max-width-grid: 1250px;
+    --max-width-grid: 1200px;
 }
 
 * {
@@ -65,4 +64,28 @@ img {
 
 .background--FB:hover {
     background-color: #2ba7fa;
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes goUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
 }
