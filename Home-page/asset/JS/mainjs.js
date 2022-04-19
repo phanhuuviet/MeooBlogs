@@ -23,7 +23,7 @@ function openLists() {
     }
 }
 
-function navHandle() {
+function customStickyNav() {
     
     if(lastScrollValue < window.scrollY)
     {
@@ -82,5 +82,5 @@ function closeSearchBar() {
 
 headerCloseSearchButton.addEventListener('click', closeSearchBar)
 headerSearchIcon.addEventListener('click', openSearchBar);
-window.addEventListener('scroll', navHandle);
+window.addEventListener('scroll', customStickyNav);
 followedList.addEventListener('click', openLists);
