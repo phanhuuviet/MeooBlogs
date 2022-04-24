@@ -1,10 +1,11 @@
 .main {
     display: flex;
+    position: relative;
 }
 
 .sideBar {
-    width: var(--width-sideBar);
-    min-width: 200px;
+    /* width: var(--width-sideBar); */
+    max-width: 200px;
     height: auto;
     background-color: var(--primary-color);
 }
@@ -31,6 +32,8 @@
 .sideBar__item-icon {
     margin-right: 4px;
 }
+
+.sideBar__logo-img {}
 
 .container {
     box-shadow: 0 0 10px 0 #ccc;
@@ -133,7 +136,7 @@
     border-spacing: 12px 30px;
 }
 
-.container__table-row th{
+.container__table-row th {
     font-size: 1.6rem;
     padding-bottom: 4px;
 }
@@ -183,13 +186,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
     font-size: 1.4rem;
+}
+
+.container__pagination>button {
+    color: #000;
 }
 
 .container__pagination-lists {
     list-style: none;
     display: flex;
+}
+
+.container__pagination-icon {
+    padding: 0 5px;
 }
 
 .container__pagination-icon:hover {
@@ -213,4 +224,124 @@
 
 .container__pagination-end:hover {
     cursor: pointer;
+}
+
+.container__pagination-item.active {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: #fff;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    animation: dropDown linear 0.3s;
+}
+
+.modal__wrap {
+    background-color: var(--white-color);
+    border-radius: 5px;
+}
+
+/* Modal delete */
+.modal__wrap--delete {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    display: none;
+}
+
+.modal__img {
+    width: 70px;
+    height: 70px;
+}
+
+.modal__title {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.modal__choose {
+    margin-top: 20px;
+}
+
+.modal__choose--yes {
+    background-color: #f44336;
+    padding: 10px 30px;
+    margin-right: 10px;
+}
+
+.modal__choose--no {
+    background-color: #ccc;
+    padding: 10px 30px;
+}
+
+/* Modal edit */
+.modal__wrap--edit {
+    padding: 16px 30px;
+}
+
+.modal__edit-inf {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.modal__edit-list {
+    width: 600px;
+}
+
+.modal__edit-item {
+    margin-bottom: 20px;
+}
+
+.modal__edit-text {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.modal__edit-input {
+    font-size: 1.4rem;
+    padding: 8px 4px;
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--border-color);
+    transition: border linear 0.2s;
+    border-radius: 5px;
+}
+
+.modal__edit-input:focus {
+    border: 2px solid #000;
+}
+
+.modal__edit-icon {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.modal__choose-radio {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-top: 16px;
+}
+
+.modal__edit-radio {
+    margin-right: 4px;
+}
+
+.modal__edit-label {
+    margin-right: 50px;
 }

@@ -37,6 +37,10 @@ img {
     object-fit: cover;
 }
 
+li {
+    list-style: none;
+}
+
 .gridFlex {
     width: 100%;
     max-width: var(--max-width-grid);
@@ -67,6 +71,25 @@ img {
 .background--FB:hover {
     background-color: #2ba7fa;
 }
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.appear-flex {
+    display: flex !important;
+}
+
+/* Animation */
 
 @keyframes dropDown {
     0% {

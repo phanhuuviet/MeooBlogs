@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>admin</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="../Home-page/asset/css/base.css">
-    <link rel="stylesheet" href="./asset/css/main.css">
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="../Home-page/asset/css/base.css" />
+    <link rel="stylesheet" href="./asset/css/main.css" />
 </head>
+
 <body>
     <div class="main">
         <div class="sideBar">
             <div class="sideBar__logo">
-                <img src="../Home-page/asset/img/logo-blog.png" alt="" class="sideBar__logo-img">
+                <img src="../Home-page/asset/img/logo-blog.png" alt="" class="sideBar__logo-img" />
             </div>
 
             <ul class="sideBar__lists">
@@ -43,7 +45,8 @@
                     </div>
                 </div>
                 <div class="container__search">
-                    <input type="text" class="container__input" placeholder="Nhập tên đăng nhập, họ tên, vị trí và nhóm">
+                    <input type="text" class="container__input"
+                        placeholder="Nhập tên đăng nhập, họ tên, vị trí và nhóm" />
                 </div>
                 <div class="container_filter">
                     <ul class="container__filter-lists">
@@ -63,9 +66,7 @@
                             Nhóm
                             <i class="fa-solid fa-angle-down"></i>
                         </li>
-                        <li class="container__filter-item">
-                            Lọc kết quả
-                        </li>
+                        <li class="container__filter-item">Lọc kết quả</li>
                     </ul>
                 </div>
 
@@ -236,25 +237,115 @@
                 </table>
 
                 <div class="container__pagination">
-                    <i class="fa-solid fa-angles-left container__pagination-icon"></i>
-                    <i class="fa-solid fa-angle-left container__pagination-icon"></i>
+                    <button class="btn firstBtn">
+                        <i class="fa-solid fa-angles-left container__pagination-icon"></i>
+                    </button>
+                    <button class="btn prevBtn">
+                        <i class="fa-solid fa-angle-left container__pagination-icon"></i>
+                    </button>
                     <ul class="container__pagination-lists">
-                        <li class="container__pagination-item pagination-item-active">1</li>
-                        <li class="container__pagination-item">2</li>
-                        <li class="container__pagination-item">3</li>
-                        <li class="container__pagination-item">4</li>
-                        <li class="container__pagination-item">5</li>
+
                     </ul>
-                    <i class="fa-solid fa-angle-right container__pagination-icon"></i>
-                    <i class="fa-solid fa-angles-right container__pagination-icon"></i>
-                    <div class="container__pagination-end">
-                        10
-                    </div>
+                    <button class="btn nextBtn">
+                        <i class="fa-solid fa-angle-right container__pagination-icon"></i>
+                    </button>
+                    <button class="btn lastBtn">
+                        <i class="fa-solid fa-angles-right container__pagination-icon"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal">
+        <!-- Modal delete -->
+        <div class="modal__wrap modal__wrap--delete">
+            <div class="modal__header">
+                <img src="./asset/img/warning-img.png" alt="" class="modal__img">
+            </div>
+            <div class="modal__title">Bạn có chắc chắn muốn xóa không?</div>
+            <div class="modal__choose">
+                <button class="btn modal__choose--yes">Yes</button>
+                <button class="btn modal__choose--no">No</button>
+            </div>
+        </div>
+
+        <!-- Modal edit -->
+        <div class="modal__wrap modal__wrap--edit">
+
+            <!-- Edit info -->
+            <div class="modal__edit-inf">
+                <ul class="modal__edit-list">
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">
+                            Tên đăng nhập
+                            <i class="fas fa-asterisk modal__edit-icon"></i>
+                        </p>
+                        <input type="text" class="modal__edit-input" required>
+                    </li>
+
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">
+                            Họ và tên
+                            <i class="fas fa-asterisk modal__edit-icon"></i>
+                        </p>
+                        <input type="text" class="modal__edit-input" required>
+                    </li>
+
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">Email</p>
+                        <input type="email" class="modal__edit-input">
+                    </li>
+
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">Người thêm</p>
+                        <input type="text" class="modal__edit-input">
+                    </li>
+
+                </ul>
+                <ul class="modal__edit-list">
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">Số điện thoại</p>
+                        <input type="number" class="modal__edit-input">
+                    </li>
+
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">Role</p>
+                        <input type="text" class="modal__edit-input">
+                    </li>
+
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">
+                            Nhóm
+                            <i class="fas fa-asterisk modal__edit-icon"></i>
+                        </p>
+                        <input type="text" class="modal__edit-input" required>
+                    </li>
+
+                    <li class="modal__edit-item">
+                        <p class="modal__edit-text">Kiểu người dùng</p>
+                        <div class="modal__choose-radio">
+                            <input type="radio" class="modal__edit-radio">
+                            <label for="" class="modal__edit-label">Thành viên clb</label>
+                            <input type="radio" class="modal__edit-radio">
+                            <label for="" class="modal__edit-label">Người dùng</label>
+                            <input type="radio" class="modal__edit-radio">
+                            <label for="" class="modal__edit-label">khác</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Edit role -->
+            <div class="modal__edit-role">
+
+            </div>
+        </div>
+
+        <!-- Modal eye -->
+    </div>
+
     <script src="./asset/JS/main_admin.js"></script>
 </body>
+
 </html>
