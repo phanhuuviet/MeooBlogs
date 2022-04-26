@@ -11,6 +11,7 @@
     --login-color: #04c35c;
     --login-color-lighter: #2bbd6f;
     --max-width-grid: 1200px;
+    --confirm-color: #187ff5;
 }
 
 * {
@@ -88,6 +89,15 @@ li {
 .appear-flex {
     display: flex !important;
 }
+
+.appear-block {
+    display: block !important;
+}
+
+/* .modal,
+.modal__wrap--edit {
+    display: block;
+} */
 
 /* Animation */
 
