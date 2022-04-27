@@ -144,6 +144,16 @@ const app = {
             Status: 'Online',
 
         },
+        {
+            STT: 10,
+            Name: 'Trần Thị Bích Diệp',
+            UserName: 'BichDiep1309',
+            Role: 'admin',
+            UserType: 'Trưởng nhóm truyền thông',
+            Team: 'truyền thông',
+            Status: 'Online',
+
+        },
     ],
 
     render_member: function () {
@@ -377,4 +387,3 @@ const app = {
 }
 
 app.start();
-
