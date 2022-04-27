@@ -142,7 +142,6 @@ const app = {
             UserType: 'Trưởng nhóm truyền thông',
             Team: 'truyền thông',
             Status: 'Online',
-
         },
         {
             STT: 10,
