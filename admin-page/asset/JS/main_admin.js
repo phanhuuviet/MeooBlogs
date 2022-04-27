@@ -36,7 +36,6 @@ const cancelBtn = $('.modal__edit-cancel');
 // Biến phần sideBar
 const sideBarItems = $$('.sideBar__item');
 
-
 const app = {
     currentIndex: 0,
     isActive: false,
