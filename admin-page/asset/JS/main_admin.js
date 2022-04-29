@@ -159,23 +159,25 @@ const app = {
         const htmls_member = this.Members.map((member, index) => {
             return `
             <tr class="container__table-row">
-                            <td>${member.STT}</td>
-                            <td>${member.Name}</td>
-                            <td>${member.UserName}</td>
-                            <td>${member.Role}</td>
-                            <td>${member.UserType}</td>
-                            <td>${member.Team}</td>
-                            <td>${member.Status}</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
+                <td>${member.STT}</td>
+                <td>${member.Name}</td>
+                <td>${member.UserName}</td>
+                <td>${member.Role}</td>
+                <td>${member.UserType}</td>
+                <td>${member.Team}</td>
+                <td>${member.Status}</td>
+                <td>
+                    <i class="fa-solid fa-eye container__table-icon"></i>
+                    <i class="fa-solid fa-pen container__table-icon"></i>
+                    <i class="fa-solid fa-trash container__table-icon"></i>
+                </td>
+            </tr>
             `;
         });
 
-        memberList.innerHTML = this.arr.join('').concat(htmls_member.join(''));
+        console.log(this.arr.join(''));
+        memberList.innerHTML = this.arr.concat(htmls_member).join('');
+        // memberList.innerHTML = htmls_member.join('');
     },
 
     render: function () {
@@ -297,20 +299,6 @@ const app = {
                 document.getElementById(`filter-${index}`).classList.toggle('appear-block');
             }
         })
-
-        //Lắng nghe hành vi click vào sideBar item
-        sideBarItems.forEach((sideBarItem, index) => {
-            const containerWrapper = containerWrappers[index];
-
-            sideBarItem.onclick = function () {
-                $('.sideBar__item.active').classList.remove('active');
-                $('.container__wrapper.active').classList.remove('active');
-
-                this.classList.add('active');
-                containerWrapper.classList.add('active');
-            }
-        })
-
         
     },
 

@@ -28,6 +28,7 @@ html {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 img {
@@ -99,6 +100,14 @@ li {
     display: block;
 } */
 
+.max-width-40px {
+    max-width: 40px;
+}
+
+.box-shadow {
+    box-shadow: 0 -4px 32px rgb(0 0 0 / 20%);
+}
+
 /* Animation */
 
 @keyframes dropDown {
@@ -124,3 +133,4 @@ li {
         transform: translateY(-30px);
     }
 }
+

@@ -10,6 +10,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="../Home-page/asset/css/base.css" />
+    <link rel="stylesheet" href="./asset/css/base_admin.css">
     <link rel="stylesheet" href="./asset/css/main.css" />
 </head>
 
@@ -21,18 +22,28 @@
             </div>
 
             <ul class="sideBar__lists">
-                <li class="sideBar__item active">
-                    <i class="fas fa-user sideBar__item-icon"></i>
-                    Quản lý người dùng
-                </li>
-                <li class="sideBar__item">
-                    <i class="fas fa-book sideBar__itemsicon"></i>
-                    Quản lý role
-                </li>
-                <li class="sideBar__item">
-                    <i class="fas fa-book sideBar__item-icon"></i>
-                    Quản lý bản tin
-                </li>
+                <a href="./admin.html">
+                    <li class="sideBar__item active">
+                        <i class="fas fa-user sideBar__item-icon"></i>
+                        Quản lý người dùng
+                    </li>
+                </a>
+
+                <a href="./Role_manage.html">
+                    <li class="sideBar__item">
+                        <i class="fas fa-book sideBar__itemsicon"></i>
+                        Quản lý role
+                    </li>
+                </a>
+
+                <a href="./posts-manage.html">
+                    <li class="sideBar__item">
+                        <i class="fas fa-book sideBar__item-icon"></i>
+                        Quản lý bản tin
+                    </li>
+                </a>
+
+
             </ul>
         </div>
 
@@ -121,7 +132,6 @@
                             <i class="fa-solid fa-trash container__table-icon"></i>
                         </td>
                     </tr>
-                    
                     <tr class="container__table-row">
                         <td>2</td>
                         <td>Phan Hữu Việt</td>
@@ -178,8 +188,6 @@
                             <i class="fa-solid fa-trash container__table-icon"></i>
                         </td>
                     </tr>
-                    
-                    
                     <tr class="container__table-row">
                         <td>6</td>
                         <td>Thực Trịnh Văn</td>
@@ -250,7 +258,7 @@
                             <i class="fa-solid fa-trash container__table-icon"></i>
                         </td>
                     </tr>
-                    
+
                 </table>
 
                 <div class="container__pagination">
@@ -274,14 +282,6 @@
                         <i class="fa-solid fa-angles-right container__pagination-icon"></i>
                     </button>
                 </div>
-            </div>
-
-            <div id="container-w2" class="container__wrapper">
-
-            </div>
-
-            <div id="container-w3" class="container__wrapper">
-
             </div>
         </div>
     </div>

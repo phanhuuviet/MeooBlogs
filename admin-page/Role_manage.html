@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin_role</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="../Home-page/asset/css/base.css"/>
+    <link rel="stylesheet" href="./asset/css/base_admin.css">
+    <link rel="stylesheet" href="./asset/css/main_role.css"/>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sideBar">
+            <div class="sideBar__logo">
+                <img src="../Home-page/asset/img/logo-blog.png" alt="" class="sideBar__logo-img" />
+            </div>
+
+            <ul class="sideBar__lists">
+                <a href="./admin.html">
+                    <li class="sideBar__item">
+                        <i class="fas fa-user sideBar__item-icon"></i>
+                        Quản lý người dùng
+                    </li>
+                </a>
+
+                <a href="./Role_manage.html">
+                    <li class="sideBar__item active">
+                        <i class="fas fa-book sideBar__items-icon"></i>
+                        Quản lý role
+                    </li>
+                </a>
+
+                <a href="./posts-manage.html">
+                    <li class="sideBar__item">
+                        <i class="fas fa-book sideBar__item-icon"></i>
+                        Quản lý bản tin
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="container__wrapper active">
+                <div class="container__top">
+                    <div class="container__title">Quản lý Role</div>
+                    <div class="container__refresh-btn">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </div>
+                </div>
+                
+
+                <table class="container__table">
+                    <tr class="container__table-row border-bottom-1px">
+                        <th>STT</th>
+                        <th>Mã code</th>
+                        <th>Chức năng</th>
+                        <th class="container__addMore-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Thêm mới
+                        </th>
+                    </tr>
+
+                    <tr class="container__table-row">
+                        <td>1</td>
+                        <td>ADMIN</td>
+                        <td>Quản trị viên</td>
+                        <td>
+                            <i class="fa-solid fa-pen container__table-icon"></i>
+                            <i class="fa-solid fa-trash container__table-icon"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="container__table-row">
+                        <td>2</td>
+                        <td>USER</td>
+                        <td>Người dùng</td>
+                        <td>
+                            <i class="fa-solid fa-pen container__table-icon"></i>
+                            <i class="fa-solid fa-trash container__table-icon"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="container__table-row">
+                        <td>5</td>
+                        <td>Thực Trịnh Văn</td>
+                        <td>ThucCho'2002</td>
+                        <td>
+                            <i class="fa-solid fa-pen container__table-icon"></i>
+                            <i class="fa-solid fa-trash container__table-icon"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="container__table-row">
+                        <td>5</td>
+                        <td>Thực Trịnh Văn</td>
+                        <td>ThucCho'2002</td>
+                        <td>
+                            <i class="fa-solid fa-pen container__table-icon"></i>
+                            <i class="fa-solid fa-trash container__table-icon"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="container__table-row">
+                        <td>5</td>
+                        <td>Thực Trịnh Văn</td>
+                        <td>ThucCho'2002</td>
+                        <td>
+                            <i class="fa-solid fa-pen container__table-icon"></i>
+                            <i class="fa-solid fa-trash container__table-icon"></i>
+                        </td>
+                    </tr>
+
+                    <tr class="container__table-row">
+                        <td>5</td>
+                        <td>Thực Trịnh Văn</td>
+                        <td>ThucCho'2002</td>
+                        <td>
+                            <i class="fa-solid fa-pen container__table-icon"></i>
+                            <i class="fa-solid fa-trash container__table-icon"></i>
+                        </td>
+                    </tr>
+                </table>
+               
+
+                <div class="container__pagination">
+                    <button class="btn firstBtn">
+                        <i class="fa-solid fa-angles-left container__pagination-icon"></i>
+                    </button>
+
+                    <button class="btn prevBtn">
+                        <i class="fa-solid fa-angle-left container__pagination-icon"></i>
+                    </button>
+
+                    <ul class="container__pagination-lists">
+
+                    </ul>
+
+                    <button class="btn nextBtn">
+                        <i class="fa-solid fa-angle-right container__pagination-icon"></i>
+                    </button>
+
+                    <button class="btn lastBtn">
+                        <i class="fa-solid fa-angles-right container__pagination-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
