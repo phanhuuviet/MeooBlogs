@@ -13,7 +13,7 @@
     border: 2px solid var(--border-color);
     padding: 8px;
     border-radius: 5px;
-    min-width: 75px;
+    min-width: 150px;
     font-weight: 500;
     position: relative;
     user-select: none;
@@ -41,6 +41,7 @@
 
 .container__filter-item i {
     margin-left: 4px;
+    float: right;
 }
 
 .container__filter-item:hover {

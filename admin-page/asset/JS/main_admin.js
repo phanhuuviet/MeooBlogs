@@ -18,9 +18,11 @@ const iconEyes = $$('.container__table-icon:nth-child(1)');
 const iconEdits = $$('.container__table-icon:nth-child(2)');
 const iconDeletes = $$('.container__table-icon:nth-child(3)');
 const addMoreBtn = $('.container__addMore-btn');
+const containerWrappers = $$('.container__wrapper');
+const filterItems = $$('.container__filter-title');
 const filters = $$('.container__filter-item')
 const selections = $$('.container__selection-list');
-const containerWrappers = $$('.container__wrapper');
+const selectionItems = $$('.container__selection-item');
 
 // Biến của phần modal
 const modalTable = $('.modal');
@@ -142,6 +144,7 @@ const app = {
             UserType: 'Trưởng nhóm truyền thông',
             Team: 'truyền thông',
             Status: 'Online',
+
         },
         {
             STT: 10,
@@ -297,8 +300,16 @@ const app = {
         filters.forEach((filter, index) => {
             filter.onclick = function () {
                 document.getElementById(`filter-${index}`).classList.toggle('appear-block');
+                selectionItems.forEach((selectionItem, index1) => {
+                    selectionItem.onclick = function() {
+                        var value = selectionItem.innerHTML;
+                        document.getElementById(`title-${index}`).innerHTML = value;
+                    }
+                })
             }
         })
+
+        // Xử lý khi click vào 1 chức năng lọc
         
     },
 

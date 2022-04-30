@@ -7,12 +7,16 @@
     max-width: 150px;
     color: #000;
     font-size: 1.6rem;
-    text-align: center;
+    text-align: left;
     padding: 8px 16px;
     margin-top: 8px;
     border-radius: 5px;
     position: relative;
     user-select: none;
+}
+
+.container__action span {
+    
 }
 
 .container__action:hover {
@@ -21,6 +25,7 @@
 
 .container__action-icon {
     margin-left: 4px;
+    float: right;
 }
 
 .container__action-list {
