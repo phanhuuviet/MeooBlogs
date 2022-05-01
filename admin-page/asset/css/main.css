@@ -1,3 +1,107 @@
+.main {
+    display: flex;
+    position: relative;
+}
+
+.sideBar {
+    /* width: var(--width-sideBar); */
+    max-width: 200px;
+    height: auto;
+    background-color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.sideBar__lists {
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+.sideBar__item {
+    padding: 14px 8px;
+}
+
+.sideBar__item.active {
+    background-color: var(--primary-color-lighter);
+}
+
+.sideBar__item:hover {
+    background-color: var(--primary-color-lighter);
+    cursor: pointer;
+}
+
+.sidebar__item.active-sideBar {
+    background: #ccc;
+}
+
+.sideBar__item-icon {
+    margin-right: 4px;
+}
+
+.container {
+    box-shadow: 0 0 10px 0 #ccc;
+    margin: 24px 16px;
+    width: 100%;
+}
+
+.container__wrapper {
+    min-height: 768px;
+    padding: 20px 30px;
+    display: none;
+}
+
+.container__wrapper.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container__title {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.container__refresh-btn {
+    font-size: 1.4rem;
+    padding: 4px;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+
+.container__refresh-btn:hover {
+    cursor: pointer;
+}
+
+.container__search {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    will-change: border;
+    transition: border linear 0.3s;
+    margin-top: 10px;
+}
+
+.container__search:focus-within {
+    border: 2px solid #000;
+}
+
+.container__input {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    outline: none;
+    border: none;
+}
+
 .container__filter {
     margin-top: 12px;
 }
@@ -55,6 +159,13 @@
     min-width: 150px;
     text-align: center;
 }
+
+.container__table-member {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 
 .container__table {
     width: 100%;
@@ -347,7 +458,7 @@
 .modal__edit-confirm {
     background-color: var(--confirm-color);
     border: 1px solid var(--confirm-color);
-     margin-left: 20px;
+    margin-left: 20px;
 }
 
 .modal__edit-cancel,
