@@ -105,6 +105,12 @@
     border: none;
 }
 
+.container__table-member {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 /* PAGINATION */
 .container__pagination {
     display: none;
@@ -112,6 +118,7 @@
     align-items: center;
     gap: 30px;
     font-size: 1.4rem;
+    margin-top: auto;
 }
 
 .container__pagination>button {

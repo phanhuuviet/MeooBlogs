@@ -120,6 +120,9 @@
     min-width: 150px;
     font-weight: 500;
     position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
@@ -232,6 +235,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-animation: dropDown linear 0.3s;
     animation: dropDown linear 0.3s;
     display: none;
 }
@@ -440,6 +444,7 @@
 }
 
 .modal__edit-btn:hover {
+    -webkit-filter: brightness(103%);
     filter: brightness(103%);
     cursor: pointer;
 }

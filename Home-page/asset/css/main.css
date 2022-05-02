@@ -2,6 +2,7 @@
     height: var(--header-height);
     border-bottom: 1px solid var(--border-color);
     background-color: var(--white-color);
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     transition: all 0.3s;
@@ -64,6 +65,26 @@
     width: 100%;
     background-color: rgb(246, 248, 252);
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.header__search-input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    color: #979cae;
+}
+
+.header__search-input::-moz-placeholder {
+    font-size: 1.2rem;
+    color: #979cae;
+}
+
+.header__search-input:-ms-input-placeholder {
+    font-size: 1.2rem;
+    color: #979cae;
+}
+
+.header__search-input::-ms-input-placeholder {
+    font-size: 1.2rem;
+    color: #979cae;
 }
 
 .header__search-input::placeholder {
@@ -141,7 +162,6 @@
     -moz-user-select: none !important;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
-    -khtml-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;

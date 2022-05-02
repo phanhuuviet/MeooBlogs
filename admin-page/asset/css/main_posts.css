@@ -12,12 +12,13 @@
     margin-top: 8px;
     border-radius: 5px;
     position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
-.container__action span {
-    
-}
+.container__action span {}
 
 .container__action:hover {
     cursor: pointer;
