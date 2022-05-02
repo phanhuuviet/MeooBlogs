@@ -97,17 +97,16 @@ li {
     display: block !important;
 }
 
-/* .modal,
-.modal__wrap--edit {
-    display: block;
-} */
-
 .max-width-40px {
     max-width: 40px;
 }
 
 .box-shadow {
     box-shadow: 0 -4px 32px rgb(0 0 0 / 20%);
+}
+
+.margin-TB-8-px {
+    margin: 8px 0;
 }
 
 /* Animation */

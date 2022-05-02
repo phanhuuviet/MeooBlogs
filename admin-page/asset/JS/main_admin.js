@@ -249,7 +249,7 @@ const app = {
             const paginationNode = e.target.closest('.container__pagination-item:not(.active)');
             app.currentPage = e.target.dataset.index;
 
-            app.render_member();
+            // app.render_member();
 
             if (paginationNode) {
                 app.currentIndex = Number(paginationNode.dataset.index);
@@ -428,7 +428,7 @@ const app = {
     //Ham de bat dau khoi dong chuong trinh
     start: function () {
         // render cac trang trong list ra html
-        this.render_member();
+        // this.render_member();
         if (this.Members.length > 10) {
             this.render();
             paginationBar.classList.add('appear-flex');
