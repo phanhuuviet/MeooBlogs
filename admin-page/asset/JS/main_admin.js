@@ -207,9 +207,7 @@ const app = {
             `;
         });
 
-        console.log(this.arr.join(''));
-        memberList.innerHTML = this.arr.concat(htmls_member).join('');
-        // memberList.innerHTML = htmls_member.join('');
+        memberList.innerHTML = this.arr.concat(htmls_member).join('');  
     },
 
     render: function () {
