@@ -41,7 +41,6 @@
 }
 
 /* CONTAINER */
-
 .container {
     box-shadow: 0 0 10px 0 #ccc;
     margin: 24px 16px;
@@ -161,4 +160,11 @@
     background-color: var(--primary-color);
     border-radius: 50%;
     color: #fff;
+}
+
+/* MODAL */
+.modal__wrap {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    position: relative;
 }
