@@ -29,6 +29,7 @@ const modalTable = $('.modal');
 const modalWraps = $$('.modal__wrap');
 const modalTableDelete = $('.modal__wrap--delete');
 const modalTableEdit = $('.modal__wrap--edit');
+const modalTableView = $('.modal__wrap--view');
 const chooseYes = $('.modal__choose--yes');
 const chooseNo = $('.modal__choose--no');
 const closeBtn = $('.modal__close');
@@ -177,7 +178,7 @@ const app = {
             Team: 'truyền thông',
             Status: 'Online',
 
-        }, 
+        },
     ],
 
     render_member: function () {
@@ -207,7 +208,7 @@ const app = {
             `;
         });
 
-        memberList.innerHTML = this.arr.concat(htmls_member).join('');  
+        memberList.innerHTML = this.arr.concat(htmls_member).join('');
     },
 
     render: function () {
@@ -244,7 +245,7 @@ const app = {
         //Lang nghe hanh vi click vao pagination list
         paginationList.onclick = function (e) {
 
-            if(!e.target.classList.contains('container__pagination-item')) return;
+            if (!e.target.classList.contains('container__pagination-item')) return;
 
             const paginationNode = e.target.closest('.container__pagination-item:not(.active)');
             app.currentPage = e.target.dataset.index;
@@ -294,6 +295,7 @@ const app = {
         modalTable.onclick = function () {
             app.hideDeleteTable();
             app.hideEditTable();
+            app.hideViewTable();
         }
 
         // Lang nghe hanh vi click vao modal-wrap 
@@ -335,7 +337,7 @@ const app = {
             filter.onclick = function () {
                 document.getElementById(`filter-${index}`).classList.toggle('appear-block');
                 selectionItems.forEach((selectionItem, index1) => {
-                    selectionItem.onclick = function() {
+                    selectionItem.onclick = function () {
                         var value = selectionItem.innerHTML;
                         document.getElementById(`title-${index}`).innerHTML = value;
                     }
@@ -343,8 +345,13 @@ const app = {
             }
         })
 
-        // Xử lý khi click vào 1 chức năng lọc
-        
+        // Xử lý khi click vào icon eye
+        iconEyes.forEach((iconEye, index) => {
+            iconEye.onclick = function () {
+                app.appearModal();
+                app.appearEyeTable();
+            }
+        })
     },
 
     activeSideBar: function () {
@@ -380,7 +387,7 @@ const app = {
         this.currentIndex += 3;
         this.currentPage += 3;
 
-        if(this.currentIndex >= this.paginations.length) {
+        if (this.currentIndex >= this.paginations.length) {
             this.currentIndex = this.paginations.length - 1;
             this.currentPage = this.paginations.length - 1;
         }
@@ -393,7 +400,7 @@ const app = {
         this.currentIndex -= 3;
         this.currentPage -= 3;
 
-        if(this.currentIndex < 0) {
+        if (this.currentIndex < 0) {
             this.currentIndex = 0;
             this.currentPage = 0;
         }
@@ -413,6 +420,11 @@ const app = {
         modalTableEdit.classList.remove('appear-block');
     },
 
+    hideViewTable: function() {
+        modalTable.classList.remove('appear-flex');
+        modalTableView.classList.remove('appear-block');
+    },
+
     appearModal: function () {
         modalTable.classList.add('appear-flex');
     },
@@ -423,6 +435,10 @@ const app = {
 
     appearEditTable: function () {
         modalTableEdit.classList.add('appear-block');
+    },
+
+    appearEyeTable: function () {
+        modalTableView.classList.add('appear-block');
     },
 
     //Ham de bat dau khoi dong chuong trinh

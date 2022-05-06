@@ -462,13 +462,14 @@
 
 /* Modal view */
 .modal {
-    display: flex
+    display: none;
 }
 
 .modal__wrap--view {
     padding: 20px 40px;
     max-width: 1200px;
     width: 1000px;
+    display: none;
 }
 
 .modal__view-background {
@@ -536,14 +537,18 @@
 
 .modal__container-list {
     padding: 10px 15px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .modal__container-item {
-    margin-top: 20px;
+    margin-top: 24px;
     display: flex;
     align-items: center;
     height: 100px;
 }
+
 
 .modal__container-info {
     font-size: 1.3rem;
@@ -555,6 +560,8 @@
 
 .modal__container-img {
     width: 100px;
+    border-radius: 5px;
+    margin-right: 20px;
 }
 
 .modal__container-title {
