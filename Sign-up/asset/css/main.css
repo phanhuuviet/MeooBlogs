@@ -43,7 +43,7 @@ body {
 .form__sign-up {
     z-index: 2;
     /* background-color: transparent; */
-    max-width: 500px;
+    width: 430px;
 }
 
 .form__subtitle {
@@ -58,27 +58,50 @@ body {
     margin-bottom: 50px;
 }
 
-.form__input-title {
+.form-group {
+    display: flex;
+    flex-direction: column;
     font-size: 1.4rem;
-    margin-bottom: 4px;
-    display: block;
-    color: var(--text-color);
+    margin-bottom: 16px;
 }
 
-.form__input-content {
-    padding: 10px;
-    width: 100%;
-    outline: none;
-    border: 1px solid var(--border-color);
-    transition: border ease 0.3s;
-    line-height: 1.6rem;
-    margin-bottom: 14px;
+.form-label,
+.form-message {
+    text-align: left;
+}
+
+.form-label {
+    font-weight: 700;
+    padding-bottom: 6px;
+    line-height: 1.8rem;
     font-size: 1.4rem;
+}
+
+.form-control {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
     border-radius: 3px;
+    outline: none;
+    font-size: 1.4rem;
 }
 
-.form__input-content:focus {
-    border: 1px solid #000;
+.form-control:hover {
+    border-color: var(--primary-color);
+}
+
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
+}
+
+.form-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
 }
 
 .form__related-to-password {
@@ -96,6 +119,14 @@ body {
 
 .form__remember-checkbox {
     margin-right: 4px;
+}
+
+.form__forgot-pw {
+    color: #1d8acb;
+}
+
+.form__forgot-pw:hover {
+    text-decoration: underline;
 }
 
 .form__login-now {
@@ -146,13 +177,35 @@ body {
     margin-right: 4px;
 }
 
+.form-submit {
+    outline: none;
+    background-color: var(--primary-color);
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    filter: brightness(102.5%);
+}
+
 .footer_link {
     font-size: 1.4rem;
     z-index: 2;
 }
 
-.footer_link a:hover {
-    cursor: pointer;
+.footer_link a {
+    color: #1d8acb;
+
 }
 
-/* test git */
+.footer_link a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
