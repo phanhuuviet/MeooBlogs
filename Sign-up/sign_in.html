@@ -16,8 +16,8 @@
 
 <body>
     <div class="main_background">
+        <img src="./asset/img/sign-up-background.png" alt="" class="header-logo">
         <div class="main">
-            <!-- <img src="./asset/img/post.jpg" alt="" class="header-logo"> -->
             <form id="form-1" class="form__sign-up">
                 <h3 class="form__subtitle">Welcome Back</h3>
                 <h1 class="form__title">Đăng nhập tài khoản của bạn</h1>
@@ -71,7 +71,10 @@
         rules: [
             Validator.isEmail('#email'),
             Validator.isRequired('#password')
-        ]
+        ],
+        onSubmit: function (data) {
+            console.log(data);
+        }
     });
 </script>
 
