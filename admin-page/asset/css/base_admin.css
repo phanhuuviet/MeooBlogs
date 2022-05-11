@@ -47,10 +47,11 @@
     width: 100%;
 }
 
-.container__wrapper {
+/* .container__wrapper {
     padding: 20px 30px;
+    min-height: 772px;
     display: none;
-}
+} */
 
 .container__wrapper.active {
     display: block;

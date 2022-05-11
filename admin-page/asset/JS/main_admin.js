@@ -208,7 +208,8 @@ const app = {
             `;
         });
 
-        memberList.innerHTML = this.arr.concat(htmls_member).join('');
+        memberList.innerHTML = htmls_member.join('');
+        // memberList.innerHTML = htmls_member.join('');
     },
 
     render: function () {
@@ -259,7 +260,7 @@ const app = {
         }
 
         //Lang nghe hanh vi click vao detele btn
-        iconDeletes.forEach((iconDelete, index) => {
+        iconDeletes.forEach((iconDelete) => {
             iconDelete.onclick = function () {
                 app.appearModal();
                 app.appearDeleteTable();
@@ -267,14 +268,14 @@ const app = {
         })
 
         //Lang nghe hanh vi click vao eye btn
-        iconEyes.forEach((iconEye, index) => {
+        iconEyes.forEach((iconEye) => {
             iconEye.onclick = function () {
                 app.appearModal();
             }
         })
 
         //Lang nghe hanh vi click vao edit btn
-        iconEdits.forEach((iconEdit, index) => {
+        iconEdits.forEach((iconEdit) => {
             iconEdit.onclick = function () {
                 app.appearModal();
                 app.appearEditTable();

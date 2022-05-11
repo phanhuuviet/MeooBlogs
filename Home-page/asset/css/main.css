@@ -8,6 +8,7 @@
     transition: all 0.3s;
     box-shadow: 0 10px 15px -3px rgba(var(--blue-500), 0.05),
         0 4px 6px -2px rgba(var(--blue-500), 0.025) !important;
+    z-index: 999;
 }
 
 .header__top-section {
@@ -35,7 +36,7 @@
     margin-top: 20px;
     margin-bottom: 12px;
     opacity: 0;
-    transition: width 0.4s ease-in-out, opacity 0.5s ease-in-out;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .header__search-bar i {
@@ -221,17 +222,9 @@
 }
 
 /* ----CONTAINER---- */
-.grid {
+/* .grid {
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 300px);
-}
-
-.container__post--large {
-    grid-row: span 2;
-    grid-column: span 2;
-}
+} */
 
 .container__post {
     padding: 0 12px;
@@ -249,8 +242,8 @@
 }
 
 .container__post-user-avt {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 100rem;
 }
 
@@ -260,16 +253,26 @@
     line-height: 2rem;
 }
 
+.display-paragraph-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+}
+
 .container__post-desc {
     font-size: 1.4rem;
     color: #bababa;
-    margin-top: 8px;
+    margin-top: 15px;
     font-weight: 500;
     line-height: 2rem;
+
 }
 
 .container__post-userAndTime {
-    margin-top: 16px;
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -305,10 +308,59 @@
     font-weight: 700;
 }
 
+/* slider */
+
+.slick-next {
+    right: -5px !important;
+    z-index: 10;
+}
+
+.slick-prev {
+    left: -5px !important;
+    z-index: 10;
+}
+
+.slick-next,
+.slick-prev {
+    top: 53% !important;
+}
+
+.slick-next::before,
+.slick-prev::before {
+    color: rgba(0, 0, 0, 0.3) !important;
+    font-size: 30px !important;
+}
+
+/* trending */
+.container__trending-post {
+    margin-bottom: 60px;
+}
+
+/* Popular */
+.container__popular-post {
+    margin-bottom: 130px;
+}
+
+.popular--title {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+
 /* CONTAINER - POST LARGE */
-.container__post-title--large {
-    margin-top: 20px;
-    line-height: 2.4rem;
+.slider .container__post--large {
+    display: flex !important;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.trending--title {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
 
 .container__post-content--large {
@@ -316,25 +368,47 @@
     justify-content: center;
 }
 
+.container__post-title--large {
+    margin-top: 20px;
+    font-size: 3rem;
+    line-height: 3.2rem;
+}
+
+.container__post-desc--large {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+}
+
 .container__post-img--large {
+    object-fit: fill;
     min-height: 285px;
     height: 385px;
+    width: 400px;
+    margin-right: 40px;
 }
 
 /* CONTAINER - POST MEDIUM */
+.container__post--medium__wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
 .container__post--medium {
-    grid-column: 3 / -1;
-    display: flex;
+    display: grid;
 }
 
 .container__post-img--medium {
-    width: 280px;
-    height: 210px;
+    width: 100%;
+    max-height: 240px;
+    object-fit: fill;
 }
 
 .container__post-title--medium {
     font-size: 2rem;
     line-height: 2.4rem;
+    margin-top: 25px;
 }
 
 .container__post-content--medium {
@@ -343,12 +417,38 @@
 }
 
 /* CONTAINER - POST SMALL */
+.type-of-content h1 {
+    font-size: 3.6rem;
+    margin-bottom: 50px;
+}
+
+
+.container__post--small__wrapper {
+    display: grid;
+    grid-gap: 45px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 70px;
+}
+
+.container__post--small {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.container__post--small-title {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
 .container__post-img--small {
-    width: 150px;
-    height: 95px;
+    width: 60%;
+    height: 115px;
+    object-fit: fill;
 }
 
 .container__post-content--small {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }

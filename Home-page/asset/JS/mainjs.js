@@ -87,4 +87,15 @@ const app = function () {
     followedList.addEventListener("click", openLists);
 }
 
+$(document).ready(function() {
+    $('.slider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 8000,
+    });
+});
+
 app();

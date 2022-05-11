@@ -37,8 +37,15 @@
     margin-right: 4px;
 }
 
+.container {
+    box-shadow: 0 0 10px 0 #ccc;
+    margin: 24px 16px;
+    width: 100%;
+    height: calc(100vh - 48px);
+}
+
 .container__wrapper {
-    min-height: 768px;
+    min-height: calc(100vh - 48px);
     padding: 20px 30px;
     display: none;
 }
@@ -577,7 +584,4 @@
     font-weight: 500;
 }
 
-.modal__container-desc {
-
-}
-
+.modal__container-desc {}
