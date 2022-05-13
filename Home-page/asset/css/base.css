@@ -89,6 +89,30 @@ li {
     filter: brightness(95%);
 }
 
+.btn--animation {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 1;
+    isolation: isolate;
+}
+
+.btn--animation::before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: width 0.25s ease-in;
+}
+
+.btn--animation:hover::before {
+    width: 100%;
+}
+
 .appear-flex {
     display: flex !important;
 }

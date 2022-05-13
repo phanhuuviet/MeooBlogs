@@ -40,14 +40,8 @@
 .container {
     box-shadow: 0 0 10px 0 #ccc;
     margin: 24px 16px;
-    width: 100%;
-    height: calc(100vh - 48px);
-}
+    /* height: calc(100vh - 48px); */
 
-.container__wrapper {
-    min-height: calc(100vh - 48px);
-    padding: 20px 30px;
-    display: none;
 }
 
 .container__wrapper.active {
@@ -177,6 +171,14 @@
     font-size: 1.4rem;
     color: var(--text-color);
     border-spacing: 12px 30px;
+}
+
+.role_select {
+    padding: 2px;
+}
+
+.role_select:hover {
+    cursor: pointer;
 }
 
 .container__table-row th {
@@ -584,5 +586,3 @@
     font-size: 1.6rem;
     font-weight: 500;
 }
-
-.modal__container-desc {}

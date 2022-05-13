@@ -1,6 +1,5 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-document.q
 
 // Biến của pagination
 const numberOfPaginations = $$('.container__pagination-item');
@@ -368,7 +367,7 @@ const app = {
         }
 
         this.render();
-        this.render_member();
+        // this.render_member();
     },
 
     prevPage: function () {
@@ -381,7 +380,7 @@ const app = {
         }
 
         this.render();
-        this.render_member();
+        // this.render_member();
     },
 
     skip4Page: function () {
@@ -394,7 +393,7 @@ const app = {
         }
 
         this.render();
-        this.render_member();
+        // this.render_member();
     },
 
     prev4Page: function () {
@@ -407,7 +406,7 @@ const app = {
         }
 
         this.render();
-        this.render_member();
+        // this.render_member();
     },
 
 

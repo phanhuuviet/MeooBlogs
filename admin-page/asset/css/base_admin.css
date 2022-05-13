@@ -1,9 +1,11 @@
 /* ======= CSS ADMIN ======= */
 
 /* SIDE BAR */
+
 .main {
     display: flex;
     position: relative;
+    height: 100%;
 }
 
 .sideBar {
@@ -45,16 +47,16 @@
     box-shadow: 0 0 10px 0 #ccc;
     margin: 24px 16px;
     width: 100%;
+    min-height: calc(100vh - 48px);
 }
-
-/* .container__wrapper {
-    padding: 20px 30px;
-    min-height: 772px;
-    display: none;
-} */
 
 .container__wrapper.active {
     display: block;
+}
+
+.container__wrapper {
+    padding: 20px 30px;
+    min-height: 100%;
 }
 
 .container__top {

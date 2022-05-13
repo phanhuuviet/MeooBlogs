@@ -42,8 +42,6 @@
                         Quản lý bản tin
                     </li>
                 </a>
-
-
             </ul>
         </div>
 
@@ -62,27 +60,17 @@
                 <div class="container__filter">
                     <ul class="container__filter-lists">
                         <li class="container__filter-item">
-                            <span id="title-0" class="container__filter-title">Phân quyền</span>
+                            <span id="title-0" class="container__filter-title">Trạng thái</span>
                             <i class="fa-solid fa-angle-down"></i>
                             <ul id="filter-0" class="container__selection-list">
-                                <li class="container__selection-item">Super admin</li>
-                                <li class="container__selection-item">Admin</li>
-                                <li class="container__selection-item">Dân thường</li>
-                                <li class="container__selection-item">Only read</li>
-                            </ul>
-                        </li>
-                        <li class="container__filter-item">
-                            <span id="title-1" class="container__filter-title">Trạng thái</span>
-                            <i class="fa-solid fa-angle-down"></i>
-                            <ul id="filter-1" class="container__selection-list">
                                 <li class="container__selection-item">Online</li>
                                 <li class="container__selection-item">Offline</li>
                             </ul>
                         </li>
                         <li class="container__filter-item">
-                            <span id="title-2" class="container__filter-title">Kiểu người dùng</span>
+                            <span id="title-1" class="container__filter-title">Kiểu người dùng</span>
                             <i class="fa-solid fa-angle-down"></i>
-                            <ul id="filter-2" class="container__selection-list">
+                            <ul id="filter-1" class="container__selection-list">
                                 <li class="container__selection-item">Trưởng nhóm truyền thông</li>
                                 <li class="container__selection-item">Trưởng nhóm</li>
                                 <li class="container__selection-item">Dân thường</li>
@@ -90,203 +78,247 @@
                             </ul>
                         </li>
                         <li class="container__filter-item">
-                            <span id="title-3" class="container__filter-title">Nhóm</span>
+                            <span id="title-2" class="container__filter-title">Nhóm</span>
                             <i class="fa-solid fa-angle-down"></i>
-                            <ul id="filter-3" class="container__selection-list">
+                            <ul id="filter-2" class="container__selection-list">
                                 <li class="container__selection-item">Dev</li>
                                 <li class="container__selection-item">Backend</li>
                                 <li class="container__selection-item">Truyền thông</li>
                                 <li class="container__selection-item">Only read</li>
                             </ul>
                         </li>
-                        <li id="filter-4" class="container__filter-item">Lọc kết quả</li>
+                        <li id="filter-3" class="container__filter-item">Lọc kết quả</li>
                     </ul>
                 </div>
-
                 <div class="container__table-member">
-
                     <table class="container__table">
                         <tr class="container__table-row border-bottom-1px">
                             <th>STT</th>
                             <th>Họ và Tên</th>
-                        <th>Tên đăng nhập</th>
-                        <th>Phân quyền</th>
-                        <th>Kiểu người dùng</th>
-                        <th>Nhóm</th>
-                        <th>Trạng thái</th>
-                        <th class="container__addMore-btn">
-                            <i class="fa-solid fa-plus"></i>
-                            Thêm mới
-                        </th>
-                    </tr>
+                            <th>Tên đăng nhập</th>
+                            <th>Kiểu người dùng</th>
+                            <th>Nhóm</th>
+                            <th>Trạng thái</th>
+                            <th class="container__addMore-btn">
+                                <i class="fa-solid fa-plus"></i>
+                                Thêm mới
+                            </th>
+                        </tr>
 
-                    <tr class="container__table-row">
-                        <td>1</td>
-                        <td>Trần Thị Bích Diệp</td>
-                        <td>BichDiep1309</td>
-                        <td>admin</td>
-                        <td>Trưởng nhóm truyền thông</td>
-                        <td>Truyền thông</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>2</td>
-                        <td>Phan Hữu Việt</td>
-                        <td>PhanViet2002</td>
-                        <td>Super Super admin</td>
-                        <td>Trưởng nhóm</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>3</td>
-                        <td>Vũ Minh Hòa</td>
-                        <td>MinhHoa2002</td>
-                        <td>Dân thường</td>
-                        <td>only reading</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>4</td>
-                        <td>Trần Thị Diễm</td>
-                        <td>TranDiem2002</td>
-                        <td>Dân thường</td>
-                        <td>only reading</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>5</td>
-                        <td>Thực Trịnh Văn</td>
-                        <td>ThucCho'2002</td>
-                        <td>Dân thường</td>
-                        <td>Thg tạch thể truất</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>6</td>
-                        <td>Thực Trịnh Văn</td>
-                        <td>ThucCho'2002</td>
-                        <td>Dân thường</td>
-                        <td>Thg tạch thể truất</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>7</td>
-                        <td>Thực Trịnh Văn</td>
-                        <td>ThucCho'2002</td>
-                        <td>Dân thường</td>
-                        <td>Thg tạch thể truất</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>8</td>
-                        <td>Thực Trịnh Văn</td>
-                        <td>ThucCho'2002</td>
-                        <td>Dân thường</td>
-                        <td>Thg tạch thể truất</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>9</td>
-                        <td>Thực Trịnh Văn</td>
-                        <td>ThucCho'2002</td>
-                        <td>Dân thường</td>
-                        <td>Thg tạch thể truất</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-                    <tr class="container__table-row">
-                        <td>10</td>
-                        <td>Thực Trịnh Văn</td>
-                        <td>ThucCho'2002</td>
-                        <td>Dân thường</td>
-                        <td>Thg tạch thể truất</td>
-                        <td>dev</td>
-                        <td>Hoạt động</td>
-                        <td>
-                            <i class="fa-solid fa-eye container__table-icon"></i>
-                            <i class="fa-solid fa-pen container__table-icon"></i>
-                            <i class="fa-solid fa-trash container__table-icon"></i>
-                        </td>
-                    </tr>
-
-                </table>
+                        <tr class="container__table-row">
+                            <td>1</td>
+                            <td>Trần Thị Bích Diệp</td>
+                            <td>BichDiep1309</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>2</td>
+                            <td>Phan Hữu Việt</td>
+                            <td>PhanViet2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>3</td>
+                            <td>Vũ Minh Hòa</td>
+                            <td>MinhHoa2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>4</td>
+                            <td>Trần Thị Diễm</td>
+                            <td>TranDiem2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>5</td>
+                            <td>Thực Trịnh Văn</td>
+                            <td>ThucCho'2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>6</td>
+                            <td>Thực Trịnh Văn</td>
+                            <td>ThucCho'2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>7</td>
+                            <td>Thực Trịnh Văn</td>
+                            <td>ThucCho'2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>8</td>
+                            <td>Thực Trịnh Văn</td>
+                            <td>ThucCho'2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>9</td>
+                            <td>Thực Trịnh Văn</td>
+                            <td>ThucCho'2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                        <tr class="container__table-row">
+                            <td>10</td>
+                            <td>Thực Trịnh Văn</td>
+                            <td>ThucCho'2002</td>
+                            <td>
+                                <select name="roles" id="" class="role_select">
+                                    <option value="role">Trưởng nhóm truyền thông</option>
+                                    <option value="role">Trưởng nhóm</option>
+                                    <option value="role">Trưởng nhóm truyền </option>
+                                </select>
+                            </td>
+                            <td>dev</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <i class="fa-solid fa-eye container__table-icon"></i>
+                                <i class="fa-solid fa-pen container__table-icon"></i>
+                                <i class="fa-solid fa-trash container__table-icon"></i>
+                            </td>
+                        </tr>
+                    </table>
 
                     <div class="container__pagination">
                         <button class="btn firstBtn">
                             <i class="fa-solid fa-angles-left container__pagination-icon"></i>
                         </button>
-
+    
                         <button class="btn prevBtn">
                             <i class="fa-solid fa-angle-left container__pagination-icon"></i>
                         </button>
-
+    
                         <ul class="container__pagination-lists">
-
+    
                         </ul>
-
+    
                         <button class="btn nextBtn">
                             <i class="fa-solid fa-angle-right container__pagination-icon"></i>
                         </button>
-
+    
                         <button class="btn lastBtn">
                             <i class="fa-solid fa-angles-right container__pagination-icon"></i>
                         </button>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -466,7 +498,8 @@
                                 <li class="modal__container-title">
                                     4 Bài học sau khi xem series phim tài liệu Việt Nam
                                 </li>
-                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà muốn
+                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                    muốn
                                     akdjfalksdjflakdsfaakldsfj</li>
                                 <li class="modal__container-time">
                                     <span>6</span>
@@ -503,7 +536,8 @@
                                 <li class="modal__container-title">
                                     4 Bài học sau khi xem series phim tài liệu Việt Nam
                                 </li>
-                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà muốn
+                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                    muốn
                                     akdjfalksdjflakdsfaakldsfj</li>
                                 <li class="modal__container-time">
                                     <span>6</span>
@@ -520,7 +554,8 @@
                                 <li class="modal__container-title">
                                     4 Bài học sau khi xem series phim tài liệu Việt Nam
                                 </li>
-                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà muốn
+                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                    muốn
                                     akdjfalksdjflakdsfaakldsfj</li>
                                 <li class="modal__container-time">
                                     <span>6</span>

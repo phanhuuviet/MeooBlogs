@@ -20,20 +20,9 @@ body {
     bottom: 0px;
     opacity: 0.1;
     z-index: 1;
+    -webkit-user-drag: none;
+    user-select: none;
 }
-
-/* .main_background::before {
-    content: '';
-    background-image: url(./asset/img/tesst.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.15;
-    z-index: 1;
-} */
 
 .main {
     width: 72vw;
