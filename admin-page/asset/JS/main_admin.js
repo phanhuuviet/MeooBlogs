@@ -1,3 +1,11 @@
+// ========= NOTE =========
+
+// this.render_member() đang lỗi phần này nên t comment hết các
+// chức năng có câu lệnh này r, khi nào fix thì ctrl F để tìm
+
+
+
+// Begin
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
