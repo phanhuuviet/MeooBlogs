@@ -1,3 +1,6 @@
+const topicSlide = document.querySelector(".header__navbar-topic-list");
+const topicSlidePrevBtn = document.querySelector(".header__topic-list-prev-button");
+const topicSlideNextBtn = document.querySelector(".header__topic-list-next-button");
 const followedList = document.querySelector(".followed-list");
 const listNavbar = document.querySelector(".header__navbar-followed-list");
 const header = document.querySelector(".header");
@@ -13,6 +16,8 @@ const headerCloseSearchButton = document.querySelector(
 const app = function () {
     let flag = false;
     let lastScrollValue = window.scrollY;
+    const topicSlideWidth = topicSlide.clientWidth;
+
     const openLists = function () {
         flag = !flag;
         if (flag) {
@@ -80,22 +85,67 @@ const app = function () {
             }, 300);
         });
     }
+
+    // disable button till transition end
+    const disableBtn = (currentBtn) => {
+        currentBtn.disabled = true;
+        setTimeout(() => {
+            currentBtn.disabled = false;
+        }, 350);
+    }
+
+    const moveToRight = (e) => {
+        disableBtn(topicSlideNextBtn);
+        const style = window.getComputedStyle(topicSlide);
+        const matrix = new WebKitCSSMatrix(style.transform);
+        const currentTranslate = -matrix.m41;
+        let moveToRight;
+        if((currentTranslate + 800) >= topicSlideWidth)
+        {
+            moveToRight = moveToRight - 30;
+            topicSlide.style.transform = `translateX(-${moveToRight}px)`;
+            console.log(moveToRight);
+            return;
+        } else {
+            moveToRight = currentTranslate + 85;
+            topicSlide.style.transform = `translateX(-${moveToRight}px)`;
+        }
+    }
     
+    const moveToLeft = (e) => {
+        disableBtn(topicSlidePrevBtn);
+        const style = window.getComputedStyle(topicSlide);
+        const matrix = new WebKitCSSMatrix(style.transform);
+        const currentTranslate = matrix.m41;
+        if(currentTranslate >= 0)
+        {
+            return;
+        } else {
+            const moveToLeft = currentTranslate + 85;
+            topicSlide.style.transform = `translateX(${moveToLeft}px)`;
+        }
+    }
+
+    // Slider (using slick slider libary)
+    $(document).ready(function() {
+        $('.slider').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 8000,
+        });
+    });
+    
+    // topicSlide.addEventListener("")
+    topicSlideNextBtn.addEventListener("click", moveToRight);
+    topicSlidePrevBtn.addEventListener("click", moveToLeft);
     headerCloseSearchButton.addEventListener("click", closeSearchBar);
     headerSearchIcon.addEventListener("click", openSearchBar);
     window.addEventListener("scroll", customStickyNav);
     followedList.addEventListener("click", openLists);
 }
 
-$(document).ready(function() {
-    $('.slider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 8000,
-    });
-});
 
 app();

@@ -44,6 +44,11 @@ li {
     list-style: none;
 }
 
+.text-strong {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .gridFlex {
     width: 100%;
     max-width: var(--max-width-grid);
@@ -131,6 +136,24 @@ li {
 
 .margin-TB-8-px {
     margin: 8px 0;
+}
+
+.display-paragraph-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+}
+
+.display-paragraph-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
 }
 
 /* Animation */
