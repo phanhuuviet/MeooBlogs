@@ -44,8 +44,8 @@ body {
 
 .content-read>#img_1 {
     display: block;
-    width: 80%;
-    margin: 30px auto 30px auto;
+    width: 100%;
+    margin: 30px auto 5px auto;
     border-radius: 3px;
 }
 
@@ -53,6 +53,13 @@ body {
     margin: 20px 0;
     font-size: 24px;
     color: rgb(33, 30, 30);
+}
+
+.content-read>#note_img {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: gray;
 }
 
 .content-read>p {
@@ -74,8 +81,8 @@ body {
 
 .note>a {
     color: rgb(7, 7, 7);
-    padding-left: 15px;
-    font-size: 20px;
+    padding-left: 10px;
+    font-size: 18px;
 }
 
 .like {
