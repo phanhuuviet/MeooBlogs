@@ -31,7 +31,7 @@ body {
 .content-readpage_left>h1 {
     text-align: center;
     margin-top: 10px;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 .content-readpage_left>h5 {
@@ -39,7 +39,7 @@ body {
     color: gray;
     margin: 10px 0 25px 0;
     text-align: center;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 .content-read>#img_1 {
