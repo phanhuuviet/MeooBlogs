@@ -1,6 +1,7 @@
 const topicSlide = document.querySelector(".header__navbar-topic-list");
 const topicSlidePrevBtn = document.querySelector(".header__topic-list-prev-button");
 const topicSlideNextBtn = document.querySelector(".header__topic-list-next-button");
+const topicItems = document.querySelectorAll(".header__topic-list-item");
 const followedList = document.querySelector(".followed-list");
 const listNavbar = document.querySelector(".header__navbar-followed-list");
 const header = document.querySelector(".header");
@@ -17,7 +18,9 @@ const app = function () {
     let flag = false;
     let lastScrollValue = window.scrollY;
     const topicSlideWidth = topicSlide.clientWidth;
-
+    const topicItemsLength = topicItems.length - 1;
+    const firstTopicWidth = topicItems[0].clientWidth
+    const lastTopicWidth = topicItems[topicItemsLength].clientWidth
     const openLists = function () {
         flag = !flag;
         if (flag) {
@@ -53,14 +56,14 @@ const app = function () {
                         headerItem.style.opacity = "1";
                         headerItem.style.width = "100%";
                     }, 100);
-                }, 200);
+                }, 150);
                 return;
             }
     
             headerItem.style.opacity = "0";
             setTimeout(() => {
                 headerItem.style.display = "none";
-            }, 200);
+            }, 150);
         });
     }
     
@@ -73,7 +76,7 @@ const app = function () {
                 setTimeout(() => {
                     headerItem.parentNode.style.flexDirection = "";
                     headerItem.style.display = "none";
-                }, 300);
+                }, 150);
                 return;
             }
     
@@ -81,8 +84,8 @@ const app = function () {
                 headerItem.style.display = "flex";
                 setTimeout(() => {
                     headerItem.style.opacity = "1";
-                }, 301);
-            }, 300);
+                }, 151);
+            }, 150);
         });
     }
 
@@ -95,33 +98,36 @@ const app = function () {
     }
 
     const moveToRight = (e) => {
-        disableBtn(topicSlideNextBtn);
         const style = window.getComputedStyle(topicSlide);
         const matrix = new WebKitCSSMatrix(style.transform);
         const currentTranslate = -matrix.m41;
-        let moveToRight;
+        let moveToRight = 0;
+        disableBtn(topicSlideNextBtn);
         if((currentTranslate + 800) >= topicSlideWidth)
         {
-            moveToRight = moveToRight - 30;
-            topicSlide.style.transform = `translateX(-${moveToRight}px)`;
-            console.log(moveToRight);
+            // moveToRight = currentTranslate + lastTopicWidth;
+            // topicSlide.style.transform = `translateX(-${moveToRight}px)`;
             return;
-        } else {
-            moveToRight = currentTranslate + 85;
+        } 
+        else {
+            moveToRight = currentTranslate + 100;
             topicSlide.style.transform = `translateX(-${moveToRight}px)`;
         }
     }
     
     const moveToLeft = (e) => {
-        disableBtn(topicSlidePrevBtn);
         const style = window.getComputedStyle(topicSlide);
         const matrix = new WebKitCSSMatrix(style.transform);
         const currentTranslate = matrix.m41;
-        if(currentTranslate >= 0)
+        let moveToLeft = 0;
+        disableBtn(topicSlidePrevBtn);
+        if(currentTranslate >= -firstTopicWidth)
         {
+            // moveToLeft = currentTranslate + firstTopicWidth;
+            // topicSlide.style.transform = `translateX(-${moveToLeft}px)`;
             return;
         } else {
-            const moveToLeft = currentTranslate + 85;
+            moveToLeft = currentTranslate + 100;
             topicSlide.style.transform = `translateX(${moveToLeft}px)`;
         }
     }
