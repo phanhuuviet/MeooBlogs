@@ -157,7 +157,7 @@
             </div>
         </header>
         <div class="container">
-            <div class="container__user">
+            <div class="container__user shadow__personal-page-25">
                 <div class="container__user-head">
                     <img src="./asset/img/avt.jpg" alt="" class="user__avt">
                     <span class="user__name">Phan Viet</span>
@@ -174,12 +174,12 @@
                     </div>
                 </div>
             </div>
-            <div class="container__content">
-                <div class="content__header">
-                    <span class="active">Bài viết</span>
-                    <span>Bài viết đã lưu</span>
+            <div class="container__content appear-block">
+                <div class="content__header shadow__personal-page-25">
+                    <span class="content__header-choose active">Bài viết</span>
+                    <span class="content__header-choose">Bài viết đã lưu</span>
                 </div>
-                <ul class="content__table">
+                <ul class="content__table shadow__personal-page-25">
                     <li class="content__table-item">
                         <a href="" class="table__img-link">
                             <img src="./asset/img/post.jpg" alt="">
@@ -288,8 +288,40 @@
                             <div class="table__time">6 giờ trước</div>
                         </div>
                     </li>
-                    
                 </ul>
+                <button class="btn content__footer shadow__personal-page-25">
+                    Tải thêm
+                </button>
+            </div>
+            <div class="modal__edit">
+                <img src="./asset/img/avt.jpg" alt="" class="avt modal__avt">
+                <div class="modal__form">
+                    <span>Email</span>
+                    <div class="modal__input">PhanViet@gmail.com</div>
+                </div>
+                <div class="modal__form">
+                    <span>Tên hiển thị</span>
+                    <div class="modal__input">VietDepTraiBoDoi</div>
+                </div>
+                <button class="btn modal__btn shadow__personal-page-50">Đổi mật khẩu</button>
+                <div class="modal__change-psw">
+                    <div class="modal__form">
+                        <label for="">Mật khẩu cũ</label>
+                        <input type="password" class="modal__input" placeholder="********">
+                    </div>
+                    <div class="modal__form">
+                        <label for="">Tên hiển thị</label>
+                        <input type="password" class="modal__input" placeholder="********">
+                    </div>
+                    <div class="modal__form">
+                        <label for="">Tên hiển thị</label>
+                        <input type="password" class="modal__input" placeholder="********">
+                    </div>
+                </div>
+                <div class="modal__save">
+                    <button class="btn modal__save-btn">Lưu</button>
+                    <button class="btn modal__cancel-btn shadow__personal-page-25">Hủy bỏ</button>
+                </div>
             </div>
         </div>
         <footer class="footer">
