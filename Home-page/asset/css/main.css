@@ -144,6 +144,10 @@
     color: var(--white-color);
 }
 
+.header_signIn-btn a {
+    color: #fff;
+}
+
 .header__bottom-section {
     display: flex;
     align-items: center;
@@ -192,6 +196,11 @@
     display: flex;
     white-space: nowrap;
     transition: transform 0.3s ease-in-out;
+}
+
+.header__navbar-topic-list.active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
 }
 
 .header__navbar-topic-list a {

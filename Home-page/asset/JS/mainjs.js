@@ -24,13 +24,19 @@ const containerContent = document.querySelector('.container__content');
 const userEdit = document.querySelector('.user__edit');
 
 const app = function () {
+    // ======= Variable =======
     let flag = false;
+    let isDown = false;
     let lastScrollValue = window.scrollY;
     let isOpen = false;
+    let startX;
+    let scrollLeft;
     const topicSlideWidth = topicSlide.clientWidth;
     const topicItemsLength = topicItems.length - 1;
-    const firstTopicWidth = topicItems[0].clientWidth
-    const lastTopicWidth = topicItems[topicItemsLength].clientWidth
+    const firstTopicWidth = topicItems[0].clientWidth;
+    const lastTopicWidth = topicItems[topicItemsLength].clientWidth;
+
+    // ======= Functions =======
     const openLists = function () {
         flag = !flag;
         if (flag) {
@@ -181,7 +187,36 @@ const app = function () {
     const hideContainerContent = function () {
         modalEdit.classList.add('appear-block');
         containerContent.classList.remove('appear-block');
-    }   
+    };
+
+    // test click and drag slider in header
+    const mouseDownFunc = function (e) {
+        isDown = true;
+        topicSlide.classList.add('active');
+        startX = e.pageX - topicSlide.offsetLeft;
+        scrollLeft = topicSlide.scrollLeft;
+        console.log(startX);
+    };
+
+    const mouseUpFunc = function () {
+        isDown = false;
+        topicSlide.classList.remove('active');
+    };
+
+    const mouseLeaveFunc = function () {
+        isDown = false;
+        topicSlide.classList.remove('active');
+
+    };
+    
+    const mouseMoveFunc = function (e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - topicSlide.offsetLeft;
+        const walk = x - startX;
+        console.log(walk);
+        topicSlide.scrollLeft = scrollLeft - walk;
+    };
 
 
     // topicSlide.addEventListener("")
@@ -191,6 +226,8 @@ const app = function () {
     headerSearchIcon.addEventListener("click", openSearchBar);
     window.addEventListener("scroll", customStickyNav);
     followedList.addEventListener("click", openLists);
+
+    // Event in personal page
     chooseContents.forEach(chooseContent => {
         chooseContent.onclick = function () {
             document.querySelector('.content__header span.active').classList.remove('active');
@@ -200,6 +237,10 @@ const app = function () {
     modalBtn.addEventListener('click', styleChangePsw);
     modalCancelBtn.addEventListener('click', hideModalEdit);
     userEdit.addEventListener('click', hideContainerContent);
+    topicSlide.addEventListener('mousedown', mouseDownFunc);
+    topicSlide.addEventListener('mouseup', mouseUpFunc);
+    topicSlide.addEventListener('mouseleave', mouseLeaveFunc);
+    topicSlide.addEventListener('mousemove', mouseMoveFunc);
 }
 
 
