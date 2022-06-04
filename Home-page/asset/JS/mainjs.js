@@ -22,6 +22,7 @@ const modalCancelBtn = document.querySelector('.modal__cancel-btn');
 const modalEdit = document.querySelector('.modal__edit');
 const containerContent = document.querySelector('.container__content');
 const userEdit = document.querySelector('.user__edit');
+const scrollHeader = document.querySelector('.header__navbar-topic-list-warrper');
 
 const app = function () {
     // ======= Variable =======
@@ -194,8 +195,8 @@ const app = function () {
         isDown = true;
         topicSlide.classList.add('active');
         startX = e.pageX - topicSlide.offsetLeft;
-        scrollLeft = topicSlide.scrollLeft;
-        console.log(startX);
+        scrollLeft = scrollHeader.scrollLeft;
+        console.log(scrollLeft);
     };
 
     const mouseUpFunc = function () {
@@ -214,8 +215,7 @@ const app = function () {
         e.preventDefault();
         const x = e.pageX - topicSlide.offsetLeft;
         const walk = x - startX;
-        console.log(walk);
-        topicSlide.scrollLeft = scrollLeft - walk;
+        scrollHeader.scrollLeft = scrollLeft - walk;
     };
 
 
