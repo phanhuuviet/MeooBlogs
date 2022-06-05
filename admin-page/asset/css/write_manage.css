@@ -1,0 +1,108 @@
+        body {
+            margin-top: 20px;
+            font-size: 20px;
+            display: flex;
+        }
+        
+        .writer {
+            text-align: center;
+        }
+        
+        #avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+        }
+        
+        #name>a {
+            text-decoration: none;
+            color: gray;
+        }
+        
+        #name>a:hover {
+            color: rgb(152, 209, 220);
+        }
+        
+        .content-right {
+            border: 2px solid rgb(229, 234, 240);
+            border-radius: 6px;
+            margin-left: 2%;
+            margin-right: 2%;
+            padding: 3% 10%;
+        }
+        
+        .title {
+            font-size: 28px;
+            color: rgb(152, 209, 220);
+            margin-bottom: 20px;
+        }
+        
+        .theme>a {
+            text-decoration: none;
+            color: rgb(113, 116, 113);
+            font-style: italic;
+        }
+        
+        .theme>a:hover {
+            color: rgb(152, 209, 220);
+        }
+        
+        .content-right>h1 {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .content-right>h5 {
+            font-style: italic;
+            color: gray;
+            margin-top: 5px;
+            text-align: center;
+        }
+        
+        .content-read>#img_1 {
+            display: block;
+            width: 100%;
+            margin: 30px auto 5px auto;
+            border-radius: 3px;
+        }
+        
+        .content-read>#note_img {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: gray;
+        }
+        
+        .content-read>p {
+            text-indent: 40px;
+        }
+        
+        #heading_paragraph {
+            font-size: 24px;
+            padding-top: 20px;
+        }
+        
+        #date {
+            padding-left: 85%;
+        }
+        
+        .agree {
+            margin-top: 30px;
+            padding-left: 83%;
+        }
+        
+        .agree>button {
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            border-radius: 20px;
+            border-color: rgb(163, 211, 225);
+            background-color: #fff;
+            color: rgb(152, 209, 220);
+        }
+        
+        .agree>button:active {
+            cursor: pointer;
+            transition: 8s;
+            color: rgb(224, 218, 218);
+        }
