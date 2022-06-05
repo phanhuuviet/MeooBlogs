@@ -171,3 +171,23 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
         }
     }
 }
+
+// Code JS về giao diện
+const btnSocialNetworks = document.querySelectorAll('.form__conection-socialNetwork');
+const inputRadio = document.querySelector('.form__remember-checkbox');
+
+btnSocialNetworks.forEach((btnSocialNetwork) => {
+    btnSocialNetwork.onclick = function () {
+        this.disabled = true;
+    }
+});
+
+    if (inputRadio.checked) {
+        inputRadio.checked = false;
+    }
+    else {
+        inputRadio.checked = true;
+
+    }
+
+
