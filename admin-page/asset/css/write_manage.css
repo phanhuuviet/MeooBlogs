@@ -4,6 +4,45 @@
             display: flex;
         }
         
+        .sideBar {
+            width: 200px;
+            height: auto;
+            background-color: #afd5de;
+            margin-bottom: 25px;
+        }
+        
+        .sideBar__logo-img {
+            width: 200px;
+        }
+        
+        .sideBar__lists {
+            font-size: 16px;
+            padding-inline-start: 0px;
+        }
+        
+        .sideBar__lists>a {
+            list-style-type: none;
+            text-decoration: none;
+        }
+        
+        .sideBar__item {
+            padding: 14px 8px;
+            color: #fff;
+        }
+        
+        .sideBar__item.active {
+            background-color: #8bb1bc;
+        }
+        
+        .sideBar__item:hover {
+            background-color: #8bb1bc;
+            cursor: pointer;
+        }
+        
+        .sidebar__item.active-sideBar {
+            background: #ccc;
+        }
+        
         .writer {
             text-align: center;
         }
