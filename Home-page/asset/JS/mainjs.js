@@ -23,6 +23,8 @@ const modalEdit = document.querySelector('.modal__edit');
 const containerContent = document.querySelector('.container__content');
 const userEdit = document.querySelector('.user__edit');
 const scrollHeader = document.querySelector('.header__navbar-topic-list-warrper');
+const headerLinks = document.querySelectorAll('.header__topic-list-item a');
+const userTable = document.querySelector('.container__user');
 
 const app = function () {
     // ======= Variable =======
@@ -32,6 +34,7 @@ const app = function () {
     let isOpen = false;
     let startX;
     let scrollLeft;
+    let distance;
     const topicSlideWidth = topicSlide.clientWidth;
     const topicItemsLength = topicItems.length - 1;
     const firstTopicWidth = topicItems[0].clientWidth;
@@ -54,7 +57,7 @@ const app = function () {
     const customStickyNav = function () {
         if (lastScrollValue < window.scrollY) {
             header.style.top = `-${headerTopSection.clientHeight}px`;
-
+            userTable.style.top = `${headerTopSection.clientHeight}px`;
         } else {
             header.style.top = 0;
         }
@@ -218,6 +221,23 @@ const app = function () {
         scrollHeader.scrollLeft = scrollLeft - walk;
     };
 
+    const waitASec = function (e) {
+        const hrefLink = this.href;
+        const textcontentLink = this.textContent;
+
+        this.onmousemove = function (e) {
+            this.href = "#";
+            this.onmouseup = function (e) {
+                this.parentNode.innerHTML = `<a href="${hrefLink}">${textcontentLink}</a>`;
+            }
+        }
+
+        this.onmouseleave = function () {
+            this.parentNode.innerHTML = `<a href="${hrefLink}">${textcontentLink}</a>`;
+        }
+        
+        
+    };
 
     // topicSlide.addEventListener("")
     topicSlideNextBtn.addEventListener("click", moveToRight);
@@ -241,6 +261,9 @@ const app = function () {
     topicSlide.addEventListener('mouseup', mouseUpFunc);
     topicSlide.addEventListener('mouseleave', mouseLeaveFunc);
     topicSlide.addEventListener('mousemove', mouseMoveFunc);
+    headerLinks.forEach(headerLink => {
+        headerLink.addEventListener('mousedown', waitASec);
+    });
 }
 
 
