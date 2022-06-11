@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" 
+        rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/CSS/base.css">
+    <link rel="stylesheet" href="./assets/CSS/main.css">
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="header__content">
+                <div class="header__blog-avatar">
+                    <a href="#"> 
+                        <img src="./assets/img/logo-blog.png" alt=""> 
+                    </a>
+                </div>
+                <div class="header__blog-icon">
+                    <div class="header__icon__notificartion">
+                        <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                        </a>
+                    </div>
+                    <div class="header__icon__user-avatar">
+                        <a href="#"> 
+                            <img src="./assets/img/avt.jpg" alt=""> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="container">
+            <div class="writing-blog__container">
+                <div class="writing-blog__items writing_blog__title" contentEditable="true" placeholder="Tiêu đề bài viết..."></div>
+                <div class="writing-blog__items writing-blog__editor-wrapper">
+                    <div class="writing-blog__editor editor" placeholder="Nội dung bài viết"></div>
+                </div>
+                <div class="writing-blog__submit-btn">
+                    <a href="#">
+                        <button>
+                            SUBMIT
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./assets/ckeditor5-build-balloon/ckeditor.js"></script>
+<script src="./assets/Javascript/main.js"></script>
+</html>
