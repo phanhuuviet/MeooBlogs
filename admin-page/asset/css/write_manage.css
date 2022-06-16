@@ -76,6 +76,21 @@
             margin-bottom: 20px;
         }
         
+        .return {
+            margin-left: 98%;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgb(115, 196, 212);
+            border-radius: 20px;
+        }
+        
+        .return_icon {
+            font-size: 18px;
+            padding-left: 12px;
+            padding-top: 11px;
+            color: rgb(115, 196, 212);
+        }
+        
         .theme>a {
             text-decoration: none;
             color: rgb(113, 116, 113);
@@ -135,13 +150,14 @@
             height: 50px;
             font-size: 16px;
             border-radius: 20px;
-            border-color: rgb(163, 211, 225);
             background-color: #fff;
             color: rgb(152, 209, 220);
+            border: 1px solid rgb(152, 209, 220);
         }
         
         .agree>button:active {
             cursor: pointer;
-            transition: 8s;
-            color: rgb(224, 218, 218);
+            background-color: #fff;
+            color: rgb(220, 215, 215);
+            border-color: #fff;
         }
