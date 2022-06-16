@@ -1,0 +1,137 @@
+.header {
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--white-color);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(var(--blue-500), 0.05),
+        0 4px 6px -2px rgba(var(--blue-500), 0.025) !important;
+    z-index: 999;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: var(--max-width-grid);
+    margin: 0 auto;
+}
+
+.header__blog-avatar a img {
+    width: 100px;
+    height: 45px;
+}
+
+.header__blog-icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__icon__notificartion {
+    transition: background-color ease-in-out 0.3s;
+    border-radius: 2px;
+}
+
+.header__icon__notificartion i {
+    font-size: 1.8rem;
+    color: rgb(192, 192, 192);
+    padding: 10px;
+}
+
+.header__icon__notificartion:hover {
+    background-color: rgba(var(--blue-500), 0.15);
+}
+
+.header__icon__user-avatar {
+    margin-left: 15px;
+}
+
+.header__icon__user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+
+.writing-blog__container {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.writing_blog__title {
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    overflow: hidden;
+    word-break: break-word;
+    cursor: text;
+}
+
+.writing_blog__title:focus {
+    outline: none;
+}
+
+.writing_blog__title:empty:before {
+    content: attr(placeholder);
+    color: rgb(192, 192, 192);
+}
+
+.writing-blog__items {
+    margin: 10px 0;
+}
+
+.writing-blog__editor-wrapper {
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.writing-blog__editor {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    padding-left: 15px !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.ck.ck-editor__editable>.ck-placeholder::before {
+    color: rgb(162, 162, 162);
+}
+
+.writing-blog__submit-btn {
+    position: fixed;
+    bottom: 0;
+    left: 45%;
+    margin-bottom: 50px;
+}
+
+.writing-blog__submit-btn a {
+    display: block;
+    height: 100%;
+}
+
+.writing-blog__submit-btn button {
+    padding: 10px;
+    letter-spacing: 4px;
+    font-size: 1.8rem;
+    color: var(--white-color);
+    width: 160px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(51, 152, 212);
+    cursor: pointer;
+}
+
+.writing-blog__submit-btn button:hover {
+    opacity: 0.9;
+}
