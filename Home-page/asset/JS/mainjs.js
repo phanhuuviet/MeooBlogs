@@ -8,7 +8,7 @@ const header = document.querySelector(".header");
 const headerTopSection = document.querySelector(".header__top-section");
 const headerItems = document.querySelectorAll(".header__top-item");
 const headerSearchIcon = document.querySelector(
-    ".header__top-item .header__search-icon"
+    ".header__search-icon"
 );
 const headerCloseSearchButton = document.querySelector(
     ".header__search-bar .header__search-bar__back-button"
@@ -34,12 +34,11 @@ const app = function () {
     let isOpen = false;
     let startX;
     let scrollLeft;
-    let distance;
     const topicSlideWidth = topicSlide.clientWidth;
-    const topicItemsLength = topicItems.length - 1;
     const firstTopicWidth = topicItems[0].clientWidth;
-    const lastTopicWidth = topicItems[topicItemsLength].clientWidth;
-
+    // const topicItemsLength = topicItems.length - 1;
+    // const lastTopicWidth = topicItems[topicItemsLength].clientWidth;
+    
     // ======= Functions =======
     const openLists = function () {
         flag = !flag;
@@ -57,7 +56,7 @@ const app = function () {
     const customStickyNav = function () {
         if (lastScrollValue < window.scrollY) {
             header.style.top = `-${headerTopSection.clientHeight}px`;
-            userTable.style.top = `${headerTopSection.clientHeight}px`;
+            // userTable.style.top = `-${headerTopSection.clientHeight}px`;
         } else {
             header.style.top = 0;
         }
@@ -65,7 +64,8 @@ const app = function () {
         lastScrollValue = window.scrollY;
     }
 
-    const openSearchBar = function () {
+    const openSearchBar = function (e) {
+        console.log(e.target);
         headerItems.forEach((headerItem) => {
             if (headerItem.classList.contains("header__search-bar")) {
                 setTimeout(() => {
@@ -224,19 +224,15 @@ const app = function () {
     const waitASec = function (e) {
         const hrefLink = this.href;
         const textcontentLink = this.textContent;
-
         this.onmousemove = function (e) {
             this.href = "#";
             this.onmouseup = function (e) {
                 this.parentNode.innerHTML = `<a href="${hrefLink}">${textcontentLink}</a>`;
             }
         }
-
         this.onmouseleave = function () {
             this.parentNode.innerHTML = `<a href="${hrefLink}">${textcontentLink}</a>`;
         }
-        
-        
     };
 
     // topicSlide.addEventListener("")

@@ -103,7 +103,7 @@
 
 /* user signed In header interface */
 .header__user-signed-In {
-    display: none;
+    display: flex;
     order: 2;
     align-items: center;
 }
@@ -129,7 +129,7 @@
 }
 
 .user-signed-In__icon-items a:hover {
-    background-color: rgb(217, 229, 240);
+    background-color: rgb(255, 223, 250);
 }
 
 .user-signed-In__user-avatar-wrapper {
@@ -151,7 +151,7 @@
 .user-signed-In__writing-blog-wrapper button {
     border: none;
     border-radius: 5px;
-    width: 80px;
+    width: 100px;
     color: white;
     background-color: #2e89bf;
     padding: 10px;
@@ -168,34 +168,45 @@
     font-size: 1.6rem;
 }
 
+.user-signed-In__search-icon.header__search-icon {
+    display: block;
+    overflow: unset;
+    margin-right: 5px;
+}
+
+.user-signed-In__search-icon.header__search-icon i {
+    padding: 0;
+}
+
 /* sign in header interface */
 .header__sign-In {
     order: 2;
     display: flex;
 }
 
+.container__user {}
 
 .header__search-icon {
-    font-size: 2.2rem;
+    font-size: 2rem;
     border: none;
     border-radius: 5px;
-    color: #dfdee5;
+    color: rgb(171, 199, 222);
     background-color: #fff;
     margin-right: 12px;
     display: flex;
     align-items: center;
     cursor: pointer;
     overflow: hidden;
-    transition: background-color ease-in 0.3s;
 }
 
 .header__search-icon i {
+    transition: background-color ease-in 0.3s;
     padding: 10px;
     margin: 0;
 }
 
 .header__search-icon:hover i {
-    background-color: rgb(255, 239, 253);
+    background-color: rgb(255, 223, 250);
 }
 
 .header_signIn-btn:hover {
