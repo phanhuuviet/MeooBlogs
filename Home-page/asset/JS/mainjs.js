@@ -13,6 +13,7 @@ const headerSearchIcon = document.querySelector(
 const headerCloseSearchButton = document.querySelector(
     ".header__search-bar .header__search-bar__back-button"
 );
+const arrowToTop = document.querySelector(".goToHeader");
 
 // ==== Personal Page Variable ====
 const chooseContents = document.querySelectorAll('.content__header-choose');
@@ -56,7 +57,7 @@ const app = function () {
     const customStickyNav = function () {
         if (lastScrollValue < window.scrollY) {
             header.style.top = `-${headerTopSection.clientHeight}px`;
-            // userTable.style.top = `-${headerTopSection.clientHeight}px`;
+            // userTable.style.top = `${headerTopSection.clientHeight}px`;
         } else {
             header.style.top = 0;
         }
@@ -235,6 +236,14 @@ const app = function () {
         }
     };
 
+    const goToTop = function () {
+        window.scrollTo({
+            top: 0, 
+            left: 0, 
+            behavior: "smooth",
+        })
+    };
+
     // topicSlide.addEventListener("")
     topicSlideNextBtn.addEventListener("click", moveToRight);
     topicSlidePrevBtn.addEventListener("click", moveToLeft);
@@ -242,6 +251,7 @@ const app = function () {
     headerSearchIcon.addEventListener("click", openSearchBar);
     window.addEventListener("scroll", customStickyNav);
     followedList.addEventListener("click", openLists);
+    arrowToTop.addEventListener("click", goToTop);
 
     // Event in personal page
     chooseContents.forEach(chooseContent => {
@@ -250,16 +260,16 @@ const app = function () {
             chooseContent.classList.add('active');
         }
     });
-    modalBtn.addEventListener('click', styleChangePsw);
-    modalCancelBtn.addEventListener('click', hideModalEdit);
-    userEdit.addEventListener('click', hideContainerContent);
-    topicSlide.addEventListener('mousedown', mouseDownFunc);
-    topicSlide.addEventListener('mouseup', mouseUpFunc);
-    topicSlide.addEventListener('mouseleave', mouseLeaveFunc);
-    topicSlide.addEventListener('mousemove', mouseMoveFunc);
-    headerLinks.forEach(headerLink => {
-        headerLink.addEventListener('mousedown', waitASec);
-    });
+    // modalBtn.addEventListener('click', styleChangePsw);
+    // modalCancelBtn.addEventListener('click', hideModalEdit);
+    // userEdit.addEventListener('click', hideContainerContent);
+    // topicSlide.addEventListener('mousedown', mouseDownFunc);
+    // topicSlide.addEventListener('mouseup', mouseUpFunc);
+    // topicSlide.addEventListener('mouseleave', mouseLeaveFunc);
+    // topicSlide.addEventListener('mousemove', mouseMoveFunc);
+    // headerLinks.forEach(headerLink => {
+    //     headerLink.addEventListener('mousedown', waitASec);
+    // });
 }
 
 
