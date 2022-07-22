@@ -200,7 +200,6 @@ const app = function () {
         topicSlide.classList.add('active');
         startX = e.pageX - topicSlide.offsetLeft;
         scrollLeft = scrollHeader.scrollLeft;
-        console.log(scrollLeft);
     };
 
     const mouseUpFunc = function () {
@@ -252,7 +251,14 @@ const app = function () {
     window.addEventListener("scroll", customStickyNav);
     followedList.addEventListener("click", openLists);
     arrowToTop.addEventListener("click", goToTop);
-
+    topicSlide.addEventListener('mousedown', mouseDownFunc);
+    topicSlide.addEventListener('mouseup', mouseUpFunc);
+    topicSlide.addEventListener('mouseleave', mouseLeaveFunc);
+    topicSlide.addEventListener('mousemove', mouseMoveFunc);
+    headerLinks.forEach(headerLink => {
+        headerLink.addEventListener('mousedown', waitASec);
+    });
+    
     // Event in personal page
     chooseContents.forEach(chooseContent => {
         chooseContent.onclick = function () {
@@ -260,16 +266,11 @@ const app = function () {
             chooseContent.classList.add('active');
         }
     });
-    // modalBtn.addEventListener('click', styleChangePsw);
-    // modalCancelBtn.addEventListener('click', hideModalEdit);
-    // userEdit.addEventListener('click', hideContainerContent);
-    // topicSlide.addEventListener('mousedown', mouseDownFunc);
-    // topicSlide.addEventListener('mouseup', mouseUpFunc);
-    // topicSlide.addEventListener('mouseleave', mouseLeaveFunc);
-    // topicSlide.addEventListener('mousemove', mouseMoveFunc);
-    // headerLinks.forEach(headerLink => {
-    //     headerLink.addEventListener('mousedown', waitASec);
-    // });
+    
+    modalBtn.addEventListener('click', styleChangePsw);
+    modalCancelBtn.addEventListener('click', hideModalEdit);
+    userEdit.addEventListener('click', hideContainerContent);
+    
 }
 
 

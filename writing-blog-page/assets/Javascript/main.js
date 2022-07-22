@@ -5,12 +5,14 @@ const confirmSubmitBtn = document.querySelector(".modal__submit-btn");
 const submitBtn = document.querySelector(".writing-blog__submit-btn");
 const modal = document.querySelector(".modal");
 
+var result = document.querySelector('blog-post-genre modal__selected-choice');
+
 const application = () => {
     let currentLyVisible = false;
 
     dropDownList.forEach((modalSelect) => {
         //optionBox and selectBox is the same;
-        
+
         modalSelect.addEventListener("click", (e) => {
             if (!e.target.classList.contains("modal__selected-choice")) {
                 return;
@@ -19,31 +21,30 @@ const application = () => {
             const selectBox = modalSelect.firstElementChild;
             const optionBox = modalSelect.firstElementChild.nextElementSibling.firstElementChild;
 
-            if( optionBox.classList.contains("active") )
-            {
+            if (optionBox.classList.contains("active")) {
                 optionBox.classList.remove('active');
             } else {
                 let currentlyActive = document.querySelector(".select-box__options.active")
 
-                if ( currentlyActive ) {
+                if (currentlyActive) {
                     currentlyActive.classList.remove('active');
                 }
 
                 modalSelect.querySelector(".select-box__options").classList.toggle("active");
-            }   
-            
+            }
+
             modalSelect.querySelectorAll(".select-box__option")
-            .forEach((option) => {
-                option.addEventListener("click", () => {
-                    console.log(selectBox);
-                    selectBox.innerHTML = option.querySelector("label").innerHTML;
-                    optionBox.classList.remove('active');
+                .forEach((option) => {
+                    option.addEventListener("click", () => {
+                        selectBox.innerHTML = option.querySelector("label").innerHTML;
+                        // result = selectBox.textContent;
+                        optionBox.classList.remove('active');
+                    });
                 });
-            });
         });
 
         const makeModalHidden = () => {
-                modal.classList.remove('visible');
+            modal.classList.remove('visible');
         }
 
         const makeModalVisible = () => {
@@ -52,9 +53,8 @@ const application = () => {
 
         returnBtn.addEventListener('click', makeModalHidden);
         submitBtn.addEventListener('click', makeModalVisible);
-        // confirmSubmitBtn.addEventListener('click', submitForm);
     });
-        
+
     BalloonEditor.create(document.querySelector(".editor"), {
         placeholder: "Nội dung bài viết",
     })
@@ -64,6 +64,12 @@ const application = () => {
         .catch((error) => {
             console.error(error);
         });
-};
+
+    };
+    function submitForm() {
+        console.log(result);
+    };
+
+    confirmSubmitBtn.addEventListener('click', submitForm);
 
 application();
