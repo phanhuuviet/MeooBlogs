@@ -5,10 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
@@ -20,21 +17,98 @@
         <div class="main">
             <header class="header">
                 <div class="header__content">
-                    <div class="header__blog-avatar">
+                    <div class="header__blog-logo">
                         <a href="#">
                             <img src="./assets/img/logo-blog.png" alt="" />
                         </a>
                     </div>
                     <div class="header__blog-icon">
-                        <div class="header__icon__notificartion">
-                            <a href="#">
-                                <i class="fa-solid fa-bell"></i>
-                            </a>
+                        <div class="header__notification-bell">
+                            <div class="header__icon__notificartion">
+                                <a href="#">
+                                    <i class="fa-solid fa-bell"></i>
+                                </a>
+                            </div>
+                            <div class="header__modal__notification">
+                                <div class="modal__notification__tittle">
+                                    <h2>Thông báo</h2>
+                                </div>
+                                <div class="modal__notification__board">
+                                    <div class="notification__board__news-avatar"> 
+                                        <div class="board__item-avatar">
+                                            <img src="./assets/img/avt.jpg
+                                            " alt="">                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="notification__board__news-content">
+                                        <div class="board__item__content">
+                                            Spiderum Team vừa đăng một bài viết mới: "Chào Đón Website "Người Trong Muôn Nghề” Chính Thức Ra Mắt"
+                                        </div>
+                                        
+                                        <div class="board__item__posted-time">
+                                            20 tháng 7
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
                         </div>
-                        <div class="header__icon__user-avatar">
-                            <a href="#">
-                                <img src="./assets/img/avt.jpg" alt="" />
-                            </a>
+                        <div class="header__user-navbar">
+                            <div class="header__icon__user-navbar">
+                                <a href="#">
+                                    <img src="./assets/img/avt.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="header__modal__user-navbar">
+                                <div class="modal__user-navbar__information-wrapper">
+                                    <div class="modal__user-navbar__avatar">
+                                            <img src="./assets/img/avt.jpg
+                                            " alt="">
+                                    </div>
+                                    <div class="modal__user-navbar__information">
+                                        <div class="user-navbar__display-name">
+                                            Hòa Vũ
+                                        </div>
+                                        <div class="user-navbar__user-name">
+                                            @lamzii
+                                        </div>
+                                        <a href="#">
+                                            Xem trang cá nhân
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="modal__user-navbar__feature">
+                                    <ul class="user-navbar__items">
+                                        <a href="#">
+                                            <li class="user-navbar__item">
+                                                <i class="fa-solid fa-pen"></i>
+                                                Bài viết của tôi
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="user-navbar__item">
+                                                <i class="fa-solid fa-bookmark"></i>
+                                                Đã lưu
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="user-navbar__item">
+                                                <i class="fa-solid fa-gear"></i>Tùy chỉnh tài khoản
+                                            </li>
+                                        </ul>
+                                        </a>
+                                </div>
+                                <div class="modal__user-navbar__sign-off">
+                                    <button class="user-navbar__sign-off__btn">
+                                        <span>
+                                            <i class="fa-solid fa-arrow-right-from-bracket"></i> 
+                                            Đăng xuất
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,7 +134,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="modal">
+                <div class="modal__writing-page-submition-form">
                     <div class="modal__items">
                         <div class="modal__item modal__blog-post-description">
                             <p class="modal__text-label">
@@ -73,16 +147,7 @@
                                 rows="10"
                             ></textarea>
                         </div>
-                        <div class="modal__item modal__blog-post-tag">
-                            <p class="modal__text-label">
-                                Thêm thẻ tag <em>(Tối đa 5 thẻ)</em>
-                            </p>
-                            <div class="modal__input-box">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" />
-                            </div>
-                        </div>
-                        <div class="modal__item modal__blog-post-series">
+                        <!-- <div class="modal__item modal__blog-post-series">
                             <p
                                 class="modal__blog-post-series modal__text-label"
                             >
@@ -138,7 +203,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="modal__item modal__blog-post-genre">
                             <p class="blog-post-genre modal__text-label">
                                 Chọn danh mục
@@ -230,6 +295,6 @@
             </div>
         </div>
     </body>
-    <script src="./assets/ckeditor5-build-balloon/ckeditor.js"></script>
-    <script src="./assets/Javascript/main.js"></script>
+    <script type="module" src="./assets/ckeditor5-build-balloon/ckeditor.js"></script>
+    <script type="module" src="./assets/Javascript/main.js"></script>
 </html>
