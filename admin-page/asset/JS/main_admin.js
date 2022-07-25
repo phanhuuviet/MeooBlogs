@@ -2,7 +2,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-// Biến của pagination
+// pagination variables
 const numberOfPaginations = $$('.container__pagination-item');
 const paginationList = $('.container__pagination-lists');
 const firstBtn = $('.firstBtn');
@@ -11,7 +11,7 @@ const nextBtn = $('.nextBtn');
 const lastBtn = $('.lastBtn');
 const paginationBar = $('.container__pagination');
 
-// Biến của giao diện
+// Interface variales
 const memberList = $('.container__table');
 const memberContainer = $('.container__table-list');
 const iconEyes = $$('.container__table-icon:nth-child(1)');
@@ -25,7 +25,7 @@ const selections = $$('.container__selection-list');
 const selectionItems = $$('.container__selection-item');
 const refreshBtn = $('.container__refresh-btn');
 
-// Biến của phần modal
+// modal variables
 const modalTables = $$('.modal');
 const modalWraps = $$('.modal__wrap');
 const modalTableDeletes = $$('.modal__wrap--delete');
@@ -38,12 +38,15 @@ const closeBtns = $$('.modal__close');
 const confirmBtns = $$('.modal__edit-confirm');
 const cancelBtns = $$('.modal__edit-cancel');
 
-// Biến phần sideBar
+
+
+// const inputEditRoles = $$('.modal__role-input');
+
+// sideBar variables
 const sideBarItems = $$('.sideBar__item');
 
-// Biến test
-const tests = document.querySelectorAll(".modal__wrap--view");
-const testModals = document.querySelectorAll(".modal");
+// test variables
+
 
 const app = {
     currentIndex: 0,
@@ -341,7 +344,8 @@ const app = {
         //hoặc cancel trong modal edit
         confirmBtns.forEach(confirmBtn => {
             confirmBtn.onclick = function () {
-                app.hideAllTableEdits();
+                app.sendAllInputChecked(this);
+                app.sendStatusBlock(this);
             }
         })
 
@@ -449,12 +453,6 @@ const app = {
     appearDeleteTable: function (value) {
         // Tìm table delete của người được bấm vào
         value.querySelector('.modal__wrap--delete').classList.add('appear-flex');
-
-        // modalTableDeletes.forEach(modalTableDelete => {
-        //     if (modalTableDelete.dataset.value == value) {
-        //         modalTableDelete.classList.add('appear-flex');
-        //     }
-        // })
     },
 
     appearEditTable: function (value) {
@@ -510,6 +508,29 @@ const app = {
     test: function (value) {
         const tests = document.querySelector(`[class='container__table-row'][id='${value}']`);
         tests.querySelector('.modal').classList.add('appear-flex');
+    },
+
+    sendAllInputChecked: function (value) {
+        const parentEle = value.closest('.modal__edit-role');
+        const valueOfInputs = parentEle.querySelectorAll('.modal__role-input');
+        const array = [];
+        valueOfInputs.forEach(valueOfInput => {
+            if (valueOfInput.checked) {
+                array.push(valueOfInput.closest('.modal__role-item').querySelector('.modal__role-label').getAttribute('id')); 
+            }
+        })
+        // console.log(array);
+    },
+
+    sendStatusBlock: function (value) {
+        const parentEle = value.closest('.modal__wrap--edit');
+        const switchBtn = parentEle.querySelector('.switch-input');
+        if (switchBtn.checked) {
+            console.log(0);
+        }
+        else {
+            console.log(1);
+        }
     },
 
     //Ham de bat dau khoi dong chuong trinh
