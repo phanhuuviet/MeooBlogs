@@ -63,6 +63,7 @@
         }
         
         .content-right {
+            width: 75%;
             border: 2px solid rgb(229, 234, 240);
             border-radius: 6px;
             margin-left: 2%;
