@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html {
@@ -51,4 +52,8 @@ li {
 
 [contentEditable=true]:empty:not(:focus):before {
     content: attr(placeholder);
+}
+
+.active {
+    display: block !important;
 }

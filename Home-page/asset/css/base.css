@@ -44,6 +44,11 @@ li {
     list-style: none;
 }
 
+.active {
+    display: block !important;
+    z-index: 999;
+}
+
 .text-strong {
     font-weight: 700;
     text-transform: uppercase;
@@ -170,6 +175,30 @@ li {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     word-break: break-word;
+}
+
+.goToHeader {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.2s;
+    /* display: none; */
+}
+
+.goToHeader:hover {
+    cursor: pointer;
+}
+
+.goToHeader i {
+    color: #fff;
+    font-size: 1.6rem;
 }
 
 /* Animation */

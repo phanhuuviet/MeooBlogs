@@ -21,20 +21,20 @@
     margin: 0 auto;
 }
 
-.header__blog-avatar a img {
+.header__blog-logo a img {
     width: 100px;
     height: 45px;
 }
 
 .header__blog-icon {
     display: flex;
+    position: relative;
     align-items: center;
     height: 100%;
 }
 
 .header__icon__notificartion {
     transition: background-color ease-in-out 0.3s;
-    border-radius: 2px;
 }
 
 .header__icon__notificartion i {
@@ -43,20 +43,191 @@
     padding: 10px;
 }
 
+.header__modal__notification {
+    display: none;
+    position: absolute;
+    left: -365px;
+    background-color: #fff;
+    overflow-y: scroll;
+    height: 500px;
+    width: 414px;
+    padding-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05) !important;
+}
+
+.header__modal__notification::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 0 5px 5px 0;
+}
+
+.header__modal__notification::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 153, 240);
+    border-radius: 5px;
+}
+
+
+.modal__notification__tittle {
+    font-size: 1.6rem;
+    margin: 20px 0 15px 20px;
+}
+
+.modal__notification__board {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-bottom: 3px;
+}
+
+.modal__notification__board:hover {
+    background-color: rgb(237, 242, 247);
+}
+
+.board__item-avatar {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.notification__board__news-content {
+    font-size: 1.3rem;
+}
+
+.board__item__posted-time {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(160, 174, 192, .7)
+}
+
 .header__icon__notificartion:hover {
     background-color: rgba(var(--blue-500), 0.15);
+    border-radius: 5px;
 }
 
-.header__icon__user-avatar {
-    margin-left: 15px;
+
+.header__user-navbar {
+    position: relative;
 }
 
-.header__icon__user-avatar img {
-    width: 40px;
-    height: 40px;
+.header__icon__user-navbar {
+    margin-left: 5px;
+}
+
+.header__icon__user-navbar img {
+    width: 35px;
+    height: 35px;
     border-radius: 100%;
     margin: 10px;
 }
+
+.header__modal__user-navbar {
+    display: none;
+    position: absolute;
+    left: -200px;
+    background-color: #fff;
+    width: 260px;
+    padding-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05) !important;
+    font-family: Noto Sans, sans-serif;
+    overflow: hidden;
+}
+
+.modal__user-navbar__information-wrapper {
+    display: flex;
+    padding: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.modal__user-navbar__avatar img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    cursor: default;
+}
+
+.modal__user-navbar__information {
+    margin-left: 20px;
+}
+
+.user-navbar__display-name {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+    cursor: default;
+}
+
+.user-navbar__user-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: default;
+    color: rgba(113, 128, 150, .6);
+}
+
+.modal__user-navbar__information a {
+    border: 1px solid #e3e3e3;
+    padding: 7px 15px;
+    margin-top: 6px;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.modal__user-navbar__information a:hover {
+    background-color: #eeeeee;
+}
+
+.user-navbar__item {
+    padding: 20px 25px;
+    font-size: 1.6rem;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.user-navbar__item:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.user-navbar__item i {
+    color: #969696;
+    margin-right: 10px;
+}
+
+.user-navbar__sign-off__btn {
+    border: none;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 25px;
+    border-top: 1px solid #e3e3e3;
+    font-size: 1.6rem;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.user-navbar__sign-off__btn:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.user-navbar__sign-off__btn span {
+    display: block;
+    text-align: left;
+}
+
+.user-navbar__sign-off__btn i {
+    color: #969696;
+    margin-right: 8px;
+}
+
+/* END: modal */
 
 
 .writing-blog__container {
@@ -66,11 +237,12 @@
 }
 
 .writing_blog__title {
+    margin-top: 30px !important;
     border: none;
     width: 100%;
     padding: 15px;
-    font-size: 2.2rem;
-    line-height: 2.5rem;
+    font-size: 3rem;
+    line-height: 3.4rem;
     color: var(--text-color);
     font-weight: 600;
     overflow: hidden;
@@ -85,10 +257,6 @@
 .writing_blog__title:empty:before {
     content: attr(placeholder);
     color: rgb(192, 192, 192);
-}
-
-.writing-blog__items {
-    margin: 10px 0;
 }
 
 .writing-blog__editor-wrapper {
@@ -134,4 +302,198 @@
 
 .writing-blog__submit-btn button:hover {
     opacity: 0.9;
+}
+
+/* modal section */
+.modal__writing-page-submition-form {
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+}
+
+.modal.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__items {
+    width: 600px;
+}
+
+.modal__items * {
+    border-radius: 5px;
+}
+
+.modal__item textarea,
+.modal__item select {
+    width: 100%;
+}
+
+.modal__item {
+    display: block;
+}
+
+.modal__item p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(74, 85, 104);
+    margin: 10px 0;
+}
+
+.modal__item p>em {
+    color: rgb(160, 174, 192);
+}
+
+.modal__blog-post-description textarea {
+    resize: none;
+    height: 170px !important;
+    padding: 10px;
+    font-size: 1.4rem;
+    color: rgb(74, 85, 104);
+    border: 1px solid #e2e8f0;
+    font-weight: 500;
+    outline: none;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+/* modal selection box */
+.modal__custom-drop-down-list {
+    position: relative;
+}
+
+.modal__selected-choice {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.modal__select-box {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    position: relative;
+}
+
+.modal__select-box .select-box__options {
+    max-height: 200px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    overflow-y: scroll;
+}
+
+.modal__item .select-box__options.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__selected-choice::after {
+    content: "";
+    background-image: url("/writing-blog-page/assets/img/down-arrow-svgrepo-com.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 33%;
+    width: 15px;
+    right: 25px;
+    top: 15px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.modal__select-box .select-box__options::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 0 5px 5px 0;
+}
+
+.modal__select-box .select-box__options::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 153, 240);
+    border-radius: 5px;
+}
+
+.select-box__option {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 12px 15px;
+}
+
+.select-box__option label {
+    cursor: pointer;
+}
+
+.select-box__option:hover {
+    background-color: rgb(255, 223, 250);
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.modal__select-box .select-box__option__radio {
+    display: none;
+}
+
+.modal__action-warpper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal__action-warpper button {
+    margin: 0 10px;
+    padding: 10px;
+
+    border: none;
+
+    width: 100px;
+
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.modal__return-btn {
+    background-color: #fff;
+    border: 1px solid #e3e3e3 !important;
+}
+
+.modal__return-btn:hover {
+    background-color: rgba(19, 161, 243, 0.7);
+    color: #fff;
+}
+
+.modal__submit-btn {
+    background-color: rgb(51, 152, 212);
+    color: #fff;
+}
+
+.modal__submit-btn:hover {
+    opacity: 0.7;
 }

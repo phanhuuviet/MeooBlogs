@@ -8,11 +8,16 @@ const header = document.querySelector(".header");
 const headerTopSection = document.querySelector(".header__top-section");
 const headerItems = document.querySelectorAll(".header__top-item");
 const headerSearchIcon = document.querySelector(
-    ".header__top-item .header__search-icon"
+    ".header__search-icon"
 );
 const headerCloseSearchButton = document.querySelector(
     ".header__search-bar .header__search-bar__back-button"
 );
+const arrowToTop = document.querySelector(".goToHeader");
+const notificationIcon = document.querySelector(".header__icon__notificartion");
+const userAvatar = document.querySelector(".header__icon__user-navbar");
+const modalUserNavbar = document.querySelector(".header__modal__user-navbar");
+const modalNotification = document.querySelector(".header__modal__notification");
 
 // ==== Personal Page Variable ====
 const chooseContents = document.querySelectorAll('.content__header-choose');
@@ -34,12 +39,11 @@ const app = function () {
     let isOpen = false;
     let startX;
     let scrollLeft;
-    let distance;
     const topicSlideWidth = topicSlide.clientWidth;
-    const topicItemsLength = topicItems.length - 1;
     const firstTopicWidth = topicItems[0].clientWidth;
-    const lastTopicWidth = topicItems[topicItemsLength].clientWidth;
-
+    // const topicItemsLength = topicItems.length - 1;
+    // const lastTopicWidth = topicItems[topicItemsLength].clientWidth;
+    
     // ======= Functions =======
     const openLists = function () {
         flag = !flag;
@@ -57,7 +61,7 @@ const app = function () {
     const customStickyNav = function () {
         if (lastScrollValue < window.scrollY) {
             header.style.top = `-${headerTopSection.clientHeight}px`;
-            userTable.style.top = `${headerTopSection.clientHeight}px`;
+            // userTable.style.top = `${headerTopSection.clientHeight}px`;
         } else {
             header.style.top = 0;
         }
@@ -65,7 +69,8 @@ const app = function () {
         lastScrollValue = window.scrollY;
     }
 
-    const openSearchBar = function () {
+    const openSearchBar = function (e) {
+        console.log(e.target);
         headerItems.forEach((headerItem) => {
             if (headerItem.classList.contains("header__search-bar")) {
                 setTimeout(() => {
@@ -199,7 +204,6 @@ const app = function () {
         topicSlide.classList.add('active');
         startX = e.pageX - topicSlide.offsetLeft;
         scrollLeft = scrollHeader.scrollLeft;
-        console.log(scrollLeft);
     };
 
     const mouseUpFunc = function () {
@@ -224,39 +228,42 @@ const app = function () {
     const waitASec = function (e) {
         const hrefLink = this.href;
         const textcontentLink = this.textContent;
-
         this.onmousemove = function (e) {
             this.href = "#";
             this.onmouseup = function (e) {
                 this.parentNode.innerHTML = `<a href="${hrefLink}">${textcontentLink}</a>`;
             }
         }
-
         this.onmouseleave = function () {
             this.parentNode.innerHTML = `<a href="${hrefLink}">${textcontentLink}</a>`;
         }
-        
-        
     };
 
-    // topicSlide.addEventListener("")
+    const goToTop = function () {
+        window.scrollTo({
+            top: 0, 
+            left: 0, 
+            behavior: "smooth",
+        })
+    };
+
+    const toggleUserNavbar = () => {
+        modalUserNavbar.classList.toggle("active");
+    }
+    
+    const toggleNotification = () => {
+        modalNotification.classList.toggle("active");
+    }
+
+    userAvatar.addEventListener("click", toggleUserNavbar)
+    notificationIcon.addEventListener("click", toggleNotification)
     topicSlideNextBtn.addEventListener("click", moveToRight);
     topicSlidePrevBtn.addEventListener("click", moveToLeft);
     headerCloseSearchButton.addEventListener("click", closeSearchBar);
     headerSearchIcon.addEventListener("click", openSearchBar);
     window.addEventListener("scroll", customStickyNav);
     followedList.addEventListener("click", openLists);
-
-    // Event in personal page
-    chooseContents.forEach(chooseContent => {
-        chooseContent.onclick = function () {
-            document.querySelector('.content__header span.active').classList.remove('active');
-            chooseContent.classList.add('active');
-        }
-    });
-    modalBtn.addEventListener('click', styleChangePsw);
-    modalCancelBtn.addEventListener('click', hideModalEdit);
-    userEdit.addEventListener('click', hideContainerContent);
+    arrowToTop.addEventListener("click", goToTop);
     topicSlide.addEventListener('mousedown', mouseDownFunc);
     topicSlide.addEventListener('mouseup', mouseUpFunc);
     topicSlide.addEventListener('mouseleave', mouseLeaveFunc);
@@ -264,6 +271,19 @@ const app = function () {
     headerLinks.forEach(headerLink => {
         headerLink.addEventListener('mousedown', waitASec);
     });
+    
+    // Event in personal page
+    chooseContents.forEach(chooseContent => {
+        chooseContent.onclick = function () {
+            document.querySelector('.content__header span.active').classList.remove('active');
+            chooseContent.classList.add('active');
+        }
+    });
+    
+    modalBtn.addEventListener('click', styleChangePsw);
+    modalCancelBtn.addEventListener('click', hideModalEdit);
+    userEdit.addEventListener('click', hideContainerContent);
+    
 }
 
 

@@ -105,7 +105,7 @@
                             </th>
                         </tr>
 
-                        <tr class="container__table-row">
+                        <tr id="1" class="container__table-row">
                             <td>1</td>
                             <td>Trần Thị Bích Diệp</td>
                             <td>BichDiep1309</td>
@@ -122,12 +122,274 @@
                                 <i class="fa-solid fa-eye container__table-icon"></i>
                                 <i class="fa-solid fa-pen container__table-icon"></i>
                                 <i class="fa-solid fa-trash container__table-icon"></i>
+                                <div class="modal">
+                                    <!-- Modal delete -->
+                                    <div class="modal__wrap modal__wrap--delete">
+                                        <div class="modal__header">
+                                            <img src="./asset/img/warning-img.png" alt="" class="modal__img">
+                                        </div>
+                                        <div class="modal__title">Bạn có chắc chắn muốn xóa không?</div>
+                                        <div class="modal__choose">
+                                            <button class="btn modal__choose--yes">Yes</button>
+                                            <button class="btn modal__choose--no">No</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Modal edit -->
+                                    <div class="modal__wrap modal__wrap--edit">
+                                        <i class="fas fa-times modal__close"></i>
+                                        <!-- Edit info -->
+                                        <div class="modal__edit-inf">
+                                            <ul class="modal__edit-list">
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Tên đăng nhập
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="text" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Mật khẩu
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="password" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Họ và tên
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="text" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Email</p>
+                                                    <input type="email" class="modal__edit-input">
+                                                </li>
+                            
+                                            </ul>
+                                            <ul class="modal__edit-list">
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Số điện thoại</p>
+                                                    <input type="number" class="modal__edit-input">
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Role</p>
+                                                    <input type="text" class="modal__edit-input">
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Nhóm
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="text" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Người thêm</p>
+                                                    <input type="text" class="modal__edit-input">
+                                                </li>
+                                            </ul>
+                                        </div>
+                            
+                                        <!-- Edit role -->
+                                        <div class="modal__edit-role">
+                                            <p class="modal__edit-text">
+                                                Roles
+                                                <i class="fas fa-asterisk modal__edit-icon"></i>
+                                            </p>
+                                            <div class="modal__edit-container">
+                                                <!-- table 1 của edit role -->
+                                                <div class="modal__edit-table">
+                                                    <div class="modal__table-wrap">
+                                                        <div class="modal__table-title">
+                                                            Danh sách Roles
+                                                        </div>
+                                                        <div class="modal__table-search">
+                                                            <i class="fas fa-search modal__table-icon"></i>
+                                                            <input type="text" class="modal__table-input">
+                                                        </div>
+                                                        <ul class="modal__table-list">
+                                                            <li class="modal__table-item">Giám đốc chi nhánh</li>
+                                                            <li class="modal__table-item">Phó giám đốc chi nhánh</li>
+                                                            <li class="modal__table-item">Trưởng phong</li>
+                                                            <li class="modal__table-item">Trưởng phong ke toan</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="modal__edit-change">
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-right"></i>
+                                                    </button>
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-double-right"></i>
+                                                    </button>
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-left"></i>
+                                                    </button>
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-double-left"></i>
+                                                    </button>
+                                                </div>
+                            
+                                                <!-- table 2 của edit role -->
+                                                <div class="modal__edit-table">
+                                                    <div class="modal__table-wrap">
+                                                        <div class="modal__table-title">
+                                                            Danh sách Role đã chọn
+                                                        </div>
+                                                        <div class="modal__table-search">
+                                                            <i class="fas fa-search modal__table-icon"></i>
+                                                            <input type="text" class="modal__table-input">
+                                                        </div>
+                                                        <ul class="modal__table-list">
+                                                            <li class="modal__table-item">Giám đốc khối</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal__edit-footer">
+                                                <button class="btn modal__edit-cancel">
+                                                    Hủy bỏ
+                                                </button>
+                            
+                                                <button class="btn modal__edit-confirm">
+                                                    Xác nhận
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Modal eye -->
+                                    <div class="modal__wrap modal__wrap--view">
+                                        <div class="modal__view-background">
+                                            <img src="./asset/img/avt_admin.jpg" alt="" class="modal__avt">
+                                            <span class="modal__name">Trinh Van Thuc </span>
+                                            <span class="modal__role">Admin</span>
+                                        </div>
+                                        <div class="modal__view-info">
+                                            <div class="modal__info">
+                                                <span>Tên đăng nhập</span>
+                                                <div>TrinhThuc</div>
+                                            </div>
+                                            <div class="modal__info">
+                                                <span>Email</span>
+                                                <div>TrinhThuc423@gmail.com</div>
+                                            </div>
+                                        </div>
+                                        <button class="btn modal__change-pasw">Đổi mật khẩu</button>
+                                        <div class="modal__view-all">
+                                            <header>
+                                                Tất cả các bài viết
+                                            </header>
+                                            <ul class="modal__container-list">
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view1.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                                                muốn
+                                                                akdjfalksdjflakdsfaakldsfj</li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rerum repellendus
+                                                                mollitia itaque provident optio. Maiores omnis praesentium quisquam labore, dolorem
+                                                                veniam fugiat deserunt blanditiis eos explicabo! Illum, enim corporis.
+                                                            </li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                                                muốn
+                                                                akdjfalksdjflakdsfaakldsfj</li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                                                muốn
+                                                                akdjfalksdjflakdsfaakldsfj</li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan </li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
-                        <tr class="container__table-row">
+
+                        <tr id="2" class="container__table-row">
                             <td>2</td>
-                            <td>Phan Hữu Việt</td>
-                            <td>PhanViet2002</td>
+                            <td>Trần Thị Bích Diệp</td>
+                            <td>BichDiep1309</td>
                             <td>
                                 <select name="roles" id="" class="role_select">
                                     <option value="role">Trưởng nhóm truyền thông</option>
@@ -141,160 +403,270 @@
                                 <i class="fa-solid fa-eye container__table-icon"></i>
                                 <i class="fa-solid fa-pen container__table-icon"></i>
                                 <i class="fa-solid fa-trash container__table-icon"></i>
+                                <div class="modal">
+                                    <!-- Modal delete -->
+                                    <div class="modal__wrap modal__wrap--delete">
+                                        <div class="modal__header">
+                                            <img src="./asset/img/warning-img.png" alt="" class="modal__img">
+                                        </div>
+                                        <div class="modal__title">Bạn có chắc chắn muốn xóa không?</div>
+                                        <div class="modal__choose">
+                                            <button class="btn modal__choose--yes">Yes</button>
+                                            <button class="btn modal__choose--no">No</button>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Modal edit -->
+                                    <div class="modal__wrap modal__wrap--edit">
+                                        <i class="fas fa-times modal__close"></i>
+                                        <!-- Edit info -->
+                                        <div class="modal__edit-inf">
+                                            <ul class="modal__edit-list">
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Tên đăng nhập
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="text" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Mật khẩu
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="password" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Họ và tên
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="text" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Email</p>
+                                                    <input type="email" class="modal__edit-input">
+                                                </li>
+                            
+                                            </ul>
+                                            <ul class="modal__edit-list">
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Số điện thoại</p>
+                                                    <input type="number" class="modal__edit-input">
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Role</p>
+                                                    <input type="text" class="modal__edit-input">
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">
+                                                        Nhóm
+                                                        <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                    </p>
+                                                    <input type="text" class="modal__edit-input" required>
+                                                </li>
+                            
+                                                <li class="modal__edit-item">
+                                                    <p class="modal__edit-text">Người thêm</p>
+                                                    <input type="text" class="modal__edit-input">
+                                                </li>
+                                            </ul>
+                                        </div>
+                            
+                                        <!-- Edit role -->
+                                        <div class="modal__edit-role">
+                                            <p class="modal__edit-text">
+                                                Roles
+                                                <i class="fas fa-asterisk modal__edit-icon"></i>
+                                            </p>
+                                            <div class="modal__edit-container">
+                                                <!-- table 1 của edit role -->
+                                                <div class="modal__edit-table">
+                                                    <div class="modal__table-wrap">
+                                                        <div class="modal__table-title">
+                                                            Danh sách Roles
+                                                        </div>
+                                                        <div class="modal__table-search">
+                                                            <i class="fas fa-search modal__table-icon"></i>
+                                                            <input type="text" class="modal__table-input">
+                                                        </div>
+                                                        <ul class="modal__table-list">
+                                                            <li class="modal__table-item">Giám đốc chi nhánh</li>
+                                                            <li class="modal__table-item">Phó giám đốc chi nhánh</li>
+                                                            <li class="modal__table-item">Trưởng phong</li>
+                                                            <li class="modal__table-item">Trưởng phong ke toan</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="modal__edit-change">
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-right"></i>
+                                                    </button>
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-double-right"></i>
+                                                    </button>
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-left"></i>
+                                                    </button>
+                                                    <button class="modal__edit-btn">
+                                                        <i class="fas fa-angle-double-left"></i>
+                                                    </button>
+                                                </div>
+                            
+                                                <!-- table 2 của edit role -->
+                                                <div class="modal__edit-table">
+                                                    <div class="modal__table-wrap">
+                                                        <div class="modal__table-title">
+                                                            Danh sách Role đã chọn
+                                                        </div>
+                                                        <div class="modal__table-search">
+                                                            <i class="fas fa-search modal__table-icon"></i>
+                                                            <input type="text" class="modal__table-input">
+                                                        </div>
+                                                        <ul class="modal__table-list">
+                                                            <li class="modal__table-item">Giám đốc khối</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal__edit-footer">
+                                                <button class="btn modal__edit-cancel">
+                                                    Hủy bỏ
+                                                </button>
+                            
+                                                <button class="btn modal__edit-confirm">
+                                                    Xác nhận
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Modal eye -->
+                                    <div class="modal__wrap modal__wrap--view">
+                                        <div class="modal__view-background">
+                                            <img src="./asset/img/avt_admin.jpg" alt="" class="modal__avt">
+                                            <span class="modal__name">Trinh Van Thuc thuc</span>
+                                            <span class="modal__role">Admin</span>
+                                        </div>
+                                        <div class="modal__view-info">
+                                            <div class="modal__info">
+                                                <span>Tên đăng nhập</span>
+                                                <div>TrinhThuc</div>
+                                            </div>
+                                            <div class="modal__info">
+                                                <span>Email</span>
+                                                <div>TrinhThuc423@gmail.com</div>
+                                            </div>
+                                        </div>
+                                        <button class="btn modal__change-pasw">Đổi mật khẩu</button>
+                                        <div class="modal__view-all">
+                                            <header>
+                                                Tất cả các bài viết
+                                            </header>
+                                            <ul class="modal__container-list">
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view1.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                                                muốn
+                                                                akdjfalksdjflakdsfaakldsfj</li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rerum repellendus
+                                                                mollitia itaque provident optio. Maiores omnis praesentium quisquam labore, dolorem
+                                                                veniam fugiat deserunt blanditiis eos explicabo! Illum, enim corporis.
+                                                            </li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                                                muốn
+                                                                akdjfalksdjflakdsfaakldsfj</li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
+                                                                muốn
+                                                                akdjfalksdjflakdsfaakldsfj</li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                                <a href="" class="modal__item-link">
+                                                    <li class="modal__container-item">
+                                                        <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
+                                                        <ul class="modal__container-info">
+                                                            <li class="modal__container-tag">Quan điểm - tranh luận</li>
+                                                            <li class="modal__container-title">
+                                                                4 Bài học sau khi xem series phim tài liệu Việt Nam
+                                                            </li>
+                                                            <li class="modal__container-desc">Ở đây tôi không muốn nói về quan </li>
+                                                            <li class="modal__container-time">
+                                                                <span>6</span>
+                                                                giờ trước
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
-                        <tr class="container__table-row">
-                            <td>3</td>
-                            <td>Vũ Minh Hòa</td>
-                            <td>MinhHoa2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
-                        <tr class="container__table-row">
-                            <td>4</td>
-                            <td>Trần Thị Diễm</td>
-                            <td>TranDiem2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">Trưởng nhóm truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
-                        <tr class="container__table-row">
-                            <td>5</td>
-                            <td>Thực Trịnh Văn</td>
-                            <td>ThucCho'2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">Trưởng nhóm truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
-                        <tr class="container__table-row">
-                            <td>6</td>
-                            <td>Thực Trịnh Văn</td>
-                            <td>ThucCho'2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">Trưởng nhóm truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
-                        <tr class="container__table-row">
-                            <td>7</td>
-                            <td>Thực Trịnh Văn</td>
-                            <td>ThucCho'2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">Trưởng nhóm truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
-                        <tr class="container__table-row">
-                            <td>8</td>
-                            <td>Thực Trịnh Văn</td>
-                            <td>ThucCho'2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">Trưởng nhóm truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
-                        <tr class="container__table-row">
-                            <td>9</td>
-                            <td>Thực Trịnh Văn</td>
-                            <td>ThucCho'2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">Trưởng nhóm truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
-                        <tr class="container__table-row">
-                            <td>10</td>
-                            <td>Thực Trịnh Văn</td>
-                            <td>ThucCho'2002</td>
-                            <td>
-                                <select name="roles" id="" class="role_select">
-                                    <option value="role">Trưởng nhóm truyền thông</option>
-                                    <option value="role">Trưởng nhóm</option>
-                                    <option value="role">Trưởng nhóm truyền </option>
-                                </select>
-                            </td>
-                            <td>dev</td>
-                            <td>Hoạt động</td>
-                            <td>
-                                <i class="fa-solid fa-eye container__table-icon"></i>
-                                <i class="fa-solid fa-pen container__table-icon"></i>
-                                <i class="fa-solid fa-trash container__table-icon"></i>
-                            </td>
-                        </tr>
+                           
                     </table>
 
                     <div class="container__pagination">
@@ -323,267 +695,7 @@
         </div>
     </div>
 
-    <div class="modal">
-        <!-- Modal delete -->
-        <div class="modal__wrap modal__wrap--delete">
-            <div class="modal__header">
-                <img src="./asset/img/warning-img.png" alt="" class="modal__img">
-            </div>
-            <div class="modal__title">Bạn có chắc chắn muốn xóa không?</div>
-            <div class="modal__choose">
-                <button class="btn modal__choose--yes">Yes</button>
-                <button class="btn modal__choose--no">No</button>
-            </div>
-        </div>
-
-        <!-- Modal edit -->
-        <div class="modal__wrap modal__wrap--edit">
-            <i class="fas fa-times modal__close"></i>
-            <!-- Edit info -->
-            <div class="modal__edit-inf">
-                <ul class="modal__edit-list">
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">
-                            Tên đăng nhập
-                            <i class="fas fa-asterisk modal__edit-icon"></i>
-                        </p>
-                        <input type="text" class="modal__edit-input" required>
-                    </li>
-
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">
-                            Mật khẩu
-                            <i class="fas fa-asterisk modal__edit-icon"></i>
-                        </p>
-                        <input type="password" class="modal__edit-input" required>
-                    </li>
-
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">
-                            Họ và tên
-                            <i class="fas fa-asterisk modal__edit-icon"></i>
-                        </p>
-                        <input type="text" class="modal__edit-input" required>
-                    </li>
-
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">Email</p>
-                        <input type="email" class="modal__edit-input">
-                    </li>
-
-                </ul>
-                <ul class="modal__edit-list">
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">Số điện thoại</p>
-                        <input type="number" class="modal__edit-input">
-                    </li>
-
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">Role</p>
-                        <input type="text" class="modal__edit-input">
-                    </li>
-
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">
-                            Nhóm
-                            <i class="fas fa-asterisk modal__edit-icon"></i>
-                        </p>
-                        <input type="text" class="modal__edit-input" required>
-                    </li>
-
-                    <li class="modal__edit-item">
-                        <p class="modal__edit-text">Người thêm</p>
-                        <input type="text" class="modal__edit-input">
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Edit role -->
-            <div class="modal__edit-role">
-                <p class="modal__edit-text">
-                    Roles
-                    <i class="fas fa-asterisk modal__edit-icon"></i>
-                </p>
-                <div class="modal__edit-container">
-                    <!-- table 1 của edit role -->
-                    <div class="modal__edit-table">
-                        <div class="modal__table-wrap">
-                            <div class="modal__table-title">
-                                Danh sách Roles
-                            </div>
-                            <div class="modal__table-search">
-                                <i class="fas fa-search modal__table-icon"></i>
-                                <input type="text" class="modal__table-input">
-                            </div>
-                            <ul class="modal__table-list">
-                                <li class="modal__table-item">Giám đốc chi nhánh</li>
-                                <li class="modal__table-item">Phó giám đốc chi nhánh</li>
-                                <li class="modal__table-item">Trưởng phong</li>
-                                <li class="modal__table-item">Trưởng phong ke toan</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="modal__edit-change">
-                        <button class="modal__edit-btn">
-                            <i class="fas fa-angle-right"></i>
-                        </button>
-                        <button class="modal__edit-btn">
-                            <i class="fas fa-angle-double-right"></i>
-                        </button>
-                        <button class="modal__edit-btn">
-                            <i class="fas fa-angle-left"></i>
-                        </button>
-                        <button class="modal__edit-btn">
-                            <i class="fas fa-angle-double-left"></i>
-                        </button>
-                    </div>
-
-                    <!-- table 2 của edit role -->
-                    <div class="modal__edit-table">
-                        <div class="modal__table-wrap">
-                            <div class="modal__table-title">
-                                Danh sách Role đã chọn
-                            </div>
-                            <div class="modal__table-search">
-                                <i class="fas fa-search modal__table-icon"></i>
-                                <input type="text" class="modal__table-input">
-                            </div>
-                            <ul class="modal__table-list">
-                                <li class="modal__table-item">Giám đốc khối</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal__edit-footer">
-                    <button class="btn modal__edit-cancel">
-                        Hủy bỏ
-                    </button>
-
-                    <button class="btn modal__edit-confirm">
-                        Xác nhận
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal eye -->
-        <div class="modal__wrap modal__wrap--view">
-            <div class="modal__view-background">
-                <img src="./asset/img/avt_admin.jpg" alt="" class="modal__avt">
-                <span class="modal__name">Trinh Van Thuc</span>
-                <span class="modal__role">Admin</span>
-            </div>
-            <div class="modal__view-info">
-                <div class="modal__info">
-                    <span>Tên đăng nhập</span>
-                    <div>TrinhThuc</div>
-                </div>
-                <div class="modal__info">
-                    <span>Email</span>
-                    <div>TrinhThuc423@gmail.com</div>
-                </div>
-            </div>
-            <button class="btn modal__change-pasw">Đổi mật khẩu</button>
-            <div class="modal__view-all">
-                <header>
-                    Tất cả các bài viết
-                </header>
-                <ul class="modal__container-list">
-                    <a href="" class="modal__item-link">
-                        <li class="modal__container-item">
-                            <img src="./asset/img/post_view1.jpg" alt="" class="modal__container-img">
-                            <ul class="modal__container-info">
-                                <li class="modal__container-tag">Quan điểm - tranh luận</li>
-                                <li class="modal__container-title">
-                                    4 Bài học sau khi xem series phim tài liệu Việt Nam
-                                </li>
-                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
-                                    muốn
-                                    akdjfalksdjflakdsfaakldsfj</li>
-                                <li class="modal__container-time">
-                                    <span>6</span>
-                                    giờ trước
-                                </li>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href="" class="modal__item-link">
-                        <li class="modal__container-item">
-                            <img src="./asset/img/post_view.jpg" alt="" class="modal__container-img">
-                            <ul class="modal__container-info">
-                                <li class="modal__container-tag">Quan điểm - tranh luận</li>
-                                <li class="modal__container-title">
-                                    4 Bài học sau khi xem series phim tài liệu Việt Nam
-                                </li>
-                                <li class="modal__container-desc">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rerum repellendus
-                                    mollitia itaque provident optio. Maiores omnis praesentium quisquam labore, dolorem
-                                    veniam fugiat deserunt blanditiis eos explicabo! Illum, enim corporis.
-                                </li>
-                                <li class="modal__container-time">
-                                    <span>6</span>
-                                    giờ trước
-                                </li>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href="" class="modal__item-link">
-                        <li class="modal__container-item">
-                            <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
-                            <ul class="modal__container-info">
-                                <li class="modal__container-tag">Quan điểm - tranh luận</li>
-                                <li class="modal__container-title">
-                                    4 Bài học sau khi xem series phim tài liệu Việt Nam
-                                </li>
-                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
-                                    muốn
-                                    akdjfalksdjflakdsfaakldsfj</li>
-                                <li class="modal__container-time">
-                                    <span>6</span>
-                                    giờ trước
-                                </li>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href="" class="modal__item-link">
-                        <li class="modal__container-item">
-                            <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
-                            <ul class="modal__container-info">
-                                <li class="modal__container-tag">Quan điểm - tranh luận</li>
-                                <li class="modal__container-title">
-                                    4 Bài học sau khi xem series phim tài liệu Việt Nam
-                                </li>
-                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan điểm chính trị, mà
-                                    muốn
-                                    akdjfalksdjflakdsfaakldsfj</li>
-                                <li class="modal__container-time">
-                                    <span>6</span>
-                                    giờ trước
-                                </li>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href="" class="modal__item-link">
-                        <li class="modal__container-item">
-                            <img src="./asset/img/post_view2.jpg" alt="" class="modal__container-img">
-                            <ul class="modal__container-info">
-                                <li class="modal__container-tag">Quan điểm - tranh luận</li>
-                                <li class="modal__container-title">
-                                    4 Bài học sau khi xem series phim tài liệu Việt Nam
-                                </li>
-                                <li class="modal__container-desc">Ở đây tôi không muốn nói về quan </li>
-                                <li class="modal__container-time">
-                                    <span>6</span>
-                                    giờ trước
-                                </li>
-                            </ul>
-                        </li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-    </div>
+    
 
     <script src="./asset/JS/main_admin.js"></script>
 </body>
