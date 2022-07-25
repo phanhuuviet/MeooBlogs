@@ -36,32 +36,17 @@ const application = () => {
             }
 
             modalSelect.querySelectorAll(".select-box__option")
-<<<<<<< HEAD
                 .forEach((option) => {
                     option.addEventListener("click", () => {
                         selectBox.innerHTML = option.querySelector("label").innerHTML;
                         // result = selectBox.textContent;
                         optionBox.classList.remove('active');
                     });
-=======
-            .forEach((option) => {
-                option.addEventListener("click", (e) => {
-                    // if(e.target.contains(label)) {
-                    //     console.log(true);
-                    // }
-                    // console.log(option);
-                    selectBox.innerHTML = option.querySelector("label").innerHTML;
-                    optionBox.classList.remove('active');
->>>>>>> f6eb104 (finished writing page)
                 });
         });
 
         const makeModalHidden = () => {
-<<<<<<< HEAD
             modal.classList.remove('visible');
-=======
-            modalWritingPage.classList.remove('visible');
->>>>>>> f6eb104 (finished writing page)
         }
 
         const makeModalVisible = () => {
@@ -72,21 +57,17 @@ const application = () => {
         submitBtn.addEventListener('click', makeModalVisible);
     });
 
-<<<<<<< HEAD
-=======
     const toggleUserNavbar = () => {
-        modalUserNavbar.classList.toggle('active');
-    };
-
-    const notificationToggle = () => {
-        modalNotification.classList.toggle('active');
+        modalUserNavbar.classList.toggle("active");
     }
 
-    userAvatar.addEventListener("click", toggleUserNavbar);
-    notificationIcon.addEventListener("click", notificationToggle);
+    const toggleNotification = () => {
+        modalNotification.classList.toggle("active");
+    }
 
-        
->>>>>>> f6eb104 (finished writing page)
+    userAvatar.addEventListener("click", toggleUserNavbar)
+    notificationIcon.addEventListener("click", toggleNotification)
+
     BalloonEditor.create(document.querySelector(".editor"), {
         placeholder: "Nội dung bài viết",
     })

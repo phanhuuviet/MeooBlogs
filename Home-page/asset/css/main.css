@@ -101,6 +101,197 @@
     height: var(--header-wrap-height);
 }
 
+.user-signed-In__message-icon,
+.user-signed-In__user-avatar-wrapper {
+    position: relative;
+}
+
+/* Header modal */
+
+/* notification modal  */
+.header__modal__notification {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: -365px;
+    background-color: #fff;
+    overflow-y: scroll;
+    height: 500px;
+    width: 414px;
+    padding-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05) !important;
+}
+
+.header__modal__notification::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 0 5px 5px 0;
+}
+
+.header__modal__notification::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 153, 240);
+    border-radius: 5px;
+}
+
+
+.modal__notification__tittle {
+    font-size: 1.6rem;
+    margin: 20px 0 15px 20px;
+}
+
+.modal__notification__board {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-bottom: 3px;
+}
+
+.modal__notification__board:hover {
+    background-color: rgb(237, 242, 247);
+}
+
+.board__item-avatar {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.notification__board__news-content {
+    font-size: 1.3rem;
+}
+
+.board__item__posted-time {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(160, 174, 192, .7)
+}
+
+/* User navbar modal  */
+
+
+.header__user-navbar {
+    position: relative;
+}
+
+.header__icon__user-navbar {
+    margin-left: 5px;
+}
+
+.header__icon__user-navbar img {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.header__modal__user-navbar {
+    display: none;
+    position: absolute;
+    left: -200px;
+    background-color: #fff;
+    width: 260px;
+    padding-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05) !important;
+    font-family: Noto Sans, sans-serif;
+    overflow: hidden;
+}
+
+.modal__user-navbar__information-wrapper {
+    display: flex;
+    padding: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.modal__user-navbar__avatar img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    cursor: default;
+}
+
+.modal__user-navbar__information {
+    margin-left: 20px;
+}
+
+.user-navbar__display-name {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+    cursor: default;
+}
+
+.user-navbar__user-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: default;
+    color: rgba(113, 128, 150, .6);
+}
+
+.modal__user-navbar__information a {
+    border: 1px solid #e3e3e3;
+    padding: 7px 15px;
+    margin-top: 6px;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.modal__user-navbar__information a:hover {
+    background-color: #eeeeee;
+}
+
+.user-navbar__item {
+    padding: 20px 25px;
+    font-size: 1.6rem;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.user-navbar__item:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.user-navbar__item i {
+    color: #969696;
+    margin-right: 10px;
+}
+
+.user-navbar__sign-off__btn {
+    border: none;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 25px;
+    border-top: 1px solid #e3e3e3;
+    font-size: 1.6rem;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.user-navbar__sign-off__btn:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.user-navbar__sign-off__btn span {
+    display: block;
+    text-align: left;
+}
+
+.user-navbar__sign-off__btn i {
+    color: #969696;
+    margin-right: 8px;
+}
+
+
 /* user signed In header interface */
 .header__user-signed-In {
     display: flex;
@@ -130,11 +321,6 @@
 
 .user-signed-In__icon-items a:hover {
     background-color: rgb(255, 223, 250);
-}
-
-.user-signed-In__user-avatar-wrapper {
-    margin-left: 10px;
-
 }
 
 .user-signed-In__user-avatar-wrapper img {

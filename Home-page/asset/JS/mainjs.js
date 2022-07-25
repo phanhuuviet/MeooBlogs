@@ -14,6 +14,10 @@ const headerCloseSearchButton = document.querySelector(
     ".header__search-bar .header__search-bar__back-button"
 );
 const arrowToTop = document.querySelector(".goToHeader");
+const notificationIcon = document.querySelector(".header__icon__notificartion");
+const userAvatar = document.querySelector(".header__icon__user-navbar");
+const modalUserNavbar = document.querySelector(".header__modal__user-navbar");
+const modalNotification = document.querySelector(".header__modal__notification");
 
 // ==== Personal Page Variable ====
 const chooseContents = document.querySelectorAll('.content__header-choose');
@@ -243,7 +247,16 @@ const app = function () {
         })
     };
 
-    // topicSlide.addEventListener("")
+    const toggleUserNavbar = () => {
+        modalUserNavbar.classList.toggle("active");
+    }
+    
+    const toggleNotification = () => {
+        modalNotification.classList.toggle("active");
+    }
+
+    userAvatar.addEventListener("click", toggleUserNavbar)
+    notificationIcon.addEventListener("click", toggleNotification)
     topicSlideNextBtn.addEventListener("click", moveToRight);
     topicSlidePrevBtn.addEventListener("click", moveToLeft);
     headerCloseSearchButton.addEventListener("click", closeSearchBar);
