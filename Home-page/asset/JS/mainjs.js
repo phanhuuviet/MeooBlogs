@@ -36,7 +36,6 @@ const app = function () {
     let flag = false;
     let isDown = false;
     let lastScrollValue = window.scrollY;
-    let isOpen = false;
     let startX;
     let scrollLeft;
     const topicSlideWidth = topicSlide.clientWidth;
