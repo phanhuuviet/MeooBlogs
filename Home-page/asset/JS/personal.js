@@ -1,3 +1,4 @@
+// Slider variables
 const topicSlide = document.querySelector(".header__navbar-topic-list");
 const topicSlidePrevBtn = document.querySelector(".header__topic-list-prev-button");
 const topicSlideNextBtn = document.querySelector(".header__topic-list-next-button");
@@ -167,6 +168,37 @@ const app = function () {
         });
     });
 
+    const styleChangePsw = function () {
+        if (isOpen) {
+            modalChangePswBtn.style.opacity = 0;
+            modalChangePswBtn.style.transform = `translateY(-15px)`;
+            isOpen = !isOpen;
+            setTimeout(() => {
+                modalChangePswBtn.style.display = 'none';
+            }, 301);
+            return;
+        }
+        modalChangePswBtn.style.display = 'block';
+        modalChangePswBtn.style.opacity = 0;
+        setTimeout(() => {
+            modalChangePswBtn.style.opacity = 1;
+            modalChangePswBtn.style.transform = `translateY(0)`;
+            isOpen = !isOpen;
+        }, 0.1);
+
+        // modalChangePswBtn.style.display = 'block';
+    };
+
+    const hideModalEdit = function () {
+        modalEdit.classList.remove('appear-block');
+        containerContent.classList.add('appear-block');
+    };
+
+    const hideContainerContent = function () {
+        modalEdit.classList.add('appear-block');
+        containerContent.classList.remove('appear-block');
+    };
+
     // test click and drag slider in header
     const mouseDownFunc = function (e) {
         isDown = true;
@@ -183,6 +215,7 @@ const app = function () {
     const mouseLeaveFunc = function () {
         isDown = false;
         topicSlide.classList.remove('active');
+
     };
     
     const mouseMoveFunc = function (e) {
@@ -215,16 +248,6 @@ const app = function () {
         })
     };
 
-    const toggleUserNavbar = () => {
-        modalUserNavbar.classList.toggle("active");
-    }
-    
-    const toggleNotification = () => {
-        modalNotification.classList.toggle("active");
-    }
-
-    userAvatar.addEventListener("click", toggleUserNavbar)
-    notificationIcon.addEventListener("click", toggleNotification)
     topicSlideNextBtn.addEventListener("click", moveToRight);
     topicSlidePrevBtn.addEventListener("click", moveToLeft);
     headerCloseSearchButton.addEventListener("click", closeSearchBar);
@@ -239,7 +262,16 @@ const app = function () {
     headerLinks.forEach(headerLink => {
         headerLink.addEventListener('mousedown', waitASec);
     });
+    chooseContents.forEach(chooseContent => {
+        chooseContent.onclick = function () {
+            document.querySelector('.content__header span.active').classList.remove('active');
+            chooseContent.classList.add('active');
+        }
+    });
     
+    modalBtn.addEventListener('click', styleChangePsw);
+    modalCancelBtn.addEventListener('click', hideModalEdit);
+    userEdit.addEventListener('click', hideContainerContent);
     
 }
 

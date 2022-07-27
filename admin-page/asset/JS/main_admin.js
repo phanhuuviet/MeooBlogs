@@ -14,9 +14,9 @@ const paginationBar = $('.container__pagination');
 // Interface variales
 const memberList = $('.container__table');
 const memberContainer = $('.container__table-list');
-const iconEyes = $$('.container__table-icon:nth-child(1)');
-const iconEdits = $$('.container__table-icon:nth-child(2)');
-const iconDeletes = $$('.container__table-icon:nth-child(3)');
+const iconEyes = $$('.fa-solid.fa-eye.container__table-icon');
+const iconEdits = $$('.fa-solid.fa-pen.container__table-icon');
+const iconDeletes = $$('.fa-solid.fa-trash.container__table-icon');
 const addMoreBtn = $('.container__addMore-btn');
 const containerWrappers = $$('.container__wrapper');
 const filterItems = $$('.container__filter-title');
@@ -37,10 +37,6 @@ const chooseNos = $$('.modal__choose--no');
 const closeBtns = $$('.modal__close');
 const confirmBtns = $$('.modal__edit-confirm');
 const cancelBtns = $$('.modal__edit-cancel');
-
-
-
-// const inputEditRoles = $$('.modal__role-input');
 
 // sideBar variables
 const sideBarItems = $$('.sideBar__item');
@@ -190,36 +186,36 @@ const app = {
         },
     ],
 
-    render_member: function () {
-        const visibleUser = this.visibleUser;
-        const currentPage = this.currentPage;
+    // render_member: function () {
+    //     const visibleUser = this.visibleUser;
+    //     const currentPage = this.currentPage;
 
-        const start = visibleUser * currentPage;
+    //     const start = visibleUser * currentPage;
 
-        const displayedMember = this.Members.slice(start, start + visibleUser);
+    //     const displayedMember = this.Members.slice(start, start + visibleUser);
 
-        const htmls_member = displayedMember.map((member) => {
-            return `
-            <tr class="container__table-row">
-                <td>${member.STT}</td>
-                <td>${member.Name}</td>
-                <td>${member.UserName}</td>
-                <td>${member.Role}</td>
-                <td>${member.UserType}</td>
-                <td>${member.Team}</td>
-                <td>${member.Status}</td>
-                <td>
-                    <i class="fa-solid fa-eye container__table-icon"></i>
-                    <i class="fa-solid fa-pen container__table-icon"></i>
-                    <i class="fa-solid fa-trash container__table-icon"></i>
-                </td>
-            </tr>
-            `;
-        });
+    //     const htmls_member = displayedMember.map((member) => {
+    //         return `
+    //         <tr class="container__table-row">
+    //             <td>${member.STT}</td>
+    //             <td>${member.Name}</td>
+    //             <td>${member.UserName}</td>
+    //             <td>${member.Role}</td>
+    //             <td>${member.UserType}</td>
+    //             <td>${member.Team}</td>
+    //             <td>${member.Status}</td>
+    //             <td>
+    //                 <i class="fa-solid fa-eye container__table-icon"></i>
+    //                 <i class="fa-solid fa-pen container__table-icon"></i>
+    //                 <i class="fa-solid fa-trash container__table-icon"></i>
+    //             </td>
+    //         </tr>
+    //         `;
+    //     });
 
-        memberList.innerHTML = htmls_member.join('');
-        // memberList.innerHTML = htmls_member.join('');
-    },
+    //     memberList.innerHTML = htmls_member.join('');
+    //     // memberList.innerHTML = htmls_member.join('');
+    // },
 
     render: function () {
         const htmls = this.paginations.map((pagination, index) => {
@@ -259,7 +255,8 @@ const app = {
 
             const paginationNode = e.target.closest('.container__pagination-item:not(.active)');
             app.currentPage = e.target.dataset.index;
-
+            app.currentIndex = Number(paginationNode.dataset.index);
+            app.render();
             // app.render_member();
 
             // if (paginationNode) {
@@ -345,7 +342,7 @@ const app = {
         confirmBtns.forEach(confirmBtn => {
             confirmBtn.onclick = function () {
                 app.sendAllInputChecked(this);
-                app.sendStatusBlock(this);
+                // app.sendStatusBlock(this);
             }
         })
 
@@ -519,17 +516,17 @@ const app = {
                 array.push(valueOfInput.closest('.modal__role-item').querySelector('.modal__role-label').getAttribute('id')); 
             }
         })
-        // console.log(array);
+        console.log(array);
     },
 
     sendStatusBlock: function (value) {
         const parentEle = value.closest('.modal__wrap--edit');
         const switchBtn = parentEle.querySelector('.switch-input');
         if (switchBtn.checked) {
-            console.log(0);
+            return 0;
         }
         else {
-            console.log(1);
+            return 1;
         }
     },
 
