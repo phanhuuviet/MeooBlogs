@@ -1,3 +1,6 @@
+// NOTE
+// hàm sendRoleInf để lấy 1 obj có name với code nhé
+
 // Begin
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -341,8 +344,9 @@ const app = {
         //hoặc cancel trong modal edit
         confirmBtns.forEach(confirmBtn => {
             confirmBtn.onclick = function () {
-                app.sendAllInputChecked(this);
+                // app.sendAllInputChecked(this);
                 // app.sendStatusBlock(this);
+                app.sendRoleInf(this);
             }
         })
 
@@ -528,6 +532,17 @@ const app = {
         else {
             return 1;
         }
+    },
+
+    sendRoleInf: function (value) {
+        const parentEle = value.closest('.modal__wrap--edit');
+        const code = parentEle.querySelector('.modal__edit-input[name="code"]').value;
+        const name = parentEle.querySelector('.modal__edit-input[name="name"]').value;
+        const obj = {
+            code: code,
+            name: name,
+        }
+        return obj;
     },
 
     //Ham de bat dau khoi dong chuong trinh
