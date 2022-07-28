@@ -248,6 +248,30 @@ const app = function () {
         })
     };
 
+    const closeWhenClickOutside = (e) => {
+        if(!e.target.closest(".active") && !e.target.closest(".fa-bell")) {
+            modalNotification.classList.remove("active");
+        }
+        console.log(e.target.closest(".active"))
+        if(!e.target.closest(".active") && !e.target.closest("img")) {
+            modalUserNavbar.classList.remove("active");
+        }   
+    }
+
+    const toggleUserNavbar = () => {
+        modalUserNavbar.classList.toggle("active");
+    }
+    
+    const toggleNotification = () => {
+        modalNotification.classList.toggle("active");
+    }
+
+    if(userAvatar && notificationIcon) {
+        document.addEventListener("click", closeWhenClickOutside)
+        userAvatar.addEventListener("click", toggleUserNavbar)
+        notificationIcon.addEventListener("click", toggleNotification)
+    }
+
     topicSlideNextBtn.addEventListener("click", moveToRight);
     topicSlidePrevBtn.addEventListener("click", moveToLeft);
     headerCloseSearchButton.addEventListener("click", closeSearchBar);

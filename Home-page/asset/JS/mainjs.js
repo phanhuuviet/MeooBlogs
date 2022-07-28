@@ -214,6 +214,16 @@ const app = function () {
         })
     };
 
+    const closeWhenClickOutside = (e) => {
+        if(!e.target.closest(".active") && !e.target.closest(".fa-bell") && !e.target.closest("a")) {
+            console.log(e.target)
+            modalNotification.classList.remove("active");
+        }
+        if(!e.target.closest(".active") && !e.target.closest("a") && !e.target.closest("img") ) {
+            modalUserNavbar.classList.remove("active");
+        }   
+    }
+
     const toggleUserNavbar = () => {
         modalUserNavbar.classList.toggle("active");
     }
@@ -222,8 +232,11 @@ const app = function () {
         modalNotification.classList.toggle("active");
     }
 
-    userAvatar.addEventListener("click", toggleUserNavbar)
-    notificationIcon.addEventListener("click", toggleNotification)
+    if(userAvatar && notificationIcon) {
+        document.addEventListener("click", closeWhenClickOutside)
+        userAvatar.addEventListener("click", toggleUserNavbar)
+        notificationIcon.addEventListener("click", toggleNotification)
+    }
     topicSlideNextBtn.addEventListener("click", moveToRight);
     topicSlidePrevBtn.addEventListener("click", moveToLeft);
     headerCloseSearchButton.addEventListener("click", closeSearchBar);

@@ -125,7 +125,7 @@
 }
 
 .header__modal__notification.active {
-    display: block;
+    display: block !important;
 }
 
 .header__modal__notification::-webkit-scrollbar {
@@ -210,7 +210,7 @@
 }
 
 .header__modal__user-navbar.active {
-    display: block;
+    display: block !important;
 }
 
 .modal__user-navbar__information-wrapper {
@@ -319,18 +319,16 @@
     margin: 0 5px;
 }
 
-.user-signed-In__icon-items a {
+.user-signed-In__icon-items i {
+    color: rgb(171, 199, 222);
     padding: 10px 12px;
     border-radius: 5px;
     transition: background-color ease-in-out 0.3s;
 }
 
-.user-signed-In__icon-items i {
-    color: rgb(171, 199, 222);
-}
-
-.user-signed-In__icon-items a:hover {
+.user-signed-In__icon-items i:hover {
     background-color: rgb(255, 223, 250);
+    cursor: pointer;
 }
 
 .user-signed-In__user-avatar-wrapper img {
@@ -364,16 +362,6 @@
     font-size: 1.6rem;
 }
 
-.user-signed-In__search-icon.header__search-icon {
-    display: block;
-    overflow: unset;
-    margin-right: 5px;
-}
-
-.user-signed-In__search-icon.header__search-icon i {
-    padding: 0;
-}
-
 /* sign in header interface */
 .header__sign-In {
     order: 2;
@@ -388,7 +376,6 @@
     border-radius: 5px;
     color: rgb(171, 199, 222);
     background-color: #fff;
-    margin-right: 12px;
     display: flex;
     align-items: center;
     cursor: pointer;
