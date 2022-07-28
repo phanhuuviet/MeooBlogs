@@ -49,8 +49,8 @@ const sideBarItems = $$('.sideBar__item');
 
 const app = {
     currentIndex: 0,
-    visibleUser: 10,
     currentPage: 0,
+    visibleUser: 10,
     isActive: false,
     arr: [memberList.innerHTML],
 
@@ -535,13 +535,16 @@ const app = {
     },
 
     sendRoleInf: function (value) {
-        const parentEle = value.closest('.modal__wrap--edit');
+        const parentEle = value.closest('.container__table-row');
         const code = parentEle.querySelector('.modal__edit-input[name="code"]').value;
         const name = parentEle.querySelector('.modal__edit-input[name="name"]').value;
+        const ID = parentEle.getAttribute('id');
         const obj = {
+            id: ID,
             code: code,
             name: name,
         }
+        console.log(obj);
         return obj;
     },
 
