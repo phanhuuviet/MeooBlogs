@@ -8,6 +8,7 @@ const action = $('.container__action');
 const actionTitle = $('.container__action span');
 const actionItems = $$('.container__action-item');
 const confirmBtn = $('.container__confirm');
+const refreshBtn = $('.container__refresh-btn');
 
 // pagination variables
 const numberOfPaginations = $$('.container__pagination-item');
@@ -231,6 +232,10 @@ const app = {
         // Xử lý hành vi click vào nút xác nhận
         confirmBtn.onclick = function() {
             app.sendInfOfEachUser();
+        }
+
+        refreshBtn.onclick = function () {
+            location.reload();
         }
     },
 
