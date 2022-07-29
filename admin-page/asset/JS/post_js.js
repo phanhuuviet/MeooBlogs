@@ -276,6 +276,7 @@ const app = {
         // this.render_member();
     },
 
+    
     sendInfOfEachUser: function () {
         const allUser = document.querySelectorAll('.container__table-row[id]'); 
         var status = document.querySelector('.container__action span').textContent;

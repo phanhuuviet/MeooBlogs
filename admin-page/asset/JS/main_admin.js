@@ -53,9 +53,6 @@ const app = {
     visibleUser: 10,
     isActive: false,
     arr: [memberList.innerHTML],
-
-    paginations: [1, 2, 3, 4, 5],
-
     Members: [
         {
             STT: 1,
@@ -189,41 +186,46 @@ const app = {
         },
     ],
 
-    // render_member: function () {
-    //     const visibleUser = this.visibleUser;
-    //     const currentPage = this.currentPage;
+    paginations: [1, 2, 3, 4, 5],
 
-    //     const start = visibleUser * currentPage;
+    paginations2: function() {
+        console.log(Members);
+    },
 
-    //     const displayedMember = this.Members.slice(start, start + visibleUser);
+    render_member: function () {
+        const visibleUser = this.visibleUser;
+        const currentPage = this.currentPage;
 
-    //     const htmls_member = displayedMember.map((member) => {
-    //         return `
-    //         <tr class="container__table-row">
-    //             <td>${member.STT}</td>
-    //             <td>${member.Name}</td>
-    //             <td>${member.UserName}</td>
-    //             <td>${member.Role}</td>
-    //             <td>${member.UserType}</td>
-    //             <td>${member.Team}</td>
-    //             <td>${member.Status}</td>
-    //             <td>
-    //                 <i class="fa-solid fa-eye container__table-icon"></i>
-    //                 <i class="fa-solid fa-pen container__table-icon"></i>
-    //                 <i class="fa-solid fa-trash container__table-icon"></i>
-    //             </td>
-    //         </tr>
-    //         `;
-    //     });
+        const start = visibleUser * currentPage;
 
-    //     memberList.innerHTML = htmls_member.join('');
-    //     // memberList.innerHTML = htmls_member.join('');
-    // },
+        const displayedMember = this.Members.slice(start, start + visibleUser);
+
+        const htmls_member = displayedMember.map((member) => {
+            return `
+            <tr class="container__table-row">
+                <td>${member.STT}</td>
+                <td>${member.Name}</td>
+                <td>${member.UserName}</td>
+                <td>${member.Role}</td>
+                <td>${member.UserType}</td>
+                <td>${member.Team}</td>
+                <td>${member.Status}</td>
+                <td>
+                    <i class="fa-solid fa-eye container__table-icon"></i>
+                    <i class="fa-solid fa-pen container__table-icon"></i>
+                    <i class="fa-solid fa-trash container__table-icon"></i>
+                </td>
+            </tr>
+            `;
+        });
+
+        memberList.innerHTML = htmls_member.join('');
+    },
 
     render: function () {
         const htmls = this.paginations.map((pagination, index) => {
             return `
-                <li class="container__pagination-item ${index === this.currentIndex ? 'active' : ''}" data-index="${index}">${pagination}</li>
+                <li class="container__pagination-item ${ index === this.currentIndex ? 'active' : ''}" data-index="${ index }">${ pagination }</li>
             `;
         })
 
@@ -260,12 +262,12 @@ const app = {
             app.currentPage = e.target.dataset.index;
             app.currentIndex = Number(paginationNode.dataset.index);
             app.render();
-            // app.render_member();
-
-            // if (paginationNode) {
-            //     app.currentIndex = Number(paginationNode.dataset.index);
-            //     app.render();
-            // }
+            app.render_member();
+            
+            if (paginationNode) {
+                app.currentIndex = Number(paginationNode.dataset.index);
+                app.render();
+            }
         }
 
         //Lang nghe hanh vi click vao detele btn
@@ -386,7 +388,7 @@ const app = {
         }
 
         this.render();
-        // this.render_member();
+        this.render_member();
     },
 
     prevPage: function () {
@@ -399,19 +401,19 @@ const app = {
         }
 
         this.render();
-        // this.render_member();
+        this.render_member();
     },
 
     lastPage: function () {
         this.currentIndex = this.paginations.length - 1;
         this.render();
-        // this.render_member();
+        this.render_member();
     },
 
     firstPage: function () {
         this.currentIndex = 0;
         this.render();
-        // this.render_member();
+        this.render_member();
     },
 
 
@@ -551,7 +553,7 @@ const app = {
     //Ham de bat dau khoi dong chuong trinh
     start: function () {
         // render cac trang trong list ra html
-        // this.render_member();
+        this.render_member();
         if (this.Members.length > 10) {
             this.render();
             paginationBar.classList.add('appear-flex');
