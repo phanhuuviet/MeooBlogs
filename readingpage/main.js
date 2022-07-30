@@ -9,3 +9,5 @@ $(document).ready(function () {
         nextArrow: $('.next-btn'),
     });
 });
+
+document.querySelector('.content-readpage').addEventListener("wheel", myFunction);
