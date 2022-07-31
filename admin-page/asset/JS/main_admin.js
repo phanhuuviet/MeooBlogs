@@ -6,14 +6,14 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 // pagination variables
-const numberOfPaginations = $$('.container__pagination-item');
-const paginationList = $('.container__pagination-lists');
-const firstBtn = $('.firstBtn');
-const prevBtn = $('.prevBtn');
-const nextBtn = $('.nextBtn');
-const lastBtn = $('.lastBtn');
-const paginationBar = $('.container__pagination');
-const totalPages = $('.container__pagination__total-page');
+// const numberOfPaginations = $$('.container__pagination-item');
+// const paginationList = $('.container__pagination-lists');
+// const firstBtn = $('.firstBtn');
+// const prevBtn = $('.prevBtn');
+// const nextBtn = $('.nextBtn');
+// const lastBtn = $('.lastBtn');
+// const paginationBar = $('.container__pagination');
+// const totalPages = $('.container__pagination__total-page');
 
 // Interface variales
 const memberList = $('.container__table');
@@ -49,235 +49,11 @@ const sideBarItems = $$('.sideBar__item');
 
 
 const app = {
-    currentIndex: 0,
-    currentPage: 0,
     visibleUser: 10,
     isActive: false,
     arr: [memberList.innerHTML],
-    // Members: [
-    //     {
-    //         STT: 1,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 2,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 3,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 4,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 5,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 6,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 7,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 8,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 9,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 10,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 11,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 12,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    //     {
-    //         STT: 13,
-    //         Name: 'Trần Thị Bích Diệp',
-    //         UserName: 'BichDiep1309',
-    //         Role: 'admin',
-    //         UserType: 'Trưởng nhóm truyền thông',
-    //         Team: 'truyền thông',
-    //         Status: 'Online',
-
-    //     },
-    // ],
-
-    paginations: function() {
-        const pages = totalPages.getAttribute('value');
-        let pagesArray = [];
-        for(let i = 1; i <= pages; ++i) {
-            pagesArray.push(i);
-        }
-        return pagesArray;
-    },
-
-    // render_member: function () {
-    //     const visibleUser = this.visibleUser;
-    //     const currentPage = this.currentPage;
-
-    //     const start = visibleUser * currentPage;
-
-    //     const displayedMember = this.Members.slice(start, start + visibleUser);
-
-    //     const htmls_member = displayedMember.map((member) => {
-    //         return `
-    //         <tr class="container__table-row">
-    //             <td>${member.STT}</td>
-    //             <td>${member.Name}</td>
-    //             <td>${member.UserName}</td>
-    //             <td>${member.Role}</td>
-    //             <td>${member.UserType}</td>
-    //             <td>${member.Team}</td>
-    //             <td>${member.Status}</td>
-    //             <td>
-    //                 <i class="fa-solid fa-eye container__table-icon"></i>
-    //                 <i class="fa-solid fa-pen container__table-icon"></i>
-    //                 <i class="fa-solid fa-trash container__table-icon"></i>
-    //             </td>
-    //         </tr>
-    //         `;
-    //     });
-
-    //     memberList.innerHTML = htmls_member.join('');
-    // },
-
-    render: function () {
-        const htmls = this.paginations().map((pagination, index) => {
-            return `
-                <li class="container__pagination-item ${ index === this.currentIndex ? 'active' : ''}" data-index="${ index }">${ pagination }</li>
-            `;
-        })
-
-        paginationList.innerHTML = htmls.join('');
-    },
 
     handleEvents: function () {
-        //Xu ly khi bam vao nut next page
-        nextBtn.onclick = function () {
-            app.nextPage();
-        }
-
-        //Xu ly khi bam vao nut prev page
-        prevBtn.onclick = function () {
-            app.prevPage();
-        }
-
-        //Xu ly khi bam vao nut last page
-        lastBtn.onclick = function () {
-            app.lastPage();
-        }
-
-        //Xu ly khi bam vao nut first page
-        firstBtn.onclick = function () {
-            app.firstPage();
-        }
-
-        //Lang nghe hanh vi click vao pagination list
-        paginationList.onclick = function (e) {
-
-            if (!e.target.classList.contains('container__pagination-item')) return;
-
-            const paginationNode = e.target.closest('.container__pagination-item:not(.active)');
-            app.currentPage = parseInt(e.target.dataset.index);
-
-            // let hrefIndexPage = app.currentPage + 1;
-            // window.location.href = 'localHost' + hrefIndexPage;
-            
-            app.currentIndex = Number(paginationNode.dataset.index);
-            app.render();
-            app.render_member();
-            
-            if (paginationNode) {
-                app.currentIndex = Number(paginationNode.dataset.index);
-                app.render();
-            }
-        }
-
         //Lang nghe hanh vi click vao detele btn
         iconDeletes.forEach((iconDelete) => {
             iconDelete.onclick = function () {
@@ -387,44 +163,6 @@ const app = {
 
     },
 
-    nextPage: function () {
-        this.currentIndex++;
-        this.currentPage++;
-        if (this.currentIndex >= this.paginations().length) {
-            this.currentPage = 0;
-            this.currentIndex = 0;
-        }
-
-        this.render();
-        this.render_member();
-    },
-
-    prevPage: function () {
-        this.currentIndex--;
-        this.currentPage--;
-
-        if (this.currentIndex < 0) {
-            this.currentPage = this.paginations().length - 1;
-            this.currentIndex = this.paginations().length - 1;
-        }
-
-        this.render();
-        this.render_member();
-    },
-
-    lastPage: function () {
-        this.currentIndex = this.paginations().length - 1;
-        this.render();
-        this.render_member();
-    },
-
-    firstPage: function () {
-        this.currentIndex = 0;
-        this.render();
-        this.render_member();
-    },
-
-
     hideDeleteTable: function (value) {
         modalTableDeletes.forEach(modalTableDelete => {
             if (modalTableDelete.dataset.value == value) {
@@ -527,7 +265,7 @@ const app = {
         const array = [];
         valueOfInputs.forEach(valueOfInput => {
             if (valueOfInput.checked) {
-                array.push(valueOfInput.closest('.modal__role-item').querySelector('.modal__role-label').getAttribute('id')); 
+                array.push(valueOfInput.closest('.modal__role-item').querySelector('.modal__role-label').getAttribute('id'));
             }
         })
         console.log(array);
@@ -560,12 +298,6 @@ const app = {
 
     //Ham de bat dau khoi dong chuong trinh
     start: function () {
-        // render cac trang trong list ra html
-        this.render_member();
-        if (this.Members.length > 10) {
-            this.render();
-            paginationBar.classList.add('appear-flex');
-        }
         //xu ly cac thao tac bang tay
         this.handleEvents();
     }
