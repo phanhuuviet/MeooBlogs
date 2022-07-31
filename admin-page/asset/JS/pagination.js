@@ -1,11 +1,11 @@
-const numberOfPaginations = $$('.container__pagination-item');
-const paginationList = $('.container__pagination-lists');
-const firstBtn = $('.firstBtn');
-const prevBtn = $('.prevBtn');
-const nextBtn = $('.nextBtn');
-const lastBtn = $('.lastBtn');
-const paginationBar = $('.container__pagination');
-const totalPages = $('.container__pagination__total-page');
+const numberOfPaginations = document.querySelectorAll('.container__pagination-item');
+const paginationList = document.querySelector('.container__pagination-lists');
+const firstBtn = document.querySelector('.firstBtn');
+const prevBtn = document.querySelector('.prevBtn');
+const nextBtn = document.querySelector('.nextBtn');
+const lastBtn = document.querySelector('.lastBtn');
+const paginationBar = document.querySelector('.container__pagination');
+const totalPages = document.querySelector('.container__pagination__total-page');
 
 const pagination = {
     currentIndex: 0,
