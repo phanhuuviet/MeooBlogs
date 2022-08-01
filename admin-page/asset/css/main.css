@@ -182,9 +182,14 @@
 .container__table-row th:last-child {
     border: 2px solid var(--primary-color);
     padding: 10px;
+}
+
+.container__table-row th:last-child .addmore-content {
     color: var(--primary-color);
     text-align: center;
 }
+
+
 
 .container__table-row th:last-child:hover {
     cursor: pointer;
