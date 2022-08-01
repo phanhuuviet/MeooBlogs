@@ -70,7 +70,123 @@
                         <th>Mã code</th>
                         <th>Chức năng</th>
                         <th class="container__addMore-btn">
-                            <i class="fa-solid fa-plus"></i> Thêm mới
+                            <div class="addmore-content">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>Thêm mới</span>
+                            </div>
+                            <div class="modal">
+                                <!-- Modal edit -->
+                                <div class="modal__wrap modal__wrap--edit">
+                                    <i class="fas fa-times modal__close"></i>
+                                    <!-- Edit info -->
+                                    <div class="modal__edit-inf">
+                                        <ul class="modal__edit-list">
+                                            <li class="modal__edit-item">
+                                                <p class="modal__edit-text">
+                                                    Tên đăng nhập
+                                                    <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                </p>
+                                                <input type="text" class="modal__edit-input" required>
+                                            </li>
+
+                                            <li class="modal__edit-item">
+                                                <p class="modal__edit-text">
+                                                    Mật khẩu
+                                                    <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                </p>
+                                                <input type="password" class="modal__edit-input" required>
+                                            </li>
+
+                                            <li class="modal__edit-item">
+                                                <p class="modal__edit-text">
+                                                    Họ và tên
+                                                    <i class="fas fa-asterisk modal__edit-icon"></i>
+                                                </p>
+                                                <input type="text" class="modal__edit-input" required>
+                                            </li>
+
+                                            <li class="modal__edit-item">
+                                                <p class="modal__edit-text">Email</p>
+                                                <input type="email" class="modal__edit-input">
+                                            </li>
+                                            <li class="modal__edit-item manage__user">
+                                                <div>
+                                                    <input type="checkbox" id="switch" class="switch-input" />
+                                                    <label for="switch" class="switch"></label>
+                                                </div>
+                                                <span class="modal__edit-text">Khóa tài khoản</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Edit role -->
+                                    <div class="modal__edit-role">
+                                        <p class="modal__edit-text">
+                                            Roles
+                                            <i class="fas fa-asterisk modal__edit-icon"></i>
+                                        </p>
+                                        <div class="modal__role-container">
+                                            <ul class="modal__role-list">
+                                                <li class="modal__role-item">
+                                                    <label id="1" for="" class="modal__role-label">Trưởng ban truyền
+                                                        thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="2" for="" class="modal__role-label">Trưởng ban truyền
+                                                        thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="3" for="" class="modal__role-label">Trưởng ban truyền
+                                                        thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="4" for="" class="modal__role-label">Trưởng ban truyền
+                                                        thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="5" for="" class="modal__role-label">Trưởng ban truyền
+                                                        thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="6" for="" class="modal__role-label">Trưởng ban
+                                                        asdfasdftruyền thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="7" for="" class="modal__role-label">Trưởng ban truyền
+                                                        thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="8" for="" class="modal__role-label">Trưởng ban
+                                                        trasdfasdfasdfuyền thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                                <li class="modal__role-item">
+                                                    <label id="9" for="" class="modal__role-label">Trưởng
+                                                        bafdfadsfan
+                                                        truyền thông</label>
+                                                    <input type="checkbox" class="modal__role-input">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal__edit-footer">
+                                            <button class="btn modal__edit-cancel">
+                                                Hủy bỏ
+                                            </button>
+
+                                            <button class="btn modal__edit-confirm">
+                                                Xác nhận
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </th>
                     </tr>
 
@@ -82,18 +198,6 @@
                             <i class="fa-solid fa-pen container__table-icon"></i>
                             <i class="fa-solid fa-trash container__table-icon"></i>
                             <div class="modal">
-                                <!-- modal delete -->
-                                <div class="modal__wrap modal__wrap--delete">
-                                    <div class="modal__header">
-                                        <img src="./asset/img/warning-img.png" alt="" class="modal__img">
-                                    </div>
-                                    <div class="modal__title">Bạn có chắc chắn muốn xóa không?</div>
-                                    <div class="modal__choose">
-                                        <button class="btn modal__choose--yes">Yes</button>
-                                        <button class="btn modal__choose--no">No</button>
-                                    </div>
-                                </div>
-
                                 <!-- modal edit role -->
                                 <div class="modal__wrap modal__wrap--edit">
                                     <i class="fas fa-times modal__close"></i>
@@ -119,7 +223,7 @@
                                             <!-- Edit Roles -->
                                             <div class="modal__edit-role">
                                                 <p class="modal__edit-text">
-                                                    Chức năng
+                                                    Thể loại
                                                     <i class="fas fa-asterisk modal__edit-icon"></i>
                                                 </p>
                                                 <div class="modal__role-container">
@@ -146,7 +250,7 @@
                                                     <button class="btn modal__edit-cancel">
                                                         Hủy bỏ
                                                     </button>
-
+    
                                                     <button class="btn modal__edit-confirm">
                                                         Xác nhận
                                                     </button>
