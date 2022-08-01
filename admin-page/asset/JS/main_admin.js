@@ -118,9 +118,9 @@ const app = {
         //hoặc cancel trong modal edit
         confirmBtns.forEach(confirmBtn => {
             confirmBtn.onclick = function () {
-                app.sendAllInputChecked(this);
-                // app.sendStatusBlock(this);
-                app.sendRoleInf(this);
+                // app.sendAllInputChecked(this); // checked
+                // app.sendStatusBlock(this);  // checked
+                // app.sendRoleInf(this);
             }
         })
 
