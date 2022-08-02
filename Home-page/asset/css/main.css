@@ -702,8 +702,13 @@
     margin-bottom: 40px;
 }
 
-.container__post--large a {
-    margin-right: 20px;
+.container__post--large .container__post-img--large__wrapper {
+    margin-right: 30px;
+}
+
+.container__post-img--large__wrapper a {
+    display: block;
+    width: 420px;
 }
 
 .trending--title {
@@ -738,8 +743,8 @@
     object-fit: fill;
     min-height: 285px;
     height: 385px;
-    width: 820px;
-
+    width: 420px;
+    margin-right: 0;
 }
 
 
