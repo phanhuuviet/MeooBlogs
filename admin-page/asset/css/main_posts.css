@@ -63,9 +63,6 @@
     font-size: 2rem;
 }
 
-.container__table-row .icon:hover {
-    cursor: pointer;
-}
 
 .container__table-row th {
     font-size: 1.6rem;
@@ -95,4 +92,20 @@
 
 .container__confirm:hover {
     cursor: pointer;
+}
+
+.container__table-status {
+
+}
+
+.icon_status {
+    font-size: 2rem;
+}
+
+.icon.success {
+    color: #28a745;
+}
+
+.icon.error {
+    color: #dc3545;
 }

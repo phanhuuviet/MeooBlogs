@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>admin_role</title>
+    <title>post manage</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="../Home-page/asset/css/base.css"/>
+    <link rel="stylesheet" href="../Home-page/asset/css/base.css" />
     <link rel="stylesheet" href="./asset/css/base_admin.css">
-    <link rel="stylesheet" href="./asset/css/main_posts.css"/>
+    <link rel="stylesheet" href="./asset/css/main_posts.css" />
 </head>
 
 <body>
@@ -61,7 +61,7 @@
         <div class="container">
             <div class="container__wrapper active">
                 <div class="container__top">
-                    <div class="container__title">Quản lý Role</div>
+                    <div class="container__title">Quản lý bản tin</div>
                     <div class="container__refresh-btn">
                         <i class="fa-solid fa-arrow-rotate-right"></i>
                     </div>
@@ -84,21 +84,8 @@
                         <th>Thể loại</th>
                         <th>Tác giả</th>
                         <th>Ngày đăng</th>
+                        <th class="container__table-status">Trạng thái</th>
                         <th></th>
-                        <th></th>
-                    </tr>
-
-                    <tr id="1" class="container__table-row">
-                    <tr class="container__table-row">
-                        <td>1</td>
-                        <td>Dit me Thuc</td>
-                        <td>Xã hội</td>
-                        <td>PhanVietdz</td>
-                        <td>13/9/2002</td>
-                        <td><i class="fa-solid fa-book-bookmark icon"></i></td>
-                        <td class="container__table-select">
-                            <input type="checkbox" class="container__table-input">
-                        </td>
                     </tr>
 
                     <tr class="container__table-row">
@@ -107,71 +94,23 @@
                         <td>Xã hội</td>
                         <td>PhanVietdz</td>
                         <td>13/9/2002</td>
-                        <td><i class="fa-solid fa-book-bookmark icon"></i></td>
+                        <td><i class="fa-solid fa-circle-check icon success"></i></td>
                         <td class="container__table-select">
                             <input type="checkbox" class="container__table-input">
                         </td>
                     </tr>
-
                     <tr class="container__table-row">
                         <td>1</td>
                         <td>Dit me Thuc</td>
                         <td>Xã hội</td>
                         <td>PhanVietdz</td>
                         <td>13/9/2002</td>
-                        <td><i class="fa-solid fa-book-bookmark icon"></i></td>
+                        <td><i class="fa-solid fa-circle-xmark icon error"></i></td>
                         <td class="container__table-select">
                             <input type="checkbox" class="container__table-input">
                         </td>
                     </tr>
 
-                    <tr class="container__table-row">
-                        <td>1</td>
-                        <td>Dit me Thuc</td>
-                        <td>Xã hội</td>
-                        <td>PhanVietdz</td>
-                        <td>13/9/2002</td>
-                        <td><i class="fa-solid fa-book-bookmark icon"></i></td>
-                        <td class="container__table-select">
-                            <input type="checkbox" class="container__table-input">
-                        </td>
-                    </tr>
-
-                    <tr class="container__table-row">
-                        <td>1</td>
-                        <td>Dit me Thuc</td>
-                        <td>Xã hội</td>
-                        <td>PhanVietdz</td>
-                        <td>13/9/2002</td>
-                        <td><i class="fa-solid fa-book-bookmark icon"></i></td>
-                        <td class="container__table-select">
-                            <input type="checkbox" class="container__table-input">
-                        </td>
-                    </tr>
-
-                    <tr id="2" class="container__table-row">
-                        <td>2</td>
-                        <td>Dit me Thuc</td>
-                        <td>Xã hội</td>
-                        <td>PhanVietdz</td>
-                        <td>13/9/2002</td>
-                        <td><i class="fa-solid fa-book-bookmark icon"></i></td>
-                        <td class="container__table-select">
-                            <input type="checkbox" class="container__table-input">
-                        </td>
-                    </tr>
-
-                    <tr id="3" class="container__table-row">
-                        <td>3</td>
-                        <td>Dit me Thuc</td>
-                        <td>Xã hội</td>
-                        <td>PhanVietdz</td>
-                        <td>13/9/2002</td>
-                        <td><i class="fa-solid fa-book-bookmark icon"></i></td>
-                        <td class="container__table-select">
-                            <input type="checkbox" class="container__table-input">
-                        </td>
-                    </tr>
 
                 </table>
                 <button class="btn btn--animation container__confirm">Xác nhận</button>
@@ -203,4 +142,5 @@
 </body>
 <script src="./asset/JS/post_js.js"></script>
 <script src="./asset/JS/pagination.js"></script>
+
 </html>
