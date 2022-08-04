@@ -283,11 +283,10 @@ body {
 
 .content-readpage_right {
     height: 400px;
-    padding-top: 60px;
     margin-left: 5%;
     text-align: center;
     position: sticky;
-    top: 15%;
+    top: 25%;
     left: 75%;
 }
 
@@ -344,6 +343,42 @@ body {
     font-style: italic;
     cursor: pointer;
     color: rgb(90, 132, 132);
+}
+
+.change {
+    font-size: 16px;
+    display: flex;
+}
+
+#change_modify {
+    width: 60px;
+    height: 38px;
+    padding-top: 10px;
+    color: rgb(180, 187, 194);
+    border: 0.5px solid rgb(180, 187, 194);
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#change_delete {
+    color: rgb(197, 111, 111);
+    width: 60px;
+    height: 38px;
+    padding-top: 12px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(218, 26, 26);
+}
+
+#change_modify:hover {
+    cursor: pointer;
+    color: rgb(145, 137, 137);
+    background-color: rgb(205, 200, 200);
+}
+
+#change_delete:hover {
+    cursor: pointer;
+    color: rgb(120, 29, 29);
+    background-color: rgb(216, 62, 62)
 }
 
 body>hr {
