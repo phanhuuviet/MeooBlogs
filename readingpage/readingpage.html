@@ -7,16 +7,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Readingpage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="./asset/img">
-    <link rel="stylesheet" href="./asset/css/readingpage.css">
     <link rel="stylesheet" href="../Home-page/asset/css/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Home-page/asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/readingpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
+    <header class="header">
+        <div class="gridFlex">
+            <div class="header__top-section">
+                <div class="header__top-item header__search-bar">
+                    <i class="fa-solid fa-arrow-left header__search-bar__back-button"></i>
+                    <input type="text" class="header__search-input" placeholder="Tìm kiếm bài viết, hoặc tác giả..." />
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="header__top-item header__logo">
+                    <a href="#" class="header__logo-link">
+                        <img src="../Home-page/asset/img/logo-blog.png" alt="" class="header__logo-img" />
+                    </a>
+                </div>
+
+                <div class="header__top-item header__sign-In">
+                    <button class="header__search-icon">
+                        <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
+                    </button>
+                    <button class="header_signIn-btn">
+                        <a href="../Sign-up/sign_in.html">Đăng nhập</a>
+                    </button>
+                </div>
+            </div>
+            <div class="header__bottom-section">
+                <div class="header__navbar-item followed-list text-strong">
+                    <span>
+                        ĐANG THEO DÕI
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                    <ul class="header__navbar-followed-list empty">
+                        <li class="header__navbar-followed-empty">
+                            Danh sách theo dõi rỗng
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="header__navbar-item popular-writer text-strong">
+                    <span>
+                        THÀNH VIÊN NỔI BẬT
+                    </span>
+                </div>
+
+                <div class="header__navbar-item header__navbar-topic-list-container">
+                    <button class="header__navbar-item header__topic-list-prev-button">
+                        <span>
+                            < </span>
+                    </button>
+                    <div class="header__navbar-item header__navbar-topic-list-warrper">
+                        <ul class="header__navbar-item header__navbar-topic-list">
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="https://www.facebook.com/">Tất cả</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Khoa Học - công nghệ</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Thể thao</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">game</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Tất cả</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Khoa Học - công nghệ</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Thể thao</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">game</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Thể thao</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">game</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Khoa Học - công nghệ</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Thể thao</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">game</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">Thể thao</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">game</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+                            <li class="header__navbar-item header__topic-list-item">
+                                <a href="">truyền cảm hứng</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <button class="header__navbar-item header__topic-list-next-button">
+                        <span> > </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="content-readpage">
         <div class="goToHeader">
             <i class="fa-solid fa-arrow-up"></i>
@@ -182,4 +314,5 @@
 
 </body>
 <script src="./asset/js/main.js"></script>
+
 </html>
