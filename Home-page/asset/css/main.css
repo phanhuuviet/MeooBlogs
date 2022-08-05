@@ -884,3 +884,7 @@
 .thank-you-icon {
     color: red;
 }
+
+.header__search-bar .fas.fa-search{
+    cursor: pointer;
+}
