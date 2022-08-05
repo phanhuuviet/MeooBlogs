@@ -139,8 +139,22 @@
     flex: 1;
 }
 
+.table__tag {
+    display: flex;
+    justify-content: space-between;
+}
+
 .table__title a:hover {
     text-decoration: underline;
+}
+
+.table_icon {
+    padding-right: 5%;
+}
+
+#modify,
+#delete {
+    margin-right: 10px;
 }
 
 .table__sub-title {
@@ -163,7 +177,9 @@
     font-weight: 500;
 }
 
+
 /* ======= Modal Edit =======*/
+
 .modal__edit {
     display: none;
     margin: 0 auto;
@@ -229,7 +245,9 @@
     color: #000;
 }
 
+
 /* CSS error checking */
+
 .modal__form.invalid .modal__input {
     border: 1px solid #f33a58;
 }
