@@ -16,7 +16,7 @@ const deleteBtn = document.querySelector('.table_icon .delete');
 
 // API
 
-const urlPost = "http://localhost:3000/posts";
+// const urlPost = "http://localhost:3000/posts";
 
 const app = function () {
     let isOpen = false;
@@ -70,45 +70,45 @@ const app = function () {
         modalNotification.classList.toggle("active");
     }
 
-    const getPost = (callback) => {
-        fetch(urlPost)
-            .then((response) => response.json())
-            .then(callback)
-    }
+    // const getPost = (callback) => {
+    //     fetch(urlPost)
+    //         .then((response) => response.json())
+    //         .then(callback)
+    // }
 
 
 
-    const renderPost = (posts) => {
-        const listPost = document.querySelector(".content__table");
-        var htmls = posts.map((post) => {
-            return `
-            <li id="content__table-item-${post.id}" class="content__table-item">
-                        <a href="" class="table__img-link">
-                            <img src="${post.img}" alt="">
-                        </a>
-                        <div class="table__content">
-                            <h4 class="table__tag">${post.category}
-                                <div class="table_icon">
-                                    <a href="" id="modify"><i class="fa fa-pen"></i></a>
-                                    <i onclick="deletePost(${post.id})" class="fa fa-trash-can"></i>
-                                </div>
-                            </h4>
-                            <h2 class="table__title">
-                                <a href="">
-                                ${post.title}
-                                </a>
-                            </h2>
-                            <div class="table__sub-title">
-                            ${post.description}
-                            </div>
-                            <div class="table__time">${post.time}</div>
-                        </div>
-                    </li>
-            `
-        });
+    // const renderPost = (posts) => {
+    //     const listPost = document.querySelector(".content__table");
+    //     var htmls = posts.map((post) => {
+    //         return `
+    //         <li id="content__table-item-${post.id}" class="content__table-item">
+    //                     <a href="" class="table__img-link">
+    //                         <img src="${post.img}" alt="">
+    //                     </a>
+    //                     <div class="table__content">
+    //                         <h4 class="table__tag">${post.category}
+    //                             <div class="table_icon">
+    //                                 <a href="" id="modify"><i class="fa fa-pen"></i></a>
+    //                                 <i onclick="deletePost(${post.id})" class="fa fa-trash-can"></i>
+    //                             </div>
+    //                         </h4>
+    //                         <h2 class="table__title">
+    //                             <a href="">
+    //                             ${post.title}
+    //                             </a>
+    //                         </h2>
+    //                         <div class="table__sub-title">
+    //                         ${post.description}
+    //                         </div>
+    //                         <div class="table__time">${post.time}</div>
+    //                     </div>
+    //                 </li>
+    //         `
+    //     });
 
-        listPost.innerHTML = htmls.join('');
-    }
+    //     listPost.innerHTML = htmls.join('');
+    // }
 
     if (userAvatar && notificationIcon) {
         document.addEventListener("click", closeWhenClickOutside)
@@ -126,28 +126,28 @@ const app = function () {
     modalBtn.addEventListener('click', styleChangePsw);
     modalCancelBtn.addEventListener('click', hideModalEdit);
     userEdit.addEventListener('click', hideContainerContent);
-    getPost(renderPost);
+    // getPost(renderPost);
 }
 
-const deletePost = (id) => {
-    options = {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        // body: JSON.stringify(id)
-    }
-    fetch(urlPost + "/" + id, options)
-        .then((response) => {
-            return response.json();
-        })
-        .then(function () {
-            var postItem = document.querySelector("#content__table-item-" + id);
+// const deletePost = (id) => {
+//     options = {
+//         method: 'DELETE',
+//         headers: {
+//             'Content-Type': 'application/json'
+//             // 'Content-Type': 'application/x-www-form-urlencoded',
+//         },
+//         // body: JSON.stringify(id)
+//     }
+//     fetch(urlPost + "/" + id, options)
+//         .then((response) => {
+//             return response.json();
+//         })
+//         .then(function () {
+//             var postItem = document.querySelector("#content__table-item-" + id);
 
-            postItem.remove();
-        })
-}
+//             postItem.remove();
+//         })
+// }
 
 
 app();
