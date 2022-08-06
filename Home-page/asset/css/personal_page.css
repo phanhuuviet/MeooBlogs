@@ -148,6 +148,11 @@
     text-decoration: underline;
 }
 
+.item__head {
+    display: flex;
+    justify-content: space-between;
+}
+
 .table_icon {
     padding-right: 5%;
 }
