@@ -160,6 +160,7 @@
 #modify,
 #delete {
     margin-right: 10px;
+    padding: 8px;
 }
 
 .table__sub-title {
@@ -265,4 +266,12 @@
     font-size: 1.4rem;
     line-height: 1.6rem;
     padding: 4px 0 0;
+}
+
+.table_icon #modify {
+    color: #ffeb3b;
+}
+
+.table_icon #delete {
+    color: #f44336;
 }
