@@ -384,6 +384,7 @@
     align-items: center;
     cursor: pointer;
     overflow: hidden;
+    margin-right: 20px;
 }
 
 .header__search-icon i {
@@ -885,6 +886,6 @@
     color: red;
 }
 
-.header__search-bar .fas.fa-search{
+.header__search-bar .fas.fa-search {
     cursor: pointer;
 }
