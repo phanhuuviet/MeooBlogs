@@ -105,11 +105,13 @@ const pagination = {
 
     lastPage: function () {
         this.currentIndex = this.paginations().length - 1;
+        this.currentPage = this.paginations().length - 1;
         this.render();
     },
 
     firstPage: function () {
         this.currentIndex = 0;
+        this.currentPage = 0;
         this.render();
     },
 

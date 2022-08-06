@@ -20,5 +20,4 @@ $(document).ready(function () {
     });
 });
 
-document.querySelector('.content-readpage').addEventListener("wheel", myFunction);
 arrowToTop.addEventListener("click", goToTop);

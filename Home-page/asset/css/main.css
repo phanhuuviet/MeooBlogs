@@ -586,6 +586,7 @@
 
 .container__post-content {
     display: flex;
+    width: 100%;
 }
 
 .container__post-user-avt {
@@ -786,7 +787,6 @@
 .container__post-content--medium {
     margin-top: 16px;
     flex-direction: column;
-    justify-content: space-between;
     padding: 0 4px;
 }
 

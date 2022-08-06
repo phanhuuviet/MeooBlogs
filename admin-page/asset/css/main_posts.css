@@ -81,12 +81,14 @@
 
 .container__confirm {
     border: 1px solid var(--primary-color);
-    margin: 0 50px 24px auto;
+    position: absolute;
     width: 150px;
+    bottom: 28px;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 1.6rem;
     font-weight: 500;
+    right: 120px;
     color: var(--primary-color);
 }
 
