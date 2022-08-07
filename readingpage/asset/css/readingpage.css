@@ -290,7 +290,7 @@ body {
     left: 75%;
 }
 
-.writer>#notice {
+.writer #notice {
     padding-bottom: 8px;
     color: rgb(158, 152, 152);
     font-size: 18px;
@@ -311,24 +311,24 @@ body {
     transition: all 0.5s;
 }
 
-.writer>#name {
+.writer #name {
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
-#name>a {
+#name a {
     text-decoration: none;
     color: rgb(158, 142, 142);
     font-size: 20px;
     text-transform: capitalize;
 }
 
-#name>a:hover {
+#name a:hover {
     color: rgb(90, 132, 132);
     text-decoration: underline;
 }
 
-.writer>button {
+.writer button {
     width: 90px;
     font-size: 18px;
     min-height: 35px;
@@ -338,7 +338,7 @@ body {
     color: rgb(158, 142, 142);
 }
 
-.writer>button:hover {
+.writer button:hover {
     background-color: aliceblue;
     font-style: italic;
     cursor: pointer;
