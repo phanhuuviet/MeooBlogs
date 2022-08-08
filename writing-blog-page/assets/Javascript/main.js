@@ -8,122 +8,96 @@ const userAvatar = document.querySelector(".header__icon__user-navbar");
 const modalUserNavbar = document.querySelector(".header__modal__user-navbar");
 const modalNotification = document.querySelector(".header__modal__notification");
 
-var result = document.querySelector('blog-post-genre modal__selected-choice');
+const application = {
+    handleEvent: function () {
+        document.addEventListener("click", application.closeWhenClickOutside);
+        userAvatar.addEventListener("click", application.toggleUserNavbar);
+        notificationIcon.addEventListener("click", application.toggleNotification);
+        confirmSubmitBtn.addEventListener('click', application.submitForm);
 
-const application = () => {
-    dropDownList.forEach((modalSelect) => {
-        modalSelect.addEventListener("click", (e) => {
-            if (!e.target.classList.contains("modal__selected-choice")) {
-                return;
-            }
-
-            const selectBox = modalSelect.firstElementChild;
-            const optionBox = modalSelect.firstElementChild.nextElementSibling.firstElementChild;
-
-            if (optionBox.classList.contains("active")) {
-                optionBox.classList.remove('active');
-            } else {
-                let currentlyActive = document.querySelector(".select-box__options.active")
-
-                if (currentlyActive) {
-                    currentlyActive.classList.remove('active');
+        // Xu ly hanh vi click vao dropDown list
+        dropDownList.forEach((modalSelect) => {
+            modalSelect.addEventListener("click", (e) => {
+                if (!e.target.classList.contains("modal__selected-choice")) {
+                    return;
                 }
-                modalSelect.querySelector(".select-box__options").classList.toggle("active");
+
+                const selectBox = modalSelect.firstElementChild;
+                const optionBox = modalSelect.firstElementChild.nextElementSibling.firstElementChild;
+
+                if (optionBox.classList.contains("active")) {
+                    optionBox.classList.remove('active');
+                } else {
+                    let currentlyActive = document.querySelector(".select-box__options.active")
+
+                    if (currentlyActive) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    modalSelect.querySelector(".select-box__options").classList.toggle("active");
+                }
+
+                modalSelect.querySelectorAll(".select-box__option")
+                    .forEach((option) => {
+                        option.addEventListener("click", () => {
+                            modalSelect.querySelectorAll(".select-box__option").forEach((option) => {
+                                if (option.classList.contains("selected")) {
+                                    option.classList.remove("selected");
+                                }
+                            })
+                            option.classList.toggle("selected");
+                            selectBox.innerHTML = option.querySelector("label").innerHTML;
+                            optionBox.classList.remove('active');
+                        });
+                    });
+            });
+
+            function makeModalHidden() {
+                modalWritingPage.classList.remove('visible');
             }
 
-            modalSelect.querySelectorAll(".select-box__option")
-                .forEach((option) => {
-                    option.addEventListener("click", () => {
-                        modalSelect.querySelectorAll(".select-box__option").forEach((option) => {
-                            if(option.classList.contains("selected")) {
-                                option.classList.remove("selected");
-                            }
-                        })
-                        option.classList.toggle("selected");
-                        selectBox.innerHTML = option.querySelector("label").innerHTML;
-                        optionBox.classList.remove('active');
-                    });
-                });
+            function makeModalVisible() {
+                modalWritingPage.classList.add('visible');
+            }
+
+            returnBtn.addEventListener('click', makeModalHidden);
+            submitBtn.addEventListener('click', makeModalVisible);
         });
 
-        const makeModalHidden = () => {
-            modalWritingPage.classList.remove('visible');
-        }
+        // Cai gi y chiu :v
+        BalloonEditor.create(document.querySelector(".editor"), {
+            placeholder: "Nội dung bài viết",
+        })
+            .catch((error) => {
+                console.error(error);
+            });
+    },
 
-        const makeModalVisible = () => {
-            modalWritingPage.classList.add('visible');
-        }
-
-        returnBtn.addEventListener('click', makeModalHidden);
-        submitBtn.addEventListener('click', makeModalVisible);
-    });
-
-    const closeWhenClickOutside = (e) => {
-        if(!e.target.closest(".active") && !e.target.closest(".fa-bell")) {
+    closeWhenClickOutside: function (e) {
+        if (!e.target.closest(".active") && !e.target.closest(".fa-bell")) {
             modalNotification.classList.remove("active");
         }
-        console.log(e.target.closest(".active"))
-        if(!e.target.closest(".active") && !e.target.closest("img")) {
+        if (!e.target.closest(".active") && !e.target.closest("img")) {
             modalUserNavbar.classList.remove("active");
-        }   
-    }
+        }
+    },
 
-    const toggleUserNavbar = () => {
+    toggleUserNavbar: function () {
         modalUserNavbar.classList.toggle("active");
-    }
-    
-    const toggleNotification = () => {
+    },
+
+    toggleNotification: function () {
         modalNotification.classList.toggle("active");
-    }
+    },
 
-    document.addEventListener("click", closeWhenClickOutside)
-    userAvatar.addEventListener("click", toggleUserNavbar)
-    notificationIcon.addEventListener("click", toggleNotification)
-
-    BalloonEditor.create(document.querySelector(".editor"), {
-        placeholder: "Nội dung bài viết",
-    })
-        .catch((error) => {
-            console.error(error);
-        });
-
-    };
-    function submitForm() {
+    submitForm: function () {
+        var result = document.querySelector('.select-box__option.selected');
         console.log(result);
-    };
+        return result;
+    },
 
-    confirmSubmitBtn.addEventListener('click', submitForm);
+    start: function() {
+        application.handleEvent();
+    }
+};
 
-application();
-
-// var createPostBtn = document.querySelector('#createPostBtn')
-//     function createPost(data, callback){
-//         var options = {
-//             method : 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body : JSON.stringify(data)
-//         };
-//         fetch("http://localhost:8080/api/post", options)
-//             .then(function (response){
-//                 console.log(response)
-//                 // window.location.href = "http://localhost:8080/bai-dang/viet-bai"
-//                 return response.json()
-//             })
-//             .then(callback)
-//     }
-//     createPostBtn.onclick = function (){
-//         var title = document.querySelector('div[name="title"]').textContent
-//         var content = document.querySelector('div[name="content"]').innerHTML
-//         var shortDescription = document.querySelector('textarea[name="shortDescription"]').value
-//         var categoryId = result
-//         var post = {
-//             title : title,
-//             content : content,
-//             shortDescription : shortDescription,
-//             categoryId : result
-//         }
-//         createPost(post)
-//         console.log(post)
-//     }
+application.start();
