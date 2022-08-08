@@ -1,7 +1,6 @@
 const dropDownList = document.querySelectorAll(".modal__drop-down-list");
 const returnBtn = document.querySelector(".modal__return-btn");
 const confirmSubmitBtn = document.querySelector(".modal__submit-btn");
-const submitBtn = document.querySelector(".writing-blog__submit-btn");
 const modalWritingPage = document.querySelector(".modal__writing-page-submition-form");
 const notificationIcon = document.querySelector(".header__icon__notificartion");
 const userAvatar = document.querySelector(".header__icon__user-navbar");
@@ -13,7 +12,6 @@ const application = {
         document.addEventListener("click", application.closeWhenClickOutside);
         userAvatar.addEventListener("click", application.toggleUserNavbar);
         notificationIcon.addEventListener("click", application.toggleNotification);
-        confirmSubmitBtn.addEventListener('click', application.submitForm);
 
         // Xu ly hanh vi click vao dropDown list
         dropDownList.forEach((modalSelect) => {
@@ -93,12 +91,6 @@ const application = {
 
     toggleNotification: function () {
         modalNotification.classList.toggle("active");
-    },
-
-    submitForm: function () {
-        var result = document.querySelector('.select-box__option.selected');
-        console.log(result);
-        return result;
     },
 
     start: function() {
