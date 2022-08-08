@@ -1,8 +1,10 @@
 const submitBtn = document.querySelector(".writing-blog__submit-btn");
+const confirmSubmitBtn = document.querySelector(".modal__submit-btn");
+
 
 const submit = {
     handleEvent: function() {
-        confirmSubmitBtn.addEventListener('click', application.submitForm);
+        confirmSubmitBtn.addEventListener('click', submit.submitForm);
 
     },
 
@@ -13,7 +15,7 @@ const submit = {
     },
 
     start: function() {
-        application.handleEvent();
+        submit.handleEvent();
     }
 }
 

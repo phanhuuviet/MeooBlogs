@@ -1,6 +1,5 @@
 const dropDownList = document.querySelectorAll(".modal__drop-down-list");
 const returnBtn = document.querySelector(".modal__return-btn");
-const confirmSubmitBtn = document.querySelector(".modal__submit-btn");
 const modalWritingPage = document.querySelector(".modal__writing-page-submition-form");
 const notificationIcon = document.querySelector(".header__icon__notificartion");
 const userAvatar = document.querySelector(".header__icon__user-navbar");
