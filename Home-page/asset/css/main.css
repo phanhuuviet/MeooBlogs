@@ -221,6 +221,10 @@
     border-bottom: 1px solid #e3e3e3;
 }
 
+.modal__user-navbar__avatar {
+    flex-shrink: 0;
+}
+
 .modal__user-navbar__avatar img {
     height: 50px;
     width: 50px;
