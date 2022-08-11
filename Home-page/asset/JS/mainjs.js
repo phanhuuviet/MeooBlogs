@@ -216,7 +216,6 @@ const app = function () {
 
     const closeWhenClickOutside = (e) => {
         if(!e.target.closest(".active") && !e.target.closest(".fa-bell") && !e.target.closest("a")) {
-            console.log(e.target)
             modalNotification.classList.remove("active");
         }
         if(!e.target.closest(".active") && !e.target.closest("a") && !e.target.closest("img") ) {
