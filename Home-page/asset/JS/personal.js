@@ -82,8 +82,12 @@ const app = function () {
         modalNotification.classList.toggle("active");
     }
 
-    blockBubbleEvent = (e) => {
+    const blockBubbleEvent = (e) => {
         e.stopPropagation();
+    }
+
+    const styleModalEdit = () => {
+        modalEdit.style.transform = 'translateY(0)';
     }
 
     if (userAvatar && notificationIcon) {
@@ -103,7 +107,8 @@ const app = function () {
     modalCancelBtn.addEventListener('click', hideModalEdit);
     userEdit.addEventListener('click', hideContainerContent);
     overlay.addEventListener('click', hideOverlay);
-    modalEdit.addEventListener('click', blockBubbleEvent)
+    modalEdit.addEventListener('click', blockBubbleEvent);
+    modalEdit.addEventListener('animationend', styleModalEdit);
 }
 
 app();

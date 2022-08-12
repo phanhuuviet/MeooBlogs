@@ -3,6 +3,10 @@
     .modal__edit {
         min-width: 500px;
     }
+
+    .table__title a {
+        line-height: 2rem;
+    }
 }
 
 /* mobile */
@@ -44,6 +48,11 @@
         justify-content: space-between;
         margin-top: 5px;
     }
+
+    .table__img-link {
+        width: 250px;
+        height: 200px;
+    }
 }
 
 /* Ipad and mobile */
@@ -73,7 +82,10 @@
     }
 
     .modal__edit {
+        transform: translateY(-30px);
         border-radius: 5px;
         background-color: #fff;
+        animation: dropDown 0.3s linear;
     }
+
 }

@@ -226,7 +226,7 @@ li {
     }
 }
 
-@-webkit-keyframes goUp {
+@-webkit-keyframes goDown {
     0% {
         opacity: 1;
         transform: translateY(0);
