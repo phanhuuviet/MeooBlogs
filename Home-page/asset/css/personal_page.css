@@ -45,7 +45,7 @@
 
 .user__edit {
     border: 3px solid var(--primary-color);
-    padding: 10px 16px;
+    padding: 12px 16px;
     border-radius: 25px;
     color: var(--primary-color);
     font-weight: 500;
@@ -153,8 +153,8 @@
     justify-content: space-between;
 }
 
-.table_icon {
-    padding-right: 5%;
+.table_icon.on-MB {
+    display: none;
 }
 
 #modify,
@@ -186,12 +186,15 @@
 
 /* ======= Modal Edit =======*/
 
-.modal__edit {
+.overlay {
     display: none;
-    margin: 0 auto;
     min-width: 400px;
-    padding: 16px;
     min-height: 600px;
+    margin: 0 auto;
+}
+
+.modal__edit {
+    padding: 16px;
 }
 
 .modal__avt {
