@@ -220,30 +220,3 @@
     border-radius: 50%;
     color: #fff;
 }
-
-/* responsive */
-@media screen and (max-width: 768px) {
-    .header__sign-In {
-        margin-right: 10px !important;
-    }
-
-    .header__search-bar {
-        margin: 0 10px !important;
-    }
-
-    .header {
-        height: auto !important;
-    }
-
-    .header__bottom-section {
-        display: none !important;
-    }
-
-    .user-signed-In__writing-blog-wrapper button {
-        margin-right: 10px !important;
-    }
-
-    .header__search-icon {
-        margin-right: 0 !important;
-    }
-}
