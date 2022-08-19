@@ -74,7 +74,7 @@
         background-color: rgba(0, 0, 0, 0.3);
         z-index: 999;
         align-items: center;
-        justify-content: center;        
+        justify-content: center;
     }
 
     .avt.modal__avt {
@@ -86,6 +86,32 @@
         border-radius: 5px;
         background-color: #fff;
         animation: dropDown 0.3s linear;
+    }
+
+    /* header section */
+
+    .header__sign-In {
+        margin-right: 10px !important;
+    }
+
+    .header__search-bar {
+        margin: 0 10px !important;
+    }
+
+    .header {
+        height: auto !important;
+    }
+
+    .header__bottom-section {
+        display: none !important;
+    }
+
+    .user-signed-In__writing-blog-wrapper button {
+        margin-right: 10px !important;
+    }
+
+    .header__search-icon {
+        margin-right: 0 !important;
     }
 
 }

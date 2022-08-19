@@ -1,9 +1,36 @@
 /* Both tablet and mobile */
 @media only screen and (max-width: 63.9375em) {
-    .content__header, 
+
+    .content__header,
     .content__table {
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+    /* header section */
+
+    .header__sign-In {
+        margin-right: 10px !important;
+    }
+
+    .header__search-bar {
+        margin: 0 10px !important;
+    }
+
+    .header {
+        height: auto !important;
+    }
+
+    .header__bottom-section {
+        display: none !important;
+    }
+
+    .user-signed-In__writing-blog-wrapper button {
+        margin-right: 10px !important;
+    }
+
+    .header__search-icon {
+        margin-right: 0 !important;
     }
 }
 
@@ -28,9 +55,9 @@
     .goToHeader {
         right: 10px;
     }
+
+
 }
 
 /* tablet */
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-    
-}
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {}
